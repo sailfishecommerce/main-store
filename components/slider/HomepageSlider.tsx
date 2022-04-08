@@ -1,14 +1,22 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Image from "next/image";
+import { useState } from "react";
 
 import homepageSliderContent from "@/json/homepage-slider.json";
 import HomepageSliderControls from "@/components/slider/HomepageSliderControls";
 import "@splidejs/splide/dist/css/splide.min.css";
 
 export default function HomepageSlider() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  function updateSlider() {}
   return (
-    <section className="mt-8 mb-8">
-      <Splide>
+    <section className="mt-8 mb-8 homepage-slider">
+      <Splide
+        onActive={(item) => {
+          console.log("item", item.index);
+          setActiveIndex(item.index);
+        }}
+      >
         {homepageSliderContent.map((content) => (
           <SplideSlide key={content.title}>
             <div className="content flex w-full h-100">
@@ -20,7 +28,7 @@ export default function HomepageSlider() {
                   </span>
                 </div>
                 <p className="mb-4 text-lg">{content.description}</p>
-                <button className="view-collection rounded-md py-2 px-4 text-white">
+                <button className="view-collection rounded-md py-2 px-4 text-white mt-8">
                   View collection
                 </button>
               </div>
@@ -32,13 +40,17 @@ export default function HomepageSlider() {
                   alt={content.title}
                   className="rounded-r-3xl"
                   layout="responsive"
+                  priority
                 />
               </div>
             </div>
           </SplideSlide>
         ))}
       </Splide>
-      <HomepageSliderControls content={homepageSliderContent} />
+      <HomepageSliderControls
+        content={homepageSliderContent}
+        activeIndex={activeIndex}
+      />
       <style jsx>
         {`
           .view-collection {
