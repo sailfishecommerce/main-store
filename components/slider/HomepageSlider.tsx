@@ -2,11 +2,12 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Image from "next/image";
 
 import homepageSliderContent from "@/json/homepage-slider.json";
+import HomepageSliderControls from "@/components/slider/HomepageSliderControls";
 import "@splidejs/splide/dist/css/splide.min.css";
 
 export default function HomepageSlider() {
   return (
-    <section className="mt-8">
+    <section className="mt-8 mb-8">
       <Splide>
         {homepageSliderContent.map((content) => (
           <SplideSlide key={content.title}>
@@ -14,7 +15,7 @@ export default function HomepageSlider() {
               <div className="text rounded-l-3xl bg-gray-100 p-8 w-1/4">
                 <div className="top flex items-center mb-6 justify-between">
                   <h1 className="text-2xl font-bold">{content.title}</h1>
-                  <span className="text-red-500 bg-white rounded-md py-2 text-sm px-3">
+                  <span className="font-bold text-red-500 bg-white rounded-md py-2 text-sm px-3 hover:bg-red-500 hover:text-white">
                     {content.category}
                   </span>
                 </div>
@@ -37,6 +38,7 @@ export default function HomepageSlider() {
           </SplideSlide>
         ))}
       </Splide>
+      <HomepageSliderControls content={homepageSliderContent} />
       <style jsx>
         {`
           .view-collection {
