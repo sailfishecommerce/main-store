@@ -8,15 +8,9 @@ import "@splidejs/splide/dist/css/splide.min.css";
 
 export default function HomepageSlider() {
   const [activeIndex, setActiveIndex] = useState(0);
-  function updateSlider() {}
   return (
-    <section className="mt-8 mb-8 homepage-slider">
-      <Splide
-        onActive={(item) => {
-          console.log("item", item.index);
-          setActiveIndex(item.index);
-        }}
-      >
+    <section className="mt-8 mb-12 homepage-slider">
+      <Splide onActive={(item) => setActiveIndex(item.index)}>
         {homepageSliderContent.map((content) => (
           <SplideSlide key={content.title}>
             <div className="content flex w-full h-100">

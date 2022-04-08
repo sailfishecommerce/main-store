@@ -9,6 +9,6 @@
   --mountain-green: #95bf11;
 }
 
-.homepage-slider .ul.splide__pagination.splide__pagination--ltr {
+.homepage-slider ul.splide__pagination {
   display: none;
 }

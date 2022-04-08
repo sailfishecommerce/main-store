@@ -19,7 +19,7 @@ export default function HomepageSliderControls({
             className={`slider-item splide__pagination__page flex flex-col border-t-2 pt-2 ${isActive}`}
             key={item.title}
           >
-            <h4 className="flex items-center">0 {indexValue}</h4>
+            <h4 className="flex items-center font-medium">0{indexValue}</h4>
             <h2 className="font-bold my-1">{item.title}</h2>
             <p>{item.category}</p>
           </div>
@@ -42,6 +42,9 @@ export default function HomepageSliderControls({
           }
           .slider-item.active {
             border-top: 3px solid var(--mountain-green);
+          }
+          .slider-item.active h4 {
+            color: var(--mountain-green);
           }
         `}
       </style>

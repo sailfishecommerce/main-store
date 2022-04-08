@@ -1,9 +1,16 @@
 import Image from "next/image";
 import { ProductProps } from "@/types";
 
-export default function Product({ product }: ProductProps) {
+interface ProductTypes extends ProductProps {
+  row: string;
+}
+
+export default function Product({ product, row }: ProductTypes) {
+  const isRow = row ? "flex " : "flex col";
   return (
-    <div className="hover:bg-white hover:shadow-lg hover:rounded-lg product">
+    <div
+      className={`hover:bg-white hover:shadow-lg hover:rounded-lg product ${isRow}`}
+    >
       <Image src={product.img} alt={product.name} height={500} width={500} />
       <div className="text">
         <h4 className="text-xl brand text-blue-500">{product.brand}</h4>
