@@ -1,18 +1,9 @@
 import Image from "next/image";
-
-interface ProductProps {
-  product: {
-    brand: string;
-    name: string;
-    price: number;
-    oldPrice: number;
-    img: string;
-  };
-}
+import { ProductProps } from "@/types";
 
 export default function Product({ product }: ProductProps) {
   return (
-    <div>
+    <div className="hover:bg-white hover:shadow-lg hover:rounded-lg product">
       <Image src={product.img} alt={product.name} height={500} width={500} />
       <div className="text">
         <h4 className="text-xl brand text-blue-500">{product.brand}</h4>

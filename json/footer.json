@@ -1,0 +1,26 @@
+[
+  {
+    "text": "About LiveHealthy",
+    "links": [
+      { "link": "#about-us", "text": "About us" },
+      { "link": "#contact-us", "text": "Contact Us" },
+      { "link": "#privacy-policy", "text": "Privacy Policy" },
+      { "link": "#return-refunds", "text": "Return & Refunds" },
+      { "link": "#shipping-deliveries", "text": "Shipping & Deliveries" },
+      { "link": "#terms-of-service", "text": "Terms of Service" }
+    ]
+  },
+  {
+    "text": "Categories",
+    "tag": "View all",
+    "links": [
+      { "link": "#vitamins-supplements", "text": "Vitamins & Supplements" },
+      { "link": "#medicines", "text": "Medicines" },
+      { "link": "#health-personal", "text": "Health & Personal" },
+      { "link": "#skin-care", "text": "Skin Care" },
+      { "link": "#hair-care", "text": "Hair Care" },
+      { "link": "#baby-care", "text": "Baby Care" },
+      { "link": "#pet-care", "text": "Pet Care" }
+    ]
+  }
+]

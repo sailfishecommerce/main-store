@@ -13,9 +13,7 @@ interface valuecardProps {
 export default function ValueCard({ content }: valuecardProps) {
   return (
     <>
-      <div
-        className={`value-card w-1/24 rounded-lg p-6 flex flex-col  h-44 {indexKey}`}
-      >
+      <div className="value-card w-1/24 rounded-lg p-6 flex flex-col h-44 hover:opacity-80">
         <div className="w-1/12">
           <Image
             src={content.icon}
