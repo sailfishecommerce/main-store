@@ -4,3 +4,7 @@
 /* Your own custom component styles */
 
 @import "tailwindcss/utilities";
+
+:root {
+  --mountain-green: #95bf11;
+}

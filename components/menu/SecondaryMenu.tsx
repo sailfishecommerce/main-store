@@ -11,7 +11,7 @@ export default function SecondaryMenu() {
         {menuLinks.secondaryMenu.map((menuItem) => (
           <li key={menuItem.link}>
             <Link href={menuItem.link} passHref>
-              <a>{menuItem.text}</a>
+              <a className="font-bold">{menuItem.text}</a>
             </Link>
           </li>
         ))}
