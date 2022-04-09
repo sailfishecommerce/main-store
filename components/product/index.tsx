@@ -9,7 +9,7 @@ export default function Product({ product, row }: ProductTypes) {
   const isRow = row ? "flex" : "flex flex-col";
   return (
     <div
-      className={`hover:bg-white hover:shadow-lg hover:rounded-lg product ${isRow} p-4`}
+      className={`hover:bg-white hover:shadow-lg hover:rounded-lg product ${isRow} p-6 hover:border`}
     >
       <Image
         src={product.images[0].file.url}
@@ -18,13 +18,15 @@ export default function Product({ product, row }: ProductTypes) {
         width={500}
       />
       <div className="text">
-        <h4 className="text-xl brand text-blue-500">{product.vendor}</h4>
-        <h3>{product.name}</h3>
+        <h4 className="font-bold brand text-blue-800">{product.vendor}</h4>
+        <div className="product-name-view">
+          <h3>{product.name}</h3>
+        </div>
         <div className="price-view">
-          <h3 className="font-bold mt-6 mb-3">{product.price}</h3>
-          <h3 className="font-bold text-gray-500 mt-6 mb-3">
+          <h4 className="font-bold mt-6 mb-3">${product.price}</h4>
+          <h4 className="font-bold text-gray-500 mt-6 mb-0">
             {product.oldPrice}
-          </h3>
+          </h4>
         </div>
         <button
           type="button"
@@ -40,6 +42,10 @@ export default function Product({ product, row }: ProductTypes) {
           }
           .add-to-cart:hover {
             background-color: green;
+          }
+
+          .text h3 {
+            height: 80px;
           }
         `}
       </style>

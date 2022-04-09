@@ -14,7 +14,23 @@ export default function Home() {
           title="Weight Loss"
           tags={["Optislim", "Naturopathica", "Bondi Protein"]}
         />
+        <HomepageProductView
+          title="Sport Nutrition"
+          tags={["Blessed", "Optimum Nutrition", "Wagner"]}
+        />
         <ShippingBanner />
+        <HomepageProductView
+          title="Quit Smoking"
+          tags={["Nicorette", "Nicabate", "Nicotinell"]}
+        />
+        <HomepageProductView
+          title="Health"
+          tags={["Swisse", "Manuka", "Wagner"]}
+        />
+        <HomepageProductView
+          title="Hair Colours"
+          tags={["L'Oreal", "Schwarzkopf", "Revion"]}
+        />
       </main>
     </Applayout>
   );

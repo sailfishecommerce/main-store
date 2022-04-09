@@ -13,7 +13,7 @@ export default function HomepageProductView({ title, tags, products }: Props) {
   console.log("data", data);
 
   return (
-    <section className="container mx-auto flex flex-col">
+    <section className="container mx-auto flex flex-col my-4">
       <div className="top mb-4">
         <h1 className="font-bold text-3xl">{title}</h1>
         <div className="controls"></div>
@@ -28,28 +28,26 @@ export default function HomepageProductView({ title, tags, products }: Props) {
           </li>
         ))}
       </ul>
-      {
-        <div className="products mx-auto container mt-4 flex items-center justify-between">
-          {status === "error" ? (
-            "unable to load products"
-          ) : status === "loading" ? (
-            "loading"
-          ) : (
-            <Splide
-              options={{
-                perPage: 6,
-              }}
-              className="container mx-auto"
-            >
-              {data.map((product: any) => (
-                <SplideSlide key={product.id}>
-                  <Product product={product} />
-                </SplideSlide>
-              ))}
-            </Splide>
-          )}
-        </div>
-      }
+      <div className="products mx-auto container mt-4 flex items-center justify-between pb-12">
+        {status === "error" ? (
+          "unable to load products"
+        ) : status === "loading" ? (
+          "loading"
+        ) : (
+          <Splide
+            options={{
+              perPage: 6,
+            }}
+            className="container mx-auto"
+          >
+            {data.map((product: any) => (
+              <SplideSlide key={product.id}>
+                <Product product={product} />
+              </SplideSlide>
+            ))}
+          </Splide>
+        )}
+      </div>
     </section>
   );
 }
