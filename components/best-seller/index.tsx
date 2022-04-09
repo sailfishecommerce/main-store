@@ -8,10 +8,15 @@ interface bestSellerProps {
 export default function BestSeller({ content }: bestSellerProps) {
   return (
     <div className="bg-white rounded-lg p-4 flex flex-col">
-      <Image src={content.img} height={400} width={400} alt={content.name} />
+      <Image
+        src={content.images[0].file.url}
+        height={400}
+        width={400}
+        alt={content.name}
+      />
       <hr />
       <div className="text">
-        <h5 className="brand">{content.brand}</h5>
+        <h5 className="brand">{content.vendor}</h5>
         <h4>{content.name}</h4>
 
         <div className="price-view">
