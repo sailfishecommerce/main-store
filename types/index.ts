@@ -3,9 +3,16 @@ export interface ProductProps {
 }
 
 export type productType = {
-  brand: string;
+  vendor: string;
   name: string;
   price: number;
   oldPrice: number;
-  img: string;
+  images: {
+    file:{
+      url:string
+    }
+  }[];
+  description: string;
+  slug: string;
+  id: string;
 };
