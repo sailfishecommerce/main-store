@@ -5,7 +5,7 @@ export default function useAlgoliaEvents() {
 
   const searchInsight = async () => (await import("search-insights")).default;
 
-  async function initializeAlgolia(aa) {
+  async function initializeAlgolia(aa: any) {
     aa("init", {
       appId: `${process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID}`,
       apiKey: `${process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY}`,

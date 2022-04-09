@@ -1,8 +1,8 @@
-import { productType } from "@/types";
+import { ProductType } from "@/types";
 import Image from "next/image";
 
 interface bestSellerProps {
-  content: productType;
+  content: ProductType;
 }
 
 export default function BestSeller({ content }: bestSellerProps) {

@@ -2,7 +2,7 @@ import { useQuery, useQueryClient } from "react-query";
 
 import useSwellProducts from "@/hooks/useSwellProducts";
 
-export default function useCategoryProducts(pageProduct) {
+export default function useCategoryProducts(pageProduct: any) {
   const queryClient = useQueryClient();
   const { getProductsInCategory } = useSwellProducts();
 
