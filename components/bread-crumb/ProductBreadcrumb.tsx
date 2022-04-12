@@ -3,13 +3,14 @@ import { AiOutlineMinus } from "react-icons/ai";
 
 interface Props {
   breadcrumbItem: string;
+  link:string;
 }
 
-export default function ProductBreadcrumb({ breadcrumbItem }: Props) {
+export default function ProductBreadcrumb({ breadcrumbItem, link }: Props) {
   const breadcrumbItems = [
     { name: "Homepage", link: "/" },
     { name: "All", link: "#products" },
-    { name: breadcrumbItem, link: "/products", active: true },
+    { name: breadcrumbItem, link: `/products/${link}`, active: true },
   ];
   return (
     <ul className="flex items-center my-4">

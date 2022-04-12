@@ -7,6 +7,7 @@ import { persistStore } from "redux-persist";
 import store from "@/redux/store";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import Nprogress from "@/components/loader/NProgress";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
@@ -16,6 +17,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <PersistGate loading={null} persistor={persistor}>
+          <Nprogress
+            color="#95bf11"
+            options={{ showSpinner: true }}
+            height={3}
+          />
           <Component {...pageProps} />
           <ReactQueryDevtools initialIsOpen={false} />
         </PersistGate>

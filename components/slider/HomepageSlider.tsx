@@ -17,12 +17,12 @@ export default function HomepageSlider() {
               <div className="text rounded-l-3xl bg-gray-100 p-8 w-1/4">
                 <div className="top flex items-center mb-6 justify-between">
                   <h1 className="text-2xl font-bold">{content.title}</h1>
-                  <span className="font-bold text-red-500 bg-white rounded-md py-2 text-xs px-3 hover:bg-red-500 hover:text-white">
+                  <span className="font-bold text-red-500 bg-white rounded-md py-1 text-xs px-2 hover:bg-red-500 hover:text-white">
                     {content.category}
                   </span>
                 </div>
                 <p className="mb-2 text-sm">{content.description}</p>
-                <button className="view-collection rounded-md py-2 px-4 text-white mt-8">
+                <button className="view-collection rounded-md py-1 px-2 text-white mt-20">
                   View collection
                 </button>
               </div>
@@ -49,6 +49,9 @@ export default function HomepageSlider() {
         {`
           .view-collection {
             background-color: var(--mountain-green);
+          }
+          .view-collection:hover {
+            background-color: var(--mountain-mist);
           }
         `}
       </style>

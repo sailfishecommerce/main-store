@@ -6,13 +6,13 @@ import AllCategoriesDropdownView from "@/components/dropdown/AllCategoriesDropdo
 export default function AllCategoriesDropdown() {
   const [showDropdown, setShowDropdown] = useState(false);
 
-  function toggleDropdown(){
-    return setShowDropdown(!showDropdown)
+  function toggleDropdown() {
+    return setShowDropdown(!showDropdown);
   }
   return (
     <>
       <button
-        className="allCategories flex items-center font-bold hover:bg-green-500 text-white rounded-md p-3"
+        className="allCategories flex items-center font-bold hover:bg-green-500 text-white rounded-md px-2 py-1"
         type="button"
         onClick={toggleDropdown}
       >
@@ -25,6 +25,9 @@ export default function AllCategoriesDropdown() {
         {`
           .allCategories {
             background-color: var(--mountain-green);
+          }
+          .allCategories:hover {
+            background-color: var(--mountain-mist);
           }
         `}
       </style>
