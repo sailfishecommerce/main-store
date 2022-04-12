@@ -6,14 +6,16 @@ export default function PaymentMethodView() {
     "/mastercard.png",
     "/paypal.png",
     "/american-express.png",
-    "/bank-transfer.pn",
+    "/bank-transfer.png",
   ];
   return (
     <div className="flex flex-col">
       <h5 className="text-lg">Payment methods</h5>
-      <div className="payment-icons flex items-center justify-between">
+      <div className="payment-icons flex items-center my-2">
         {paymentMethodIcons.map((item, index) => (
-          <Image src={item} key={index} height={20} width={20} />
+          <div key={index} className="w-1/6">
+            <Image src={item} height={30} alt="payment-icon" width={100} />
+          </div>
         ))}
       </div>
       <p className="gray-platinum">

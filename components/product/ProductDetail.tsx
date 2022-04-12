@@ -10,7 +10,7 @@ export default function ProductDetail({ product }: any) {
       <p>
         By <span className="text-green-500">{product.vendor}</span>
       </p>
-      <CustomerReview reviews={product.review} ratings={product.ratings} />
+      <CustomerReview reviews={product?.review_rating} ratings={product?.rating} />
       <ProductPriceView product={product} />
       <SeeMoreProductInfo title="Product Information" />
       <SeeMoreProductInfo title="Ingredients" />

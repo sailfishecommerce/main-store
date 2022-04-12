@@ -37,9 +37,16 @@ export default function Product({ product, row }: ProductTypes) {
           </div>
           <button
             type="button"
-            className="add-to-cart text-white px-4 py-1 flex mx-auto rounded-md"
+            className="add-to-cart text-white px-4 py-1 flex items-center mx-auto rounded-md"
           >
-            Add to cart
+            <Image
+              src="/cart-white-icon.png"
+              alt="cart"
+              className="mr-6"
+              height={20}
+              width={20}
+            />{" "}
+            <p className="text-sm">Add to cart</p>
           </button>
         </div>
         <style jsx>
@@ -48,7 +55,7 @@ export default function Product({ product, row }: ProductTypes) {
               background-color: var(--mountain-green);
             }
             .add-to-cart:hover {
-              background-color: green;
+              background-color: var(--mountain-mist);
             }
 
             .text h3 {

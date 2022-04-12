@@ -5,9 +5,10 @@ interface Props {
   ratings: number;
 }
 export default function CustomerReview({ reviews, ratings }: Props) {
+  console.log("ratings", ratings);
   const unfilledStars = 5 - Number(ratings);
-  const filledStarsArray = new Array(ratings);
-  const unfilledStarsArray = new Array(unfilledStars);
+  const filledStarsArray = new Array(ratings).fill(0);
+  const unfilledStarsArray = new Array(unfilledStars).fill(0);
   const reviewText = reviews > 1 ? 'reviews' : 'review'
   return (
     <div className="customer-review flex items-center">

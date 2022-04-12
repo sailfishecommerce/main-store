@@ -1,4 +1,3 @@
-import ProductBreadcrumb from "@/components/bread-crumb/ProductBreadcrumb";
 import ProductOverview from "@/components/product/ProductOverview";
 import Applayout from "@/layouts/Applayout";
 import fetchAllSwellProducts from "@/lib/processPageproduct";
@@ -13,7 +12,6 @@ export default function ProductPage({ pageProduct }: any) {
   return (
     <Applayout>
       <main className="container mx-auto">
-        <ProductBreadcrumb breadcrumbItem="Blackmores Vitamin B12 (Cyanocobalamin) 100mcg 75 Tablets" />
         <ProductOverview product={pageProduct} />
       </main>
     </Applayout>
