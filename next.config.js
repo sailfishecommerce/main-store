@@ -8,6 +8,7 @@ module.exports = withBundleAnalyzer({
   images: {
     domains: ["cdn.schema.io"],
     formats: ["image/webp"],
-    reactStrictMode: true,
   },
+  reactStrictMode: true,
+  staticPageGenerationTimeout: 240,
 });

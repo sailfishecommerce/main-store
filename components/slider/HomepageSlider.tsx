@@ -22,7 +22,7 @@ export default function HomepageSlider() {
                   </span>
                 </div>
                 <p className="mb-2 text-sm">{content.description}</p>
-                <button className="view-collection rounded-md py-2 px-4 text-white mt-4">
+                <button className="view-collection rounded-md py-2 px-4 text-white mt-8">
                   View collection
                 </button>
               </div>

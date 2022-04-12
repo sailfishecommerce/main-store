@@ -9,7 +9,7 @@ export default function FooterLink() {
           <span className="flex items-center mb-6">
             <h4 className="font-bold text-xl">{footerLink.text}</h4>
             {footerLink.tag && (
-              <div className="py-1 px-2 border mx-2 text-sm border-gray-500 text-gray-500 rounded-full hover:bg-black hover:text-white">
+              <div className="py-1 px-2 border mx-2 text-sm border-gray-500 text-gray-500 rounded-full hover:border-green-500 hover:text-green-500 hover:font-bold">
                 {footerLink.tag}
               </div>
             )}
@@ -17,7 +17,7 @@ export default function FooterLink() {
           {footerLink.links.map((link) => (
             <li className="my-2" key={link.link}>
               <Link href={link.link} passHref>
-                <a className="hover:text-red-500" title={link.text}>
+                <a className="hover:text-green-500" title={link.text}>
                   {link.text}
                 </a>
               </Link>
