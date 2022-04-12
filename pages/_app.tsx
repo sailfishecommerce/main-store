@@ -7,7 +7,7 @@ import { persistStore } from "redux-persist";
 import store from "@/redux/store";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import Nprogress from "@/components/loader/NProgress";
+import Nprogress from "@/components/loader/Nprogress";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
