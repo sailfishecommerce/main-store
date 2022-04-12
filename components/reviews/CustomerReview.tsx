@@ -20,7 +20,7 @@ export default function CustomerReview({ reviews, ratings }: Props) {
         ))}
       </div>
       <p className="mountain-mist">
-        {reviews} customer's {reviewText}
+        {reviews} customer&#39;s {reviewText}
       </p>
     </div>
   );
