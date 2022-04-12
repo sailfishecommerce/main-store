@@ -41,3 +41,27 @@
 .gray-platinum {
   color: var(--gray-platinum);
 }
+
+.bg-mountain-green {
+  background-color: var(--mountain-green);
+}
+
+.bg-mountain-mist {
+  background-color: var(--mountain-mist);
+}
+
+.bg-tan-hide {
+  background-color: var(--tan-hide);
+}
+
+.bg-gray-manatee {
+  background-color: var(--gray-manatee);
+}
+
+.bg-gray-lavender {
+  background-color: var(--gray-lavender);
+}
+
+.bg-gray-platinum {
+  background-color: var(--gray-platinum);
+}

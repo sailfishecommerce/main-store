@@ -46,7 +46,7 @@ export default function ProductMagnifier({ product }: ProductProps) {
   };
 
   return (
-    <div>
+    <div className="w-1/1">
       <div className="main-image">
         <div
           onClick={onImgClick}

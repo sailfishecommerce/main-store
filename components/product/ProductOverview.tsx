@@ -6,10 +6,12 @@ import ProductBreadcrumb from "@/components/bread-crumb/ProductBreadcrumb";
 
 export default function ProductOverview({product}:ProductProps) {
   return (
-    <div className="flex items-center">
+    <div className="flex flex-col items-start">
       <ProductBreadcrumb breadcrumbItem="Blackmores Vitamin B12 (Cyanocobalamin) 100mcg 75 Tablets" />
+      <div className="flex">
       <ProductMagnifier product={product} />
       <ProductDetail product={product} />
+      </div>
       <ProductReview />
     </div>
   );

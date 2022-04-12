@@ -5,7 +5,6 @@ interface Props {
   ratings: number;
 }
 export default function CustomerReview({ reviews, ratings }: Props) {
-  console.log("ratings", ratings);
   const unfilledStars = 5 - Number(ratings);
   const filledStarsArray = new Array(ratings).fill(0);
   const unfilledStarsArray = new Array(unfilledStars).fill(0);

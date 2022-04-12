@@ -5,8 +5,8 @@ import SeeMoreProductInfo from "@/components/product/SeeMoreProductInfo";
 
 export default function ProductDetail({ product }: any) {
   return (
-    <div>
-      <h3>{product.name}</h3>
+    <div className="w-1/2 flex flex-col justify-start">
+      <h3 className="text-2xl font-bold">{product.name}</h3>
       <p>
         By <span className="text-green-500">{product.vendor}</span>
       </p>
