@@ -9,7 +9,7 @@ export default function CategorySidebarList() {
         const sidebarStyle =
           index === 0 ? "border-b border-gray-200 pb-2" : "py-2";
         return (
-          <div className="section">
+          <div key={index} className="section">
             {sidebarItems.map((item) => {
               return (
                 !item.link && (
