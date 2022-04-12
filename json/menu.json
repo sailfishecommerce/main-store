@@ -1,0 +1,17 @@
+{
+  "primaryMenu": [
+    { "link": "#about-us", "text": "About Us" },
+    { "link": "#shipping-info", "text": "Shipping Info" },
+    { "link": "#faqs", "text": "FAQs" },
+    { "link": "#contact-us", "text": "Contact Us" }
+  ],
+  "secondaryMenu": [
+    { "link": "#vitamins-supplements", "text": "Vitamins & Supplements" },
+    { "link": "#medicines", "text": "Medicines" },
+    { "link": "#health-personal", "text": "Health & Personal" },
+    { "link": "#skin-care", "text": "Skin Care" },
+    { "link": "#hair-care", "text": "Hair Care" },
+    { "link": "#baby-care", "text": "Baby Care" },
+    { "link": "#pet-care", "text": "Pet Care" }
+  ]
+}

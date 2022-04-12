@@ -1,0 +1,43 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* Your own custom component styles */
+
+@import "tailwindcss/utilities";
+
+:root {
+  --mountain-green: #95bf11;
+  --mountain-mist: #678800;
+  --tan-hide: #faa916;
+  --gray-manatee: #9e9aa6;
+  --gray-lavender: #c3c0c8;
+  --gray-platinum: #e7e6e9;
+}
+
+.homepage-slider ul.splide__pagination {
+  display: none;
+}
+
+.mountain-green {
+  color: var(--mountain-green);
+}
+
+.mountain-mist {
+  color: var(--mountain-mist);
+}
+
+.tan-hide {
+  color: var(--tan-hide);
+}
+
+.gray-manatee {
+  color: var(--gray-manatee);
+}
+
+.gray-lavender {
+  color: var(--gray-lavender);
+}
+
+.gray-platinum {
+  color: var(--gray-platinum);
+}

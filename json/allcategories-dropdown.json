@@ -1,0 +1,83 @@
+{
+  "sidebar": [
+    [
+      { "title": "Categories" },
+      { "title": "Vitamins & Supplements", "link": "#vitamins-supplements" },
+      { "title": "Medicines", "link": "#medicines" },
+      { "title": "Health & Personal", "link": "#health-personal" },
+      { "title": "Skin Care", "link": "#skin-care" },
+      { "title": "Hair Care", "link": "#hair-care" },
+      { "title": "Baby Care", "link": "#baby-care" },
+      { "title": "Pet Care", "link": "#pet-care" }
+    ],
+    [
+      { "title": "Sections" },
+      { "title": "Best sellers", "link": "#best-sellers" },
+      { "title": "Customers also bought", "link": "#customers-also-bought" },
+      { "title": "New arrivals", "link": "#new-arrivals" }
+    ]
+  ],
+  "main": {
+    "trending": [
+      { "image": "/baby-care.webp", "name": "Baby Care", "link": "#baby-care" },
+      { "image": "/skin-care.webp", "name": "Skin Care", "link": "#skin-care" },
+      { "image": "/vitamins.webp", "name": "Vitamins", "link": "#vitamins" },
+      {
+        "image": "/smoking-deterrents.webp",
+        "name": "Smoking Deterrents",
+        "link": "#smoking-deterrents"
+      },
+      { "image": "/dental.webp", "name": "Dental", "link": "#dental" }
+    ],
+    "medicines": [
+      {
+        "link": "#allergy-hayfever-&-anti-histamines",
+        "name": "Allergy Hayfever & Anti-Histamines"
+      },
+      {
+        "link": "#coughs",
+        "name": "Coughs",
+        "tag": "Hot",
+        "color": "#ED9B09"
+      },
+      {
+        "link": "#anti-fungal-&-warts",
+        "name": "Anti-fungal & Warts"
+      },
+      {
+        "link": "#fibre-supplements",
+        "name": "Fibre-Supplements"
+      },
+      {
+        "link": "#first-aid",
+        "name": "First Aid"
+      },
+      {
+        "link": "#cold-flu",
+        "name": "Cold Flu"
+      },
+      {
+        "link": "#stomach-anti-diarrhoea",
+        "name": "Stomach Anti Diarrhoea"
+      },
+      {
+        "link": "#laxatives",
+        "name": "Laxatives"
+      },
+      {
+        "link": "#irritable-bowerl-syndrome",
+        "name": "Irritable Bowerl Syndrome"
+      },
+      {
+        "link": "#topical-ointments",
+        "name": "Topical Ointments"
+      },
+      {
+        "link": "#eye-care-&-treatments",
+        "name": "Eye Care & Treatments",
+        "tag": "New",
+        "color": "#8C2DEC"
+      }
+    ]
+  }
+}
