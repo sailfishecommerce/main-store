@@ -10,15 +10,15 @@ export default function PaymentMethodView() {
   ];
   return (
     <div className="flex flex-col">
-      <h5 className="text-lg my-2">Payment methods</h5>
-      <div className="payment-icons flex items-center my-2">
+      <h5 className="text-lg my-2 font-medium">Payment methods</h5>
+      <div className="payment-icons flex items-center my-4">
         {paymentMethodIcons.map((item, index) => (
-          <div key={index} className="w-3/5">
+          <div key={index} className="w-24">
             <img src={item} alt="payment-icon" />
           </div>
         ))}
       </div>
-      <p className="gray-lavender">
+      <p className="gray-lavender my-4">
         We accept bank deposits through all major networks globally including
         AHC, Fedwire, SWIFT, IBAN and BSB. Orders shipped after new partners are
         manually verified. Additional documentation might be requested

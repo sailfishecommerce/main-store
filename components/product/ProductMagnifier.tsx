@@ -18,7 +18,9 @@ export default function ProductMagnifier({ product }: ProductProps) {
   const imageSize = mobileView ? "w-1/3 lg:w-full" : "w-1/3 lg:w-full";
 
   const activethumbnailImg = (index: number) =>
-    activeImage === index ? "active border border-red-500" : "";
+    activeImage === index
+      ? "active border rounded-2xl p-1 border-gray-500"
+      : "";
 
   const updateActiveImage = (index: number) => setActiveImage(index);
 
@@ -83,10 +85,10 @@ export default function ProductMagnifier({ product }: ProductProps) {
           />
         )}
       </div>
-      <div className="product-gallery-thumblist flex hidden md:flex flex-wrap w-full lg:flex-col lg:order-1 lg:w-1/5">
+      <div className="product-gallery-thumblist mt-4 flex hidden md:flex flex-wrap w-full lg:flex-col lg:order-1 lg:w-1/5">
         {images?.map((image: any, index) => (
           <a
-            className={`items-center justify-center ${imageSize} flex px-2 hover:border border-red-500 ${activethumbnailImg(
+            className={`items-center justify-center ${imageSize} flex px-2 cursor-pointer hover:border-green-500 border-gray-500 ${activethumbnailImg(
               index
             )}`}
             onClick={() => updateActiveImage(index)}

@@ -15,7 +15,7 @@ export default function ProductDetail({ product }: any) {
       <SeeMoreProductInfo title="Product Information" />
       <SeeMoreProductInfo title="Ingredients" />
       <SeeMoreProductInfo title="Directions" />
-      <hr />
+      <hr className="my-4 border border-gray-100" />
       <PaymentMethodView />
     </div>
   );
