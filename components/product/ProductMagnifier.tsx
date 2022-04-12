@@ -56,6 +56,7 @@ export default function ProductMagnifier({ product }: ProductProps) {
             mgShowOverflow={false}
             mgWidth={2000}
             mgHeight={2000}
+            height={500}
             className="img-fluid"
             src={images[activeImage].file.url}
             zoomFactor={0.11}
@@ -101,7 +102,7 @@ export default function ProductMagnifier({ product }: ProductProps) {
           </a>
         ))}
       </div>
-      <div className="product-offers flex items-center">
+      <div className="product-offers my-4 flex items-center">
         {productOffers.map((offer, index) => (
           <ProductOfferCards offer={offer} key={index} />
         ))}

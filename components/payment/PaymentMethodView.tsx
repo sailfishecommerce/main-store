@@ -13,8 +13,8 @@ export default function PaymentMethodView() {
       <h5 className="text-lg my-2">Payment methods</h5>
       <div className="payment-icons flex items-center my-2">
         {paymentMethodIcons.map((item, index) => (
-          <div key={index} className="w-1/6">
-            <Image src={item} height={30} alt="payment-icon" width={100} />
+          <div key={index} className="w-3/5">
+            <img src={item} alt="payment-icon" />
           </div>
         ))}
       </div>

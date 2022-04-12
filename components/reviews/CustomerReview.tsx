@@ -1,4 +1,5 @@
-import Stars from "@/components/icons/Stars";
+import Image from 'next/image'
+import Stars from '@/components/icons/Stars';
 
 interface Props {
   reviews: number;
@@ -10,16 +11,16 @@ export default function CustomerReview({ reviews, ratings }: Props) {
   const unfilledStarsArray = new Array(unfilledStars).fill(0);
   const reviewText = reviews > 1 ? 'reviews' : 'review'
   return (
-    <div className="customer-review flex items-center">
+    <div className="customer-review flex items-center my-2">
       <div className="star-group flex items-center">
         {filledStarsArray.map((_, index) => (
-          <Stars key={index} fill="#FF6B00" />
+          <Image src="/filled-star.png" key={index} className="mx-1" height={20} width={20} />
         ))}
         {unfilledStarsArray.map((_, index) => (
           <Stars key={index} fill="none" />
         ))}
       </div>
-      <p className="mountain-mist">
+      <p className="ml-2 mountain-mist">
         {reviews} customer&#39;s {reviewText}
       </p>
     </div>

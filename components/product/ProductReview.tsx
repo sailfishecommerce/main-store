@@ -10,9 +10,9 @@ export default function ProductReview() {
     { count: 1, barWidth: 0 },
   ];
   return (
-    <div>
-      <h3>Reviews</h3>
-      <div className="trustmate-reviews">
+    <div className="w-full my-2">
+      <h3 className="font-bold text-xl my-2">Reviews</h3>
+      <div className="trustmate-reviews flex items-center">
         <div className="trust-mate w-1/5"></div>
         <div className="review-bar w-4/5 flex flex-col">
           {reviewsStat.map((review) => (
