@@ -14,7 +14,9 @@ export default function ProductBreadcrumb({ breadcrumbItem }: Props) {
   return (
     <ul className="flex items-center my-4">
       {breadcrumbItems.map((item, index) => {
-        const linkStyle = item.active ? "text-gray-900 text-sm" : "text-gray-500 hover:text-green-300 text-sm";
+        const linkStyle = item.active
+          ? "text-gray-900 text-sm"
+          : "text-gray-500 hover:text-green-300 text-sm";
         return Number(index + 1) % 2 === 0 ? (
           <li className="flex items-center" key={index}>
             <AiOutlineMinus className="mx-2 font-bold gray-manatee" />
