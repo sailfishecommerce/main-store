@@ -8,5 +8,8 @@ export default function Container({
   className,
   children,
 }: PropsWithChildren<Props>) {
-  return <div className={`${className} container mx-auto`}>{children}</div>;
+  const containerClassName = className ? className : ''
+  return (
+    <div className={`${containerClassName} container mx-auto`}>{children}</div>
+  );
 }

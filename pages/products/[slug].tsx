@@ -1,16 +1,11 @@
 import ProductOverview from "@/components/product/ProductOverview";
 import Applayout from "@/layouts/Applayout";
 import fetchAllSwellProducts from "@/lib/processPageproduct";
-import { ProductType } from "@/types";
-
-interface Props {
-  pageProduct: ProductType;
-}
 
 export default function ProductPage({ pageProduct }: any) {
   console.log("pageProduct", pageProduct);
   return (
-    <Applayout>
+    <Applayout title={pageProduct.name}>
       <main className="container mx-auto">
         <ProductOverview product={pageProduct} />
       </main>

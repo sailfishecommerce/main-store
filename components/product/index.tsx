@@ -27,7 +27,7 @@ export default function Product({ product, row }: ProductTypes) {
             {product.vendor}
           </h4>
           <div className="product-name-view">
-            <h3>{product.name}</h3>
+            <h3 className="text-md">{product.name}</h3>
           </div>
           <div className="price-view">
             <h4 className="font-bold mt-6 mb-3">${product.price}</h4>

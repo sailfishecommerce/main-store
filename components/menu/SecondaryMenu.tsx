@@ -12,7 +12,7 @@ export default function SecondaryMenu() {
         {menuLinks.secondaryMenu.map((menuItem) => (
           <li key={menuItem.link}>
             <Link href={menuItem.link} passHref>
-              <a title={menuItem.text} className="font-bold hover:text-red-500">
+              <a title={menuItem.text} className="font-bold hover:text-green-500">
                 {menuItem.text}
               </a>
             </Link>

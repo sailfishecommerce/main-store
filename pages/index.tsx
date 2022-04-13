@@ -6,7 +6,7 @@ import Applayout from "@/layouts/Applayout";
 
 export default function Home() {
   return (
-    <Applayout>
+    <Applayout title="Welcome to Livehealthy stores, your health store plug">
       <main className="container mx-auto">
         <HomepageSlider />
         <Values />
