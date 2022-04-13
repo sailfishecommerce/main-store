@@ -1,12 +1,12 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Image from "next/image";
-import { useState } from "react";
+import { memo, useState } from "react";
 
 import homepageSliderContent from "@/json/homepage-slider.json";
 import HomepageSliderControls from "@/components/slider/HomepageSliderControls";
 import "@splidejs/splide/dist/css/splide.min.css";
 
-export default function HomepageSlider() {
+function HomepageSliderComponent() {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <section className="mt-8 mb-12 homepage-slider">
@@ -22,7 +22,7 @@ export default function HomepageSlider() {
                   </span>
                 </div>
                 <p className="mb-2 text-sm">{content.description}</p>
-                <button className="view-collection rounded-md py-1 px-2 text-white mt-20">
+                <button className="view-collection rounded-md py-1 px-2 text-white mt-12 2xl:mt-20">
                   View collection
                 </button>
               </div>
@@ -58,3 +58,6 @@ export default function HomepageSlider() {
     </section>
   );
 }
+
+const HomepageSlider = memo(HomepageSliderComponent)
+export default HomepageSlider;

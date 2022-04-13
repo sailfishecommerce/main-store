@@ -5,9 +5,10 @@ import type { ProductProps } from "@/types";
 
 interface ProductTypes extends ProductProps {
   row?: string;
+  color?: string;
 }
 
-export default function Product({ product, row }: ProductTypes) {
+export default function Product({ product, row, color }: ProductTypes) {
   const isRow = row ? "flex" : "flex flex-col";
   return (
     <Link href={`/products/${product.slug}`} passHref>
@@ -23,12 +24,12 @@ export default function Product({ product, row }: ProductTypes) {
           blurDataURL={product.images[0].file.url}
         />
         <div className="text">
-          <h4 className="font-bold brand text-blue-800 border-l-4 pl-2 border-blue-600 my-0 py-0 h-5">
+          <h4 className="vendor font-bold pl-2 my-0 py-0 h-5">
             {product.vendor}
           </h4>
           <div className="product-name-view">
             <h3 className="text-md">{product.name}</h3>
-          </div>
+          </div>  
           <div className="price-view">
             <h4 className="font-bold mt-6 mb-3">${product.price}</h4>
             <h4 className="font-bold text-gray-500 mt-6 mb-0">
@@ -57,7 +58,10 @@ export default function Product({ product, row }: ProductTypes) {
             .add-to-cart:hover {
               background-color: var(--mountain-mist);
             }
-
+            .vendor {
+              border-left: 3px solid ${color};
+              color: ${color};
+            }
             .text h3 {
               height: 80px;
             }

@@ -7,19 +7,19 @@ import "@splidejs/splide/dist/css/splide.min.css";
 interface Props {
   title: string;
   tags: string[];
+  tabColor: string;
 }
-export default function HomepageProductView({ title, tags }: Props) {
+export default function ProductSlider({ title, tags, tabColor }: Props) {
   const [data, status] = useLiveHealthyProduct();
   return (
-    <section className="container mx-auto flex flex-col my-4">
-      <div className="top mb-4">
+    <section className="productSlider relative container mx-auto flex flex-col my-4">
+      <div className="top mb-4 flex items-center justify-between">
         <h1 className="font-bold text-3xl">{title}</h1>
-        <div className="controls"></div>
       </div>
-      <ul className="flex items-center justify-betwee">
+      <ul className="flex items-center">
         {tags.map((tag) => (
           <li
-            className="flex mr-2 items-center text-xs p-1 border border-blue-500 hover:text-white text-blue-500 bg-white hover:bg-blue-500 rounded-xl"
+            className="productTag flex mr-2 items-center text-xs p-1 border  bg-white rounded-xl"
             key={tag}
             title={tag}
           >
@@ -41,12 +41,24 @@ export default function HomepageProductView({ title, tags }: Props) {
           >
             {data.map((product: any) => (
               <SplideSlide key={product.id}>
-                <Product product={product} />
+                <Product color={tabColor} product={product} />
               </SplideSlide>
             ))}
           </Splide>
         )}
       </div>
+      <style jsx>
+        {`
+          .productTag {
+            border: 1px solid ${tabColor};
+            color: ${tabColor};
+          }
+          .productTag:hover {
+            background-color: ${tabColor};
+            color: white;
+          }
+        `}
+      </style>
     </section>
   );
 }
