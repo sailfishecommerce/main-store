@@ -7,12 +7,9 @@ import "@splidejs/splide/dist/css/splide.min.css";
 interface Props {
   title: string;
   tags: string[];
-  products?: any[];
 }
-export default function HomepageProductView({ title, tags, products }: Props) {
+export default function HomepageProductView({ title, tags }: Props) {
   const [data, status] = useLiveHealthyProduct();
-  console.log("data", data);
-
   return (
     <section className="container mx-auto flex flex-col my-4">
       <div className="top mb-4">

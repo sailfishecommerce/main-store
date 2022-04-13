@@ -1,5 +1,5 @@
 import ShippingBanner from "@/components/banners/ShippingBanner";
-import HomepageProductView from "@/components/product/HomepageProductView";
+import ProductSlider from "@/components/product/ProductSlider";
 import HomepageSlider from "@/components/slider/HomepageSlider";
 import Values from "@/components/values";
 import Applayout from "@/layouts/Applayout";
@@ -10,24 +10,21 @@ export default function Home() {
       <main className="container mx-auto">
         <HomepageSlider />
         <Values />
-        <HomepageProductView
+        <ProductSlider
           title="Weight Loss"
           tags={["Optislim", "Naturopathica", "Bondi Protein"]}
         />
-        <HomepageProductView
+        <ProductSlider
           title="Sport Nutrition"
           tags={["Blessed", "Optimum Nutrition", "Wagner"]}
         />
         <ShippingBanner />
-        <HomepageProductView
+        <ProductSlider
           title="Quit Smoking"
           tags={["Nicorette", "Nicabate", "Nicotinell"]}
         />
-        <HomepageProductView
-          title="Health"
-          tags={["Swisse", "Manuka", "Wagner"]}
-        />
-        <HomepageProductView
+        <ProductSlider title="Health" tags={["Swisse", "Manuka", "Wagner"]} />
+        <ProductSlider
           title="Hair Colours"
           tags={["L'Oreal", "Schwarzkopf", "Revion"]}
         />
