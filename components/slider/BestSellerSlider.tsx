@@ -3,17 +3,11 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Product from "@/components/cards/ProductCard";
 import useLiveHealthyProduct from "@/hooks/useLivehealthyProduct";
 import "@splidejs/splide/dist/css/splide.min.css";
-import Container from "@/layouts/Container";
+import selectRandomColor from "@/lib/selectRandomColor";
 
 export default function BestSellerSlider() {
   const [data, status] = useLiveHealthyProduct();
-  const colorsArray = ["#4017E0", "#C42340", "#50793E", "#C47723", "#E366B8"];
 
-  function selectRandomColor() {
-    const randomNumber = Math.round(Math.random() * 4);
-    const randomColor = colorsArray[randomNumber];
-    return randomColor;
-  }
 
   return (
     <section className="itemSlider best-seller-slider py-8 relative w-full bg-gray-platinum mx-auto flex relative z-10 flex-col my-4">
@@ -41,6 +35,7 @@ export default function BestSellerSlider() {
                     className="mr-8 bg-white rounded-xl relative z-20"
                     color={selectRandomColor()}
                     product={product}
+                    imageClassName="border-gray-300 pb-4 mb-4 border-b"
                   />
                 </SplideSlide>
               ))}

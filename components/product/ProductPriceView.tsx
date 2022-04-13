@@ -25,7 +25,7 @@ export default function ProductPriceView({ product }: any) {
                 Buy now
               </button>
             </div>
-            <div className="rounded-full border w-1/5 flex items-center px-2 my-2 py-1">
+            <div className="rounded-full border w-1/4 flex items-center px-2 my-2 py-1">
               <div className="image-wrappe w-1/5 flex items-center">
                 <Image
                   src="/check-icon-green.png"
@@ -45,7 +45,9 @@ export default function ProductPriceView({ product }: any) {
               height={20}
               width={20}
             />
-            <p className="font-normal text-sm ml-1 text-gray-400">Secure transaction</p>
+            <p className="font-normal text-sm ml-1 text-gray-400">
+              Secure transaction
+            </p>
           </div>
           <div className="imported pt-4 flex items-center justify-between">
             <div className="from-ausralia flex items-center">
@@ -57,7 +59,9 @@ export default function ProductPriceView({ product }: any) {
               />{" "}
               <p className="ml-2 text-xs">Imported from Australia</p>
             </div>
-            <p className="text-gray-400 text-sm">Buy now to receive by 31 April 2022</p>
+            <p className="text-gray-400 text-sm">
+              Buy now to receive by 31 April 2022
+            </p>
           </div>
         </div>
       </div>

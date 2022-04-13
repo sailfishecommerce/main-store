@@ -3,30 +3,50 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Product from "@/components/cards/ProductCard";
 import useLiveHealthyProduct from "@/hooks/useLivehealthyProduct";
 import "@splidejs/splide/dist/css/splide.min.css";
+import selectRandomColor from "@/lib/selectRandomColor";
 
 interface Props {
   title: string;
-  tags: string[];
-  tabColor: string;
+  tags?: string[];
+  tabColor?: string;
+  productName?: string;
+  productClassName?: string;
+  randomColor?: boolean;
 }
-export default function ProductSlider({ title, tags, tabColor }: Props) {
+export default function ProductSlider({
+  title,
+  tags,
+  tabColor,
+  productName,
+  productClassName,
+  randomColor,
+}: Props) {
   const [data, status] = useLiveHealthyProduct();
+  const color = randomColor ? selectRandomColor() : tabColor;
   return (
     <section className="itemSlider relative container mx-auto flex flex-col my-4">
       <div className="top mb-4 flex items-center justify-between">
-        <h1 className="font-bold text-3xl">{title}</h1>
+        {productName ? (
+          <h1 className="font-bold text-3xl">
+            {title} <span className="mountain-green">{productName}</span> users
+          </h1>
+        ) : (
+          <h1 className="font-bold text-3xl">{title}</h1>
+        )}
       </div>
-      <ul className="flex items-center">
-        {tags.map((tag) => (
-          <li
-            className="productTag flex mr-2 items-center text-xs p-1 border  bg-white rounded-xl"
-            key={tag}
-            title={tag}
-          >
-            {tag}
-          </li>
-        ))}
-      </ul>
+      {tags && (
+        <ul className="flex items-center">
+          {tags.map((tag) => (
+            <li
+              className="productTag flex mr-2 items-center text-xs p-1 border  bg-white rounded-xl"
+              key={tag}
+              title={tag}
+            >
+              {tag}
+            </li>
+          ))}
+        </ul>
+      )}
       <div className="products mx-auto container mt-4 flex items-center justify-between pb-12">
         {status === "error" ? (
           "unable to load products"
@@ -41,7 +61,11 @@ export default function ProductSlider({ title, tags, tabColor }: Props) {
           >
             {data.map((product: any) => (
               <SplideSlide key={product.id}>
-                <Product color={tabColor} product={product} />
+                <Product
+                  color={randomColor ? selectRandomColor() : tabColor}
+                  product={product}
+                  className={productClassName}
+                />
               </SplideSlide>
             ))}
           </Splide>

@@ -8,6 +8,7 @@ interface ProductTypes extends ProductProps {
   className?: string;
   color?: string;
   smallerImage?: boolean;
+  imageClassName?:string;
 }
 
 export default function Product({
@@ -16,12 +17,14 @@ export default function Product({
   row,
   color,
   smallerImage,
+  imageClassName
 }: ProductTypes) {
   const isRow = row ? "flex" : "flex flex-col";
   const isRowText = row ? "ml-4" : "";
-  const buttonClass = row ? "mt-1" : "mt-8";
+  const buttonClass = row ? "mt-1" : "mt-4";
 
   const productClassName = className ? className : "";
+  const productImageClassName = imageClassName ? imageClassName : ''
   const imageSize = smallerImage
     ? {
         height: 150,
@@ -37,7 +40,7 @@ export default function Product({
         className={`hover:bg-white hover:shadow-lg hover:rounded-lg product ${productClassName}  ${isRow} p-6 hover:border`}
         title={product.name}
       >
-        <div className="image-wrapper rounded-md ">
+        <div className={`${productImageClassName} image-wrapper`}>
           <Image
             src={product.images[0].file.url}
             alt={product.name}

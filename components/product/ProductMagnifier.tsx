@@ -14,10 +14,9 @@ export default function ProductMagnifier({ product }: ProductProps) {
   const [lightBoxOpen, setLightBoxOpen] = useState(false);
   const tabletView = useMediaQuery("(max-width:768px)");
 
-
   const activethumbnailImg = (index: number) =>
     activeImage === index
-      ? "active border rounded-2xl p-1 border-gray-500"
+      ? "active border rounded-2xl p-1 border-green-500"
       : "";
 
   const updateActiveImage = (index: number) => setActiveImage(index);
@@ -54,8 +53,8 @@ export default function ProductMagnifier({ product }: ProductProps) {
         >
           <Magnifier
             mgShowOverflow={false}
-            mgWidth={2000}
-            mgHeight={2000}
+            mgWidth={500}
+            mgHeight={500}
             height={500}
             className="img-fluid"
             src={images[activeImage].file.url}

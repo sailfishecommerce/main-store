@@ -3,6 +3,7 @@ import ProductDetail from "@/components/product/ProductDetail";
 import ProductMagnifier from "@/components/product/ProductMagnifier";
 import ProductReview from "@/components/product/ProductReview";
 import ProductBreadcrumb from "@/components/bread-crumb/ProductBreadcrumb";
+import ProductSlider from "@/components/slider/ProductSlider";
 
 export default function ProductOverview({ product }: ProductProps) {
   console.log("product", product);
@@ -14,6 +15,17 @@ export default function ProductOverview({ product }: ProductProps) {
         <ProductDetail product={product} />
       </div>
       <ProductReview />
+      <ProductSlider
+        title="Customers also purchased"
+        productClassName="border border-gray-200 mr-6 rounded-lg"
+        randomColor
+      />
+      <ProductSlider
+        title="Popular with"
+        productName={product.name}
+        productClassName="border border-gray-200 mr-6 rounded-lg"
+        randomColor={true}
+      />
     </div>
   );
 }
