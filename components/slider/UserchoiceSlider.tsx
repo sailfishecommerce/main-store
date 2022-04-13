@@ -13,6 +13,11 @@ export default function UserchoiceSlider() {
         <Splide
           options={{
             perPage: 3,
+            breakpoints: {
+              1000: {
+                perPage: 2,
+              }
+            },
           }}
           className="w-4/5"
         >

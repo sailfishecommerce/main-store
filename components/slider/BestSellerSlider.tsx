@@ -8,7 +8,6 @@ import selectRandomColor from "@/lib/selectRandomColor";
 export default function BestSellerSlider() {
   const [data, status] = useLiveHealthyProduct();
 
-
   return (
     <section className="itemSlider best-seller-slider py-8 relative w-full bg-gray-platinum mx-auto flex relative z-10 flex-col my-4">
       <div className="w-full">
@@ -26,6 +25,14 @@ export default function BestSellerSlider() {
               options={{
                 perPage: 5,
                 padding: "5rem",
+                breakpoints: {
+                  800: {
+                    perPage: 3,
+                  },
+                  1200: {
+                    perPage: 4,
+                  },
+                },
               }}
               className="w-full mx-auto"
             >

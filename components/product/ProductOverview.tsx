@@ -15,6 +15,7 @@ export default function ProductOverview({ product }: ProductProps) {
         <ProductDetail product={product} />
       </div>
       <ProductReview />
+      <div className="mt-6" />
       <ProductSlider
         title="Customers also purchased"
         productClassName="border border-gray-200 mr-6 rounded-lg"

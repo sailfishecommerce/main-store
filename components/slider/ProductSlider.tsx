@@ -27,11 +27,11 @@ export default function ProductSlider({
     <section className="itemSlider relative container mx-auto flex flex-col my-4">
       <div className="top mb-4 flex items-center justify-between">
         {productName ? (
-          <h1 className="font-bold text-3xl">
+          <h1 className="font-bold text-xl 2xl:text-3xl">
             {title} <span className="mountain-green">{productName}</span> users
           </h1>
         ) : (
-          <h1 className="font-bold text-3xl">{title}</h1>
+          <h1 className="font-bold text-xl 2xl:text-3xl">{title}</h1>
         )}
       </div>
       {tags && (
@@ -56,6 +56,17 @@ export default function ProductSlider({
           <Splide
             options={{
               perPage: 6,
+              breakpoints: {
+                800: {
+                  perPage: 3,
+                },
+                1200: {
+                  perPage: 4,
+                },
+                1440: {
+                  perPage: 5,
+                },
+              },
             }}
             className="container mx-auto"
           >

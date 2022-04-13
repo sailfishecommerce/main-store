@@ -28,7 +28,12 @@ export default function ProductTabSlider() {
           <Splide
             options={{
               perPage: 3,
-              padding:'5rem'
+              padding: "5rem",
+              breakpoints: {
+                1000: {
+                  perPage: 2,
+                },
+              },
             }}
             className="mx-auto container"
           >
