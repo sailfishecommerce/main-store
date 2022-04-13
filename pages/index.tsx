@@ -6,6 +6,7 @@ import Applayout from "@/layouts/Applayout";
 import UserchoiceSlider from "@/components/slider/UserchoiceSlider";
 import ProductTabSlider from "@/components/slider/ProductTabSlider";
 import BestSellerSlider from "@/components/slider/BestSellerSlider";
+import ProductBanner from "@/components/banners/ProductBanner";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
           tags={["Nicorette", "Nicabate", "Nicotinell"]}
           tabColor="#50793E"
         />
+        <ProductBanner />
         <ProductSlider
           title="Health"
           tags={["Swisse", "Manuka", "Wagner"]}
