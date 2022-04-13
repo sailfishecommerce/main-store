@@ -22,16 +22,15 @@ export default function ProductSlider({
   randomColor,
 }: Props) {
   const [data, status] = useLiveHealthyProduct();
-  const color = randomColor ? selectRandomColor() : tabColor;
   return (
     <section className="itemSlider relative container mx-auto flex flex-col my-4">
       <div className="top mb-4 flex items-center justify-between">
         {productName ? (
-          <h1 className="font-bold text-xl 2xl:text-3xl">
+          <h1 className="font-bold text-xl 2xl:text2xl">
             {title} <span className="mountain-green">{productName}</span> users
           </h1>
         ) : (
-          <h1 className="font-bold text-xl 2xl:text-3xl">{title}</h1>
+          <h1 className="font-bold text-xl 2xl:text-2xl">{title}</h1>
         )}
       </div>
       {tags && (

@@ -11,7 +11,7 @@ export default function useNavStyle() {
   const { scroll } = useScroll();
   const scrollUp = Number(scroll) > scrollGap ? true : false;
   const navStyle = scrollUp
-    ? `fixed ${homepageStyle} top-0 z-50 shadow-lg border-b`
+    ? `fixed ${homepageStyle} top-0 z-40 shadow-lg border-b`
     : "";
 
   return { navStyle, scrollUp };
