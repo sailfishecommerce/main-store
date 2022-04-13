@@ -13,14 +13,17 @@ export default function SlidingInformation({ product }: Props) {
     "Storage Instructions",
     "Directions",
   ];
-  const dispatch = useAppDispatch()
-  function closeSlidingTab(){
+  const dispatch = useAppDispatch();
+  function closeSlidingTab() {
     dispatch(updateProductInfoVisibility(false));
   }
 
   return (
     <aside className="fixed flex z-50 justify-between h-screen items-center w-full right-0 top-0">
-      <div onClick={closeSlidingTab} className="overlay w-2/3 flex cursor-pointer"></div>
+      <div
+        onClick={closeSlidingTab}
+        className="overlay w-2/3 flex cursor-pointer"
+      ></div>
       <div className="border border-gray-100 sliding-tab w-1/3">
         <div className="header h-52 flex items-end bg-mountain-green p-4 w-full">
           <button
@@ -33,6 +36,7 @@ export default function SlidingInformation({ product }: Props) {
             const tabStyle = index === 0 ? "text-white" : "text-gray-300";
             return (
               <h3
+                key={index}
                 className={`${tabStyle} font-bold text-md 2xl:text-xl 2xl:mr-4 mx-2`}
               >
                 {title}

@@ -15,7 +15,7 @@ export default function LayoutWrapper({ children }: PropsWithChildren<{}>) {
     (state) => state.product
   );
   return (
-    <body className="relative">
+    <div className="relative">
       <Head>
         <link
           href="https://CZT5MA7JLJ-dsn.algolia.net"
@@ -30,6 +30,6 @@ export default function LayoutWrapper({ children }: PropsWithChildren<{}>) {
         <DynamicSlidingInformationTab product={activeProduct} />
       )}
       {children}
-    </body>
+    </div>
   );
 }
