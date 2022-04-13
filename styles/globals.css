@@ -76,6 +76,10 @@
   width: 120px;
 }
 
+.best-seller-slider .splide__arrows {
+  right: 7%;
+}
+
 .itemSlider .splide__arrows button {
   background: #ffffff;
   border: 1px solid whitesmoke;

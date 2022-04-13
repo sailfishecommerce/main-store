@@ -8,7 +8,7 @@ export default function ProductTabSlider() {
   const [data, status] = useLiveHealthyProduct();
 
   return (
-    <section className="itemSlider product-tab-slider mb-12">
+    <section className="itemSlider container mx-auto  product-tab-slider mb-12">
       <div className="tabs flex items-center mb-6">
         {tabs.map((tab, index) => {
           const activeTab = index === 0 ? "text-black" : "text-gray-500";

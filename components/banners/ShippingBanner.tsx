@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ShippingBanner() {
   return (
-    <section>
+    <section className="container mx-auto">
       <Image
         src="/free-shipping.webp"
         alt="free shipping"

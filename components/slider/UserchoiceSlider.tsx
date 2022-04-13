@@ -6,7 +6,7 @@ import UserChoiceCard from "@/components/cards/UserChoiceCard";
 
 export default function UserchoiceSlider() {
   return (
-    <section className="userchoice-slider itemSlider">
+    <section className="container mx-auto userchoice-slider itemSlider">
       <h1 className="text-2xl my-4 font-bold">User Choice</h1>
       <div className="user-choice flex items-center w-full">
         <div className="trustmate-card w-1/5"></div>

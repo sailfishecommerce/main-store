@@ -8,7 +8,10 @@ interface Props {
 export default function ProductTabCard({ product }: Props) {
   return (
     <>
-      <div className="producttab-card flex  p-4 justify-between items-center rounded-xl bg-gray-manatee mr-8">
+      <div
+        title={`Buy ${product.name}`}
+        className="producttab-card flex  p-4 justify-between items-center rounded-xl bg-gray-manatee mr-8"
+      >
         <div className="image-wrapper flex flex-col w-1/3">
           <Image
             src={product.images[0].file.url}

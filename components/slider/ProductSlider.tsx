@@ -1,6 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-import Product from "@/components/product";
+import Product from "@/components/cards/ProductCard";
 import useLiveHealthyProduct from "@/hooks/useLivehealthyProduct";
 import "@splidejs/splide/dist/css/splide.min.css";
 

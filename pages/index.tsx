@@ -5,11 +5,12 @@ import Values from "@/components/values";
 import Applayout from "@/layouts/Applayout";
 import UserchoiceSlider from "@/components/slider/UserchoiceSlider";
 import ProductTabSlider from "@/components/slider/ProductTabSlider";
+import BestSellerSlider from "@/components/slider/BestSellerSlider";
 
 export default function Home() {
   return (
     <Applayout title="Welcome to Livehealthy stores, your health store plug">
-      <main className="container mx-auto">
+      <main className="mx-auto">
         <HomepageSlider />
         <Values />
         <ProductSlider
@@ -33,6 +34,7 @@ export default function Home() {
           tags={["Swisse", "Manuka", "Wagner"]}
           tabColor="#C47723"
         />
+        <BestSellerSlider />
         <ProductSlider
           title="Hair Colours"
           tags={["L'Oreal", "Schwarzkopf", "Revion"]}

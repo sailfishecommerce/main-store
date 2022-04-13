@@ -31,7 +31,7 @@ export default function UserChoiceCard({ choice }: Props) {
         <h4 className="font-bold text-xl my-2">{choice.username}</h4>
         <Ratings ratings={choice.rating} />
         <p className="text-md mb-2 text-center mt-4">{choice.review}</p>
-        <p className="text-sm text-gray-200">{choice.time}</p>
+        <p className="text-sm text-gray-400">{choice.time}</p>
       </div>
     </div>
   );

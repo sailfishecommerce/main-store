@@ -5,15 +5,22 @@ import type { ProductProps } from "@/types";
 
 interface ProductTypes extends ProductProps {
   row?: string;
+  className?: string;
   color?: string;
 }
 
-export default function Product({ product, row, color }: ProductTypes) {
+export default function Product({
+  product,
+  className,
+  row,
+  color,
+}: ProductTypes) {
   const isRow = row ? "flex" : "flex flex-col";
+  const productClassName = className ? className : "";
   return (
     <Link href={`/products/${product.slug}`} passHref>
       <a
-        className={`hover:bg-white hover:shadow-lg hover:rounded-lg product ${isRow} p-6 hover:border`}
+        className={`hover:bg-white hover:shadow-lg hover:rounded-lg product ${productClassName}  ${isRow} p-6 hover:border`}
         title={product.name}
       >
         <Image
@@ -29,7 +36,7 @@ export default function Product({ product, row, color }: ProductTypes) {
           </h4>
           <div className="product-name-view">
             <h3 className="text-md">{product.name}</h3>
-          </div>  
+          </div>
           <div className="price-view">
             <h4 className="font-bold mt-6 mb-3">${product.price}</h4>
             <h4 className="font-bold text-gray-500 mt-6 mb-0">
