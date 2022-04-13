@@ -1,35 +1,38 @@
-import Image from 'next/image'
-import React from 'react'
-import Ratings from '@/components/reviews/Ratings'
-import { ProductType } from '@/types'
+import Image from "next/image";
+import React from "react";
+import Ratings from "@/components/reviews/Ratings";
 
-interface Props{
-  product:ProductType
-  review:{
-    time:string;
-    username:string;
-    ratings:number;
-    review:string;
-  }
+interface Props {
+  choice: {
+    time: string;
+    username: string;
+    rating: number;
+    review: string;
+    img: string;
+  };
 }
 
-export default function UserChoiceCard({product, review}:Props) {
+export default function UserChoiceCard({ choice }: Props) {
   return (
-    <div className='border border-gray-200 rounded-md'>
-        <Image 
-         src={product.images[0].file.url}
-          alt={product.name}
-          height={500}
-          width={500}
-          blurDataURL={product.images[0].file.url}
+    <div className="border border-gray-200 mr-8 p-4 flex flex-col rounded-xl justify-center items-center">
+      {choice.img && (
+        <div className="imagewrapper mb-2 border-b pb-4">
+          <Image
+            src={choice.img}
+            alt={choice.username}
+            height={250}
+            width={250}
+            blurDataURL={choice.img}
           />
-          <hr className='border-b border-gray-200' />
-          <div className="user-review flex flex-col items-center">
-            <h4 className='font-bold text-xl'>{review.username}</h4>
-            <Ratings ratings={review.ratings} />
-            <p className='text-lg text-center'>{review.review}</p>
-            <p className='text-sm text-gray-200'>{review.time}</p>
-          </div>
+        </div>
+      )}
+      <hr className="border-b border-gray-200 mx-4" />
+      <div className="user-review flex flex-col items-center">
+        <h4 className="font-bold text-xl my-2">{choice.username}</h4>
+        <Ratings ratings={choice.rating} />
+        <p className="text-md mb-2 text-center mt-4">{choice.review}</p>
+        <p className="text-sm text-gray-200">{choice.time}</p>
+      </div>
     </div>
-  )
+  );
 }

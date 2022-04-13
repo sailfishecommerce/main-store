@@ -3,6 +3,7 @@ import ProductSlider from "@/components/slider/ProductSlider";
 import HomepageSlider from "@/components/slider/HomepageSlider";
 import Values from "@/components/values";
 import Applayout from "@/layouts/Applayout";
+import UserchoiceSlider from "@/components/slider/UserchoiceSlider";
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
           tags={["L'Oreal", "Schwarzkopf", "Revion"]}
           tabColor="#E366B8"
         />
+        <UserchoiceSlider />
       </main>
     </Applayout>
   );

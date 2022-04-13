@@ -12,7 +12,7 @@ interface Props {
 export default function ProductSlider({ title, tags, tabColor }: Props) {
   const [data, status] = useLiveHealthyProduct();
   return (
-    <section className="productSlider relative container mx-auto flex flex-col my-4">
+    <section className="itemSlider relative container mx-auto flex flex-col my-4">
       <div className="top mb-4 flex items-center justify-between">
         <h1 className="font-bold text-3xl">{title}</h1>
       </div>
