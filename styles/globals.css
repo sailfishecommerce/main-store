@@ -13,6 +13,7 @@
   --gray-manatee: #9e9aa6;
   --gray-lavender: #c3c0c8;
   --gray-platinum: #e7e6e9;
+  --tan-light-hide: #ffe690;
 }
 
 .homepage-slider ul.splide__pagination {
@@ -78,7 +79,14 @@
 .itemSlider .splide__arrows button {
   background: #ffffff;
   border: 1px solid whitesmoke;
-  box-shadow: 0px 11px 32px 0px #0D022114;
+  box-shadow: 0px 11px 32px 0px #0d022114;
+}
 
+.itemSlider .splide__pagination,
+.product-tab-slider .splide__pagination {
+  display: none;
+}
 
+.product-tab-slider .splide__track.splide__track--slide {
+  padding-left: 0px !important;
 }
