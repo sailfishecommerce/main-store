@@ -25,6 +25,7 @@ export default function ProductBanner() {
           : data &&
             getThreeProducts.map((product: any) => (
               <Product
+                key={product.productId}
                 color="#24BFCE"
                 className="items-center h-1/4 justify-between"
                 product={product}

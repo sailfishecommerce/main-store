@@ -13,9 +13,7 @@ export default function ProductMagnifier({ product }: ProductProps) {
   const [activeImage, setActiveImage] = useState(0);
   const [lightBoxOpen, setLightBoxOpen] = useState(false);
   const tabletView = useMediaQuery("(max-width:768px)");
-  const mobileView = useMediaQuery("(max-width:450px)");
 
-  const imageSize = mobileView ? "w-1/3 lg:w-full" : "w-1/3 lg:w-full";
 
   const activethumbnailImg = (index: number) =>
     activeImage === index
@@ -48,7 +46,7 @@ export default function ProductMagnifier({ product }: ProductProps) {
   };
 
   return (
-    <div className="w-1/1">
+    <div className="p-3">
       <div className="main-image">
         <div
           onClick={onImgClick}
@@ -85,10 +83,10 @@ export default function ProductMagnifier({ product }: ProductProps) {
           />
         )}
       </div>
-      <div className="product-gallery-thumblist mt-4 flex hidden md:flex flex-wrap w-full lg:flex-col lg:order-1 lg:w-1/5">
+      <div className="product-gallery-thumblist mt-4  hidden md:flex flex-wrap w-full lg:order-1">
         {images?.map((image: any, index) => (
           <a
-            className={`items-center justify-center ${imageSize} flex px-2 cursor-pointer hover:border-green-500 border-gray-500 ${activethumbnailImg(
+            className={`items-center justify-center  flex px-2 cursor-pointer hover:border-green-500 w-1/6 border-gray-500 ${activethumbnailImg(
               index
             )}`}
             onClick={() => updateActiveImage(index)}
