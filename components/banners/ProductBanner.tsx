@@ -5,7 +5,6 @@ import Product from "@/components/cards/ProductCard";
 
 export default function ProductBanner() {
   const [data, status] = useLiveHealthyProduct();
-  console.log('data',data)
   const getThreeProducts = data?.slice(5, 8);
   return (
     <div className="container mx-auto justify-between flex items-start h-1/2">

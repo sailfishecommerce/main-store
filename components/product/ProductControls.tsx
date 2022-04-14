@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 interface Props {
   cart: cartType;
-  updateQuantity: any;
 }
+import useShoppingCart from "@/hooks/useShoppingCart";
 
-export default function ProductControls({ cart, updateQuantity }: Props) {
+export default function ProductControls({ cart }: Props) {
+  const { updateCartItem, loadingState } = useShoppingCart();
+
   const [counter, setCounter] = useState(cart.quantity);
 
   function increaseQuantity() {
@@ -20,7 +22,8 @@ export default function ProductControls({ cart, updateQuantity }: Props) {
   }
 
   useEffect(() => {
-    updateQuantity.mutate({ product: cart, quantity: counter });
+    updateCartItem.mutate({ product: cart, quantity: counter });
+    loadingState(updateCartItem, `${cart.product.name} updated`);
   }, [counter]);
 
   return (

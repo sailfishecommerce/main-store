@@ -4,6 +4,7 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import type { cartType } from "@/types";
 import ProductControls from "./ProductControls";
 import useShoppingCart from "@/hooks/useShoppingCart";
+import { useEffect } from "react";
 
 interface Props {
   cart: cartType;
@@ -12,8 +13,10 @@ interface Props {
 export default function ProductRow({ cart }: Props) {
   const { removeCartItem, updateCartItem, loadingState } = useShoppingCart();
 
-  loadingState(removeCartItem, `${cart.product.name} removed`);
-  
+  useEffect(() => {
+    loadingState(removeCartItem, `${cart.product.name} removed`);
+  }, [removeItemFromCart]);
+
   loadingState(updateCartItem, `${cart.product.name} updated`);
 
   function removeItemFromCart() {
@@ -36,7 +39,7 @@ export default function ProductRow({ cart }: Props) {
       <div className="text-content flex flex-col w-3/4">
         <h5 className="text-lg">{cart.product.name}</h5>
         <div className="row flex items-center justify-between mt-4">
-          <ProductControls updateQuantity={updateCartItem} cart={cart} />
+          <ProductControls  cart={cart} />
           <h4 className="text-xl">$ {cart.priceTotal}</h4>
           <button onClick={removeItemFromCart}>
             <RiDeleteBin5Line
