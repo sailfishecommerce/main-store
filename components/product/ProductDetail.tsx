@@ -3,16 +3,15 @@ import PaymentMethodView from "@/components/payment/PaymentMethodView";
 import ProductPriceView from "@/components/product/ProductPriceView";
 import SeeMoreProductInfo from "@/components/product/SeeMoreProductInfo";
 import { useAppDispatch } from "@/hooks/useRedux";
-import {
-  updateActiveProduct,
-  updateProductInfoVisibility,
-} from "@/redux/product-slice";
+import { updateActiveProduct } from "@/redux/product-slice";
+import useSlidingTab from "@/hooks/useSlidingTab";
 
 export default function ProductDetail({ product }: any) {
   const dispatch = useAppDispatch();
+  const { updateSlideTab } = useSlidingTab();
 
   function seeMoreProductsHandler() {
-    dispatch(updateProductInfoVisibility(true));
+    updateSlideTab("SLIDING-INFO");
     dispatch(updateActiveProduct(product));
   }
   return (

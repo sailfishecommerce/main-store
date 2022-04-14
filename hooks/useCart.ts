@@ -1,19 +1,13 @@
 import { useQuery } from "react-query";
+
 import useToast from "@/hooks/useToast";
 import useSwellCart from "@/hooks/useSwellCart";
-import { useAppDispatch } from "@/redux/store";
-import { toggleSlideCart } from "@/redux/ui-slice";
 
 export default function useCart() {
   const { isLoading, isSuccessful, hasError } = useToast();
   const { applyGiftCode, getACart } = useSwellCart();
-  const dispatch = useAppDispatch();
 
   const useCartData = () => useQuery("cart", getACart);
-
-  function toggleCart() {
-    dispatch(toggleSlideCart());
-  }
 
   function applyDiscountCode(code: string) {
     const loading = isLoading();
@@ -30,7 +24,6 @@ export default function useCart() {
   }
 
   return {
-    toggleCart,
     applyDiscountCode,
     useCartData,
   };

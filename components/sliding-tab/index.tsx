@@ -1,25 +1,23 @@
 import { FaTimes } from "react-icons/fa";
-import { useAppDispatch } from "@/hooks/useRedux";
-import { updateProductInfoVisibility } from "@/redux/product-slice";
 import { PropsWithChildren } from "react";
 
+import useSlidingTab from "@/hooks/useSlidingTab";
+
 export default function SlidingTab({ children }: PropsWithChildren<{}>) {
-  const dispatch = useAppDispatch();
-  function closeSlidingTab() {
-    dispatch(updateProductInfoVisibility(false));
-  }
+  const { updateSlideTab} = useSlidingTab()
+  
 
   return (
     <aside className="fixed flex z-50 justify-between h-screen items-center w-full right-0 top-0">
       <div
-        onClick={closeSlidingTab}
-        className="overlay w-2/3 flex cursor-pointer"
+        onClick={() => updateSlideTab(null)}
+        className="overlay w-2/3 flex cursor-pointer h-full"
       ></div>
-      <div className="fixed top-0 items-start bg-white z-50 flex flex-col sliding-tab w-1/3">
+      <div className="fixed top-0 items-start bg-white z-50 flex flex-col sliding-tab w-1/3 h-full">
         <button
-          onClick={closeSlidingTab}
-          className="text-white absolute top-5 right-10 hover:text-green-600 hover:bg-white hover:rounded-full"
-        > 
+          onClick={() => updateSlideTab(null)}
+          className="text-black absolute p-1 top-5 right-10 hover:text-white hover:bg-red-500 hover:rounded-full"
+        >
           <FaTimes size={30} />
         </button>
         {children}

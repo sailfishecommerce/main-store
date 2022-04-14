@@ -1,6 +1,22 @@
 import Image from "next/image";
 
+import useShoppingCart from "@/hooks/useShoppingCart";
+import useAlgoliaEvents from "@/hooks/useAlgoliaEvents";
+import useSlidingTab from "@/hooks/useSlidingTab";
+
 export default function ProductPriceView({ product }: any) {
+  const {loadingState, addItemToCart} = useShoppingCart()
+  const { productAddedToCart } = useAlgoliaEvents();
+  const { updateSlideTab } = useSlidingTab();
+  
+  loadingState(addItemToCart, `${product.name} added to cart`);
+
+  function addToCartHandler(){
+    updateSlideTab('SLIDING-CART')
+    addItemToCart.mutate({ product, quantity: 1 });
+    productAddedToCart([product.id]);
+
+  }
   return (
     <div className="border border-gray-100 my-4 my-6 rounded-lg p-6 flex flex-col">
       <div className="price flex flex-col mb-8">
@@ -11,7 +27,10 @@ export default function ProductPriceView({ product }: any) {
         <div className="buy-now-section flex flex-col">
           <div className="row-1 flex items-center justify-between my-3">
             <div className="button-group flex items-center my-2">
-              <button className="add-to-cart rounded-lg mr-4 flex items-center bg-mountain-green text-white py-1 px-4">
+              <button
+                onClick={addToCartHandler}
+                className="add-to-cart rounded-lg mr-4 flex items-center bg-mountain-green text-white py-1 px-4"
+              >
                 <Image
                   src="/cart-white-icon.png"
                   alt="cart"

@@ -8,7 +8,6 @@ const productSlice = createSlice({
     productOption: [],
     isRequiredOptionsSelected: null,
     activeProduct: null,
-    viewProductInfoVisibility: false,
   },
   reducers: {
     updateProduct(state, action: PayloadAction<any>) {
@@ -26,9 +25,6 @@ const productSlice = createSlice({
     updateActiveProduct(state, action) {
       state.activeProduct = action.payload;
     },
-    updateProductInfoVisibility(state, action) {
-      state.viewProductInfoVisibility = action.payload
-    },
   },
 });
 
@@ -38,6 +34,5 @@ export const {
   updateProductOption,
   updateRequiredOption,
   updateActiveProduct,
-  updateProductInfoVisibility,
 } = productSlice.actions;
 export default productSlice.reducer;

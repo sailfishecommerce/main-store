@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 const uiSlice = createSlice({
   name: "UI",
   initialState: {
-    slideCart: false,
+    slideTab: null,
     sidebarRight: false,
     loading: false,
     mobileMenu: "mobileNav",
@@ -25,8 +25,8 @@ const uiSlice = createSlice({
     },
   },
   reducers: {
-    toggleSlideCart(state) {
-      state.slideCart = !state.slideCart;
+    toggleSlideTab(state, action) {
+      state.slideTab = action.payload
     },
     toggleSidebarRight(state) {
       state.sidebarRight = !state.sidebarRight;
@@ -78,7 +78,7 @@ const uiSlice = createSlice({
 
 export const {
   toggleNav,
-  toggleSlideCart,
+  toggleSlideTab,
   toggleSidebarRight,
   toggleModal,
   authModalForm,

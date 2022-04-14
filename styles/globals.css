@@ -94,3 +94,7 @@
 .product-tab-slider .splide__track.splide__track--slide {
   padding-left: 0px !important;
 }
+
+.deletebtn:hover {
+  fill: red;
+}

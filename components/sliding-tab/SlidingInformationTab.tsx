@@ -1,6 +1,4 @@
 import type { productType } from "@/types";
-import { useAppDispatch } from "@/hooks/useRedux";
-import { updateProductInfoVisibility } from "@/redux/product-slice";
 import SlidingTab from "@/components/sliding-tab";
 
 interface Props {
