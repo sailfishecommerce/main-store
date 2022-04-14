@@ -49,7 +49,7 @@ export default function ProductMagnifier({ product }: ProductProps) {
       <div className="main-image">
         <div
           onClick={onImgClick}
-          className="product-gallery-preview-item active"
+          className="product-gallery-preview-item active w-1/2 flex items-center mx-auto"
         >
           <Magnifier
             mgShowOverflow={false}

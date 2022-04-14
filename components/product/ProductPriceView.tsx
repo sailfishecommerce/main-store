@@ -25,7 +25,7 @@ export default function ProductPriceView({ product }: any) {
                 Buy now
               </button>
             </div>
-            <div className="rounded-full border w-1/4 flex items-center px-2 my-2 py-1">
+            <div className="rounded-full border w-1/4 flex items-center px-1 my-2 py-1">
               <div className="image-wrappe w-1/5 flex items-center">
                 <Image
                   src="/check-icon-green.png"
