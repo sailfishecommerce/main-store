@@ -2,6 +2,7 @@ import SlidingTab from "@/components/sliding-tab";
 import { useCart } from "@/hooks";
 import ProductRow from "@/components/product/ProductRow";
 import RecommendationSlider from "@/components/slider/RecommendationSlider";
+import SlideCardTotal from "@/components/cards/SlideCardTotal";
 
 export default function SlidingCartTab() {
   const { useCartData } = useCart();
@@ -21,6 +22,7 @@ export default function SlidingCartTab() {
           ))}
         </div>
         <RecommendationSlider />
+        <SlideCardTotal />
         <style jsx>
           {`
             .content {
