@@ -55,12 +55,11 @@ export default function PrimaryMenu() {
             {cart?.items?.length}
           </div>
         </button>
-        <button
-          onClick={() => updateSlideTab("SLIDING-ACCOUNT")}
-          className="account"
-        >
-          <IoPersonOutline className="hover:text-green-500" size={20} />
-        </button>
+        <Link href="/account" passHref>
+          <button title="account" className="account">
+            <IoPersonOutline className="hover:text-green-500" size={20} />
+          </button>
+        </Link>
       </div>
     </div>
   );

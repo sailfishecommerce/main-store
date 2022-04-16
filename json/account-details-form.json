@@ -32,7 +32,7 @@
       "name": "selectOrder",
       "type": "input"
     },
-      {
+    {
       "placeholder": "Email",
       "inputType": "email",
       "name": "userEmail",
@@ -44,5 +44,14 @@
       "name": "address",
       "type": "input"
     }
+  ],
+  "accountData": [
+    { "text": "Name", "value": "Nao Katsurou" },
+    { "text": "E-mail", "value": "naokatsurou@gmail.com" },
+    {
+      "text": "Address",
+      "value": "62 Chek Yan Yeng Tsuen, Fo Tsui Ak, Kowloon"
+    },
+    { "text": "Phone", "value": "23791973" }
   ]
 }

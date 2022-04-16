@@ -23,9 +23,9 @@ export default function ProductBanner() {
           : status === "loading"
           ? "loading"
           : data &&
-            getThreeProducts.map((product: any) => (
+            getThreeProducts.map((product: any, index: number) => (
               <Product
-                key={product.productId}
+                key={index}
                 color="#24BFCE"
                 className="items-center h-1/4 justify-between"
                 product={product}
