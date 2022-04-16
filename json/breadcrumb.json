@@ -1,0 +1,10 @@
+{
+  "product": [
+    { "name": "Homepage", "link": "/" },
+    { "name": "All", "link": "#products" }
+  ],
+  "account": [
+    { "name": "Homepage", "link": "/" },
+    { "name": "Account", "link": null, "active": true }
+  ]
+}

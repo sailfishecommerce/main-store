@@ -3,9 +3,16 @@ import { PropsWithChildren } from "react";
 
 import useSlidingTab from "@/hooks/useSlidingTab";
 
-export default function SlidingTab({ children }: PropsWithChildren<{}>) {
-  const { updateSlideTab} = useSlidingTab()
-  
+interface Props {
+  buttonColor?: string;
+}
+
+export default function SlidingTab({
+  children,
+  buttonColor,
+}: PropsWithChildren<Props>) {
+  const { updateSlideTab } = useSlidingTab();
+  const defaultButtonColor = buttonColor ? buttonColor : "text-black";
 
   return (
     <aside className="fixed flex z-50 justify-between h-screen items-center w-full right-0 top-0">
@@ -16,9 +23,9 @@ export default function SlidingTab({ children }: PropsWithChildren<{}>) {
       <div className="fixed top-0 items-start bg-white z-50 flex flex-col sliding-tab w-1/3 h-full">
         <button
           onClick={() => updateSlideTab(null)}
-          className="text-black absolute p-1 top-5 right-10 hover:text-white hover:bg-red-500 hover:rounded-full"
+          className={`${defaultButtonColor} closeButton absolute p-1 top-5 right-10 hover:text-white hover:rounded-full`}
         >
-          <FaTimes size={30} />
+          <FaTimes size={20} />
         </button>
         {children}
       </div>
@@ -36,6 +43,9 @@ export default function SlidingTab({ children }: PropsWithChildren<{}>) {
           .text-content {
             overflow-y: auto;
             height: 80vh;
+          }
+          button.closeButton:hover {
+            background-color: var(--mountain-mist);
           }
         `}
       </style>

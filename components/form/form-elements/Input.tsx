@@ -32,9 +32,9 @@ export default function Input({ content }: InputProps) {
           id={content.name}
           placeholder={content.placeholder}
         />
-        <label htmlFor={content.name} className="text-gray-700 -mt-24">
+        {/* <label htmlFor={content.name} className="text-gray-700 -mt-24">
           {content.placeholder}
-        </label>
+        </label> */}
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ export default function SlidingInformation({ product }: Props) {
   ];
 
   return (
-    <SlidingTab>
+    <SlidingTab buttonColor="text-white">
       <div className="header h-40 flex items-end bg-mountain-green p-4 w-full">
         {tabTitle.map((title, index) => {
           const tabStyle = index === 0 ? "text-white" : "text-gray-300";

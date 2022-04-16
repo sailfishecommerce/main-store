@@ -12,7 +12,7 @@ export default function SlidingCartTab() {
       <div className="cart bg-white w-full h-full p-6">
         <h3 className="text-xl font-medium flex items-center">
           Cart{" "}
-          <span className="rounded-full text-sm ml-2 py-1 -mt-4 px-2 text-white bg-tan-hide">
+          <span className="rounded-full text-xs ml-1 -mt-4 px-2 text-white bg-tan-hide">
             {cart?.items?.length}
           </span>
         </h3>
