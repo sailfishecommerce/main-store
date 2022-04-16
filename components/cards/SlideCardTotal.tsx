@@ -46,7 +46,7 @@ export default function SlideCardTotal() {
           <h3 className="font-bold text-sm">Applied Discounts</h3>
           <div className="applied-discounts-tags flex flex-wrap">
             {appliedDiscounts.map((discount, index) => (
-              <AppliedDiscountTag discountTitle={discount} count={index} />
+              <AppliedDiscountTag key={index} discountTitle={discount} count={index} />
             ))}
           </div>
         </div>

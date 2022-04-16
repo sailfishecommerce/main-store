@@ -2,21 +2,6 @@ export interface ProductProps {
   product: productType;
 }
 
-export type ProductType = {
-  vendor: string;
-  name: string;
-  price: number;
-  oldPrice: number;
-  images: {
-    file: {
-      url: string;
-    };
-  }[];
-  description: string;
-  slug: string;
-  id: string;
-};
-
 export type productType = {
   name: string;
   description?: string | any;

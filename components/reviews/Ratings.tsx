@@ -17,6 +17,7 @@ export default function Ratings({ ratings }: Props) {
           key={index}
           className="mx-1"
           height={20}
+          alt="star"
           width={20}
         />
       ))}

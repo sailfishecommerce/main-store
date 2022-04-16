@@ -3,7 +3,6 @@ import Applayout from "@/layouts/Applayout";
 import fetchAllSwellProducts from "@/lib/processPageproduct";
 
 export default function ProductPage({ pageProduct }: any) {
-  console.log("pageProduct", pageProduct);
   return (
     <Applayout title={pageProduct.name}>
       <main className="container mx-auto">
