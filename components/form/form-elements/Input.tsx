@@ -1,17 +1,20 @@
-import React from 'react'
+import React from "react";
 
-interface InputProps{
-  placeholder: string;
-  inputId:string;
-  inputType:"email" | "text" | "password"
+interface InputProps {
+  content: {
+    placeholder: string;
+    name: string;
+    inputType: "email" | "text" | "password" | string;
+  };
 }
 
-export default function Input({placeholder, inputId, inputType}:InputProps) {
+export default function Input({ content }: InputProps) {
   return (
-   <div className="flex justify-center">
-  <div>
-    <div className="form-floating mb-3 xl:w-96">
-      <input type={inputType} className="form-control
+    <div className="flex justify-center my-1">
+      <div className="form-floating mb-3 w-full">
+        <input
+          type={content.inputType}
+          className="form-control
       block
       w-full
       px-3
@@ -25,11 +28,14 @@ export default function Input({placeholder, inputId, inputType}:InputProps) {
       transition
       ease-in-out
       m-0
-      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id={inputId} placeholder={placeholder} />
-      <label htmlFor={inputId} className="text-gray-700">{placeholder}</label>
+      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+          id={content.name}
+          placeholder={content.placeholder}
+        />
+        <label htmlFor={content.name} className="text-gray-700 -mt-24">
+          {content.placeholder}
+        </label>
+      </div>
     </div>
-    
-  </div>
-</div>
-  )
+  );
 }

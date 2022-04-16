@@ -40,7 +40,10 @@ export default function PrimaryMenu() {
         ))}
       </ul>
       <div className="icons flex items-center justify-between w-16">
-        <button onClick={() => updateSlideTab("SLIDING-CART")} className="cart-icon relative">
+        <button
+          onClick={() => updateSlideTab("SLIDING-CART")}
+          className="cart-icon relative"
+        >
           <Image
             src="/cartIcon.png"
             alt="cart"
@@ -52,7 +55,10 @@ export default function PrimaryMenu() {
             {cart?.items?.length}
           </div>
         </button>
-        <button className="account">
+        <button
+          onClick={() => updateSlideTab("SLIDING-ACCOUNT")}
+          className="account"
+        >
           <IoPersonOutline className="hover:text-green-500" size={20} />
         </button>
       </div>

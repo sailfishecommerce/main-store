@@ -16,6 +16,11 @@ const DynamicSlidingCartTab = dynamic(
   () => import("@/components/sliding-tab/SlidingCartTab")
 );
 
+const DynamicAccountDetailsTab = dynamic(
+  () => import("@/components/sliding-tab/AccountDetails")
+);
+
+
 export default function LayoutWrapper({ children }: PropsWithChildren<{}>) {
   const { slideTab } = useSlidingTab();
   const { activeProduct } = useAppSelector((state) => state.product);
@@ -31,10 +36,11 @@ export default function LayoutWrapper({ children }: PropsWithChildren<{}>) {
       <LayoutMetatag />
       <div data-aos="fade-up" id="head" />
       <ToastContainer />
-      {slideTab === 'SLIDING-INFO' && activeProduct && (
+      {slideTab === "SLIDING-INFO" && activeProduct && (
         <DynamicSlidingInformationTab product={activeProduct} />
       )}
-      {slideTab === 'SLIDING-CART' && <DynamicSlidingCartTab />}
+      {slideTab === "SLIDING-CART" && <DynamicSlidingCartTab />}
+      {slideTab === "SLIDING-ACCOUNT" && <DynamicAccountDetailsTab />}
       {children}
     </div>
   );

@@ -5,8 +5,9 @@ export default function useSlidingTab() {
   const dispatch = useAppDispatch();
   const { slideTab } = useAppSelector((state) => state.UI);
 
-  const updateSlideTab = (slideTabState: "SLIDING-CART" | "SLIDING-INFO" | null) =>
-    dispatch(toggleSlideTab(slideTabState));
+  const updateSlideTab = (
+    slideTabState: "SLIDING-CART" | "SLIDING-INFO" | "SLIDING-ACCOUNT" | null
+  ) => dispatch(toggleSlideTab(slideTabState));
 
   return {
     updateSlideTab,

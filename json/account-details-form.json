@@ -1,0 +1,48 @@
+{
+  "AccountDetails": [
+    {
+      "placeholder": "First name",
+      "inputType": "text",
+      "name": "firstName",
+      "type": "input"
+    },
+    {
+      "placeholder": "Last name",
+      "inputType": "text",
+      "name": "lastName",
+      "type": "input"
+    },
+    {
+      "placeholder": "Phone",
+      "inputType": "text",
+      "name": "Phone",
+      "type": "input"
+    },
+    {
+      "placeholder": "Email",
+      "inputType": "email",
+      "name": "userEmail",
+      "type": "input"
+    }
+  ],
+  "ShippingAddress": [
+    {
+      "placeholder": "Select Order",
+      "inputType": "text",
+      "name": "selectOrder",
+      "type": "input"
+    },
+      {
+      "placeholder": "Email",
+      "inputType": "email",
+      "name": "userEmail",
+      "type": "input"
+    },
+    {
+      "placeholder": "Address",
+      "inputType": "text",
+      "name": "address",
+      "type": "input"
+    }
+  ]
+}
