@@ -16,7 +16,7 @@ export default function SlidingCartTab() {
             {cart?.items?.length}
           </span>
         </h3>
-        <div className="content mb-10">
+        <div className="content mb-4">
           {cart?.items.map((cart: any) => (
             <ProductRow key={cart.id} cart={cart} />
           ))}

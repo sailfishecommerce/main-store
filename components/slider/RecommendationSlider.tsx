@@ -8,7 +8,7 @@ export default function RecommendationSlider() {
 
   return (
     <section className="itemSlider recommendation-slider">
-      <div className="top mb-8">
+      <div className="mb-2">
         <h3 className="text-xl font-bold">Recommended for you</h3>
       </div>
       <div className="content">

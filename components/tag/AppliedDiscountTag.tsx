@@ -8,7 +8,7 @@ interface Props {
 export default function AppliedDiscountTag({ discountTitle, count }: Props) {
   const tagCount = Number(count) + 1;
   return (
-    <div className="flex px-2 py-1 items-center rounded-full border justify-between my-2 m-1 bg-gray-100">
+    <div className="flex px-2 py-1 items-center rounded-full border justify-between m-1 bg-gray-100">
       <span className="count bg-black rounded-full text-white h-6 w-6 flex text-xs items-center font-bold justify-center">
         {tagCount}
       </span>
