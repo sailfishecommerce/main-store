@@ -6,5 +6,6 @@
   "account": [
     { "name": "Homepage", "link": "/" },
     { "name": "Account", "link": null, "active": true }
-  ]
+  ],
+  "blog": [{ "name": "Homepage", "link": "/" }]
 }
