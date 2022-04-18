@@ -1,4 +1,5 @@
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import Link from "next/link";
 
 import { useCart } from "@/hooks";
 import type { cartType } from "@/types";
@@ -46,13 +47,19 @@ export default function SlideCardTotal() {
           <h3 className="font-bold text-sm">Applied Discounts</h3>
           <div className="applied-discounts-tags flex flex-wrap">
             {appliedDiscounts.map((discount, index) => (
-              <AppliedDiscountTag key={index} discountTitle={discount} count={index} />
+              <AppliedDiscountTag
+                key={index}
+                discountTitle={discount}
+                count={index}
+              />
             ))}
           </div>
         </div>
-        <button className="bg-tan-hide w-full flex items-center p-2 mt-2 font-bold text-white rounded-md justify-center">
-          Secure checkout <HiOutlineArrowNarrowRight className="ml-2" />
-        </button>
+        <Link href="/checkout" passHref>
+          <button className="bg-tan-hide w-full flex items-center p-2 mt-2 font-bold text-white rounded-md justify-center">
+            Secure checkout <HiOutlineArrowNarrowRight className="ml-2" />
+          </button>
+        </Link>
       </div>
       <style jsx>
         {`
