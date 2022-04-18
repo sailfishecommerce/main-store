@@ -8,7 +8,10 @@ export default function PopularArticles() {
       <h3 className="font-bold">Popular Articles</h3>
       <ul>
         {content.map((item, index) => (
-          <li key={index} className="flex items-center my-2">
+          <li
+            key={index}
+            className="flex items-center my-4 hover:bg-gray-100 hover:rounded-md"
+          >
             <Image
               src={item.thumbnailImg}
               alt={item.thumbnailImg}
@@ -16,7 +19,7 @@ export default function PopularArticles() {
               width={100}
               className="rounded-lg"
             />
-            <p>{item.text}</p>
+            <p className="ml-3">{item.text}</p>
           </li>
         ))}
       </ul>

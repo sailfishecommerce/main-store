@@ -111,3 +111,8 @@
   text-overflow: ellipsis;
   width: 90%;
 }
+
+/* social-icons */
+.icon:hover {
+  opacity: 0.5;
+}

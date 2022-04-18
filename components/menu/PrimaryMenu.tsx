@@ -25,9 +25,9 @@ export default function PrimaryMenu() {
         <span className="font-bold text-green-500 mx-1">Whatsapp:</span>
         9449 2060
       </div>
-      <ul className="flex items-center justify-between w-1/4">
+      <ul className="flex items-center justify-between w-1/3">
         {menuLinks.primaryMenu.map((menuItem) => (
-          <li key={menuItem.link}>
+          <li className="mx-2" key={menuItem.link}>
             <Link href={menuItem.link} passHref>
               <a
                 title={menuItem.text}
