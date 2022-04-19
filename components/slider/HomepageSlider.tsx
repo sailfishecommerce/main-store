@@ -17,7 +17,7 @@ function HomepageSliderComponent() {
         {homepageSliderContent.map((content) => (
           <SplideSlide key={content.title}>
             <div className="content px-4 md:px-0 flex flex-col md:flex-row w-full h-100">
-              <div className="text order-2 md:order-1 rounded-b-xl md:rounded-l-3xl bg-gray-100 p-8 w-full md:w-1/4">
+              <div className="text order-2 md:order-1 rounded-b-xl md:rounded-l-3xl bg-gray-100 p-6 md:p-8 w-full md:w-1/4">
                 <div className="top flex items-center mb-6 justify-between">
                   <h1 className="text-2xl font-bold">{content.title}</h1>
                   <span className="font-bold text-red-500 bg-white rounded-md py-1 text-xs px-2 hover:bg-red-500 hover:text-white">

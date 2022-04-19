@@ -27,8 +27,8 @@ export default function Product({
   const productImageClassName = imageClassName ? imageClassName : "";
   const imageSize = smallerImage
     ? {
-        height: 150,
-        width: 150,
+        height: 300,
+        width: 300,
       }
     : {
         height: 500,
@@ -40,7 +40,7 @@ export default function Product({
         className={`hover:bg-white hover:shadow-lg hover:rounded-lg product ${productClassName}  ${isRow} p-3 md:p-6 hover:border`}
         title={product.name}
       >
-        <div className={`${productImageClassName} image-wrapper`}>
+        <div className={`${productImageClassName} w-1/2 image-wrapper`}>
           <Image
             src={product.images[0].file.url}
             alt={product.name}
@@ -49,7 +49,7 @@ export default function Product({
             blurDataURL={product.images[0].file.url}
           />
         </div>
-        <div className={`${isRowText} text`}>
+        <div className={`${isRowText} text w-1/2`}>
           <h4 className="vendor text-xs md:text-md font-bold pl-2 my-0 py-0 h-3 mb-1 md:mb-0 md:h-5">
             {product.vendor}
           </h4>
@@ -66,7 +66,7 @@ export default function Product({
           </div>
           <button
             type="button"
-            className="add-to-cart md:w-4/5 justify-center h-8 text-white px-4 py-1 flex items-center mx-auto rounded-md"
+            className="add-to-cart w-full md:w-4/5 justify-center h-8 text-white px-4 py-1 flex items-center mx-auto rounded-md"
           >
             <Image
               src="/cart-white-icon.png"
