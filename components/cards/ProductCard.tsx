@@ -37,7 +37,7 @@ export default function Product({
   return (
     <Link href={`/products/${product.slug}`} passHref>
       <a
-        className={`hover:bg-white hover:shadow-lg hover:rounded-lg product ${productClassName}  ${isRow} p-6 hover:border`}
+        className={`hover:bg-white hover:shadow-lg hover:rounded-lg product ${productClassName}  ${isRow} p-3 md:p-6 hover:border`}
         title={product.name}
       >
         <div className={`${productImageClassName} image-wrapper`}>

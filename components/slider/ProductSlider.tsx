@@ -46,7 +46,7 @@ export default function ProductSlider({
           ))}
         </ul>
       )}
-      <div className="products mx-auto container mt-4 flex items-center justify-between pb-12">
+      <div className="products mx-auto container mt-4 flex items-center justify-between pb-0 md:pb-12">
         {status === "error" ? (
           "unable to load products"
         ) : status === "loading" ? (

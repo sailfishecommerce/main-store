@@ -162,3 +162,14 @@
 .not-paid .indicator {
   background-color: var(--light-red);
 }
+
+@media (max-width: 768px) {
+  .itemSlider .splide__arrows {
+    right: 0px;
+    top: -70px;
+  }
+  .best-seller-slider.itemSlider .splide__arrows {
+    right: 0%;
+    top: -30px;
+  }
+}

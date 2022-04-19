@@ -18,8 +18,8 @@ export default function ProductPriceView({ product }: any) {
 
   }
   return (
-    <div className="border border-gray-100 my-4 my-6 rounded-lg p-6 flex flex-col">
-      <div className="price flex flex-col mb-8">
+    <div className="border border-gray-100 my-4 my-6 rounded-lg p- flex flex-col">
+      <div className="price flex flex-col">
         <h4 className="font-bold text-2xl">$ {product.price}</h4>
         {product.oldPrice && (
           <h4 className="gray-manatee text-2xl">{product.oldPrice}</h4>

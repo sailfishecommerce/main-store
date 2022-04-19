@@ -9,10 +9,10 @@ export default function BestSellerSlider() {
   const [data, status] = useLiveHealthyProduct();
 
   return (
-    <section className="itemSlider best-seller-slider py-8 relative w-full bg-gray-platinum mx-auto flex relative z-10 flex-col my-4">
+    <section className="itemSlider best-seller-slider py-6 px-4 md:py-8 relative w-full bg-gray-platinum mx-auto flex relative z-10 flex-col my-4">
       <div className="w-full">
-        <div className="mx-auto container top mb-8 flex items-center justify-between">
-          <h1 className="font-bold text-3xl">Best Sellers</h1>
+        <div className="mx-auto container top md:mb-8 flex items-center justify-between">
+          <h1 className="font-bold text-xl md:text-3xl">Best Sellers</h1>
         </div>
 
         <div className="2xl:pl-28 products mx-auto mt-4 flex items-center justify-between pb-12">
