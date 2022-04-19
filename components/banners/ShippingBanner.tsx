@@ -19,16 +19,15 @@ export default function ShippingBanner() {
   ];
   const imageDimension = mobileWidth ? imageSize[1] : imageSize[0];
   return (
-    <section className="container -ml-2 mx-auto -mt-8 md:mt-0 mb-6 md:mb-0 px-4">
-      <div className="w-full justify-center fle items-cente">
-        <Image
-          src={imageSrc}
-          alt="free shipping"
-          height={imageDimension.height}
-          width={imageDimension.width}
-          layout="responsive"
-        />
-      </div>
+    <section className="container -ml-2 md:mx-auto -mt-8 md:-mt-16 mb-6 md:mb-8 md:px-0 px-4">
+      <Image
+        src={imageSrc}
+        alt="free shipping"
+        className="flex items-center justify-center mx-auto"
+        height={imageDimension.height}
+        width={imageDimension.width}
+        layout="responsive"
+      />
     </section>
   );
 }

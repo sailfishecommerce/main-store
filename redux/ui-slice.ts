@@ -6,10 +6,10 @@ const uiSlice = createSlice({
     slideTab: null,
     sidebarRight: false,
     loading: false,
-    mobileMenu: "mobileNav",
-    displayMobileMenu: false,
+    mobileMenu: false,
     modal: false,
     showNav: false,
+    showMobileSearch: false,
     authModal: "AUTHFORM",
     displayModal: {
       active: false,
@@ -26,7 +26,12 @@ const uiSlice = createSlice({
   },
   reducers: {
     toggleSlideTab(state, action) {
-      state.slideTab = action.payload
+      state.slideTab = action.payload;
+    },
+    updateSearchView(state) {
+      if (state.mobileMenu) {
+        state.showMobileSearch = !state.showMobileSearch;
+      }
     },
     toggleSidebarRight(state) {
       state.sidebarRight = !state.sidebarRight;
@@ -59,9 +64,6 @@ const uiSlice = createSlice({
     toggleNav(state) {
       state.showNav = !state.showNav;
     },
-    toggleMobileMenu(state) {
-      state.displayMobileMenu = !state.displayMobileMenu;
-    },
     toggleAppModal(state, action) {
       state.displayModal.type = action.payload.type;
       if (state.displayModal.type) {
@@ -84,11 +86,11 @@ export const {
   authModalForm,
   updateLoadingAction,
   quickViewModal,
-  toggleMobileMenu,
-  updateMobileMenu,
+  updateSearchView,
   toggleAuthModal,
   toggleAppModal,
   checkoutModal,
+  updateMobileMenu,
   displayCheckoutModalAction,
 } = uiSlice.actions;
 

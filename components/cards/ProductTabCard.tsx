@@ -12,16 +12,15 @@ export default function ProductTabCard({ product }: Props) {
         title={`Buy ${product.name}`}
         className="producttab-card flex p-2 md:p-4 justify-between items-center rounded-xl bg-light-gray mr-8"
       >
-        <div className="image-wrapper flex flex-col w-1/3 md:w-1/3">
-            <Image
-              src={product.images[0].file.url}
-              alt={product.name}
-              height={150}
-              width={150}
-              className="bg-whit rounded-lg"
-              blurDataURL={product.images[0].file.url}
-              layout="responsive"
-            />
+        <div className="image-wrapper flex flex-col w-1/2 md:w-1/3">
+          <Image
+            src={product.images[0].file.url}
+            alt={product.name}
+            height={200}
+            width={200}
+            className="bg-white flex rounded-lg"
+            blurDataURL={product.images[0].file.url}
+          />
           <button
             type="button"
             className="add-to-cart text-xs md:text-sm bg-mountain-green mx-auto absolute top-12 py-1 px-2 rounded-md text-white"

@@ -3,10 +3,10 @@ import ProductSlider from "@/components/slider/ProductSlider";
 import HomepageSlider from "@/components/slider/HomepageSlider";
 import Values from "@/components/values";
 import Applayout from "@/layouts/Applayout";
-import UserchoiceSlider from "@/components/slider/UserchoiceSlider";
 import ProductTabSlider from "@/components/slider/ProductTabSlider";
 import BestSellerSlider from "@/components/slider/BestSellerSlider";
 import ProductBanner from "@/components/banners/ProductBanner";
+import ProductReviews from "@/components/reviews/ProductReviews";
 
 export default function Home() {
   return (
@@ -43,7 +43,7 @@ export default function Home() {
           tabColor="#E366B8"
         />
         <ProductTabSlider />
-        <UserchoiceSlider />
+        <ProductReviews />
       </main>
     </Applayout>
   );

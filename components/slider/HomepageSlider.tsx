@@ -9,14 +9,14 @@ import { useMediaQuery } from "@/hooks";
 
 const DynamicHomepageSliderControls = dynamic(
   () => import("@/components/slider/HomepageSliderControls")
-  );
+  ); 
   
   function HomepageSliderComponent() {
     const [activeIndex, setActiveIndex] = useState(0);
     const mobileWidth = useMediaQuery("(max-width:768px)");
     
     return (
-    <section className="mt-8 mb-12 homepage-slider container mx-auto">
+    <section className="mt-6 mb-12 homepage-slider container mx-auto">
       <Splide onActive={(item) => setActiveIndex(item.index)}>
         {homepageSliderContent.map((content) => (
           <SplideSlide key={content.title}>
