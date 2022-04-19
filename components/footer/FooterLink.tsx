@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function FooterLink() {
   return (
-    <div className="pl-0 md:pl-12 flex items-start justify-around flex flex-col md:grid grid-cols-2 w-full md:w-2/4">
+    <div className="pl-0 md:pl-12 order-2 flex items-start justify-around flex flex-col md:grid grid-cols-2 w-full md:w-2/4">
       {footerLinks.map((footerLink) => (
         <ul className="mt-4" key={footerLink.text}>
           <span className="flex items-center mb-6">

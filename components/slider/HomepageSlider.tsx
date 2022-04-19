@@ -1,17 +1,21 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { memo, useState } from "react";
 
 import homepageSliderContent from "@/json/homepage-slider.json";
-import HomepageSliderControls from "@/components/slider/HomepageSliderControls";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { useMediaQuery } from "@/hooks";
 
-function HomepageSliderComponent() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const mobileWidth = useMediaQuery("(max-width:768px)");
-
-  return (
+const DynamicHomepageSliderControls = dynamic(
+  () => import("@/components/slider/HomepageSliderControls")
+  );
+  
+  function HomepageSliderComponent() {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const mobileWidth = useMediaQuery("(max-width:768px)");
+    
+    return (
     <section className="mt-8 mb-12 homepage-slider container mx-auto">
       <Splide onActive={(item) => setActiveIndex(item.index)}>
         {homepageSliderContent.map((content) => (
@@ -45,7 +49,7 @@ function HomepageSliderComponent() {
         ))}
       </Splide>
       {!mobileWidth && (
-        <HomepageSliderControls
+        <DynamicHomepageSliderControls
           content={homepageSliderContent}
           activeIndex={activeIndex}
         />

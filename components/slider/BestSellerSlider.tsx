@@ -9,13 +9,13 @@ export default function BestSellerSlider() {
   const [data, status] = useLiveHealthyProduct();
 
   return (
-    <section className="itemSlider best-seller-slider py-6 px-4 md:py-8 relative w-full bg-gray-platinum mx-auto flex relative z-10 flex-col my-4">
+    <section className="itemSlider best-seller-slider py-4 px-4 md:py-8 relative w-full bg-gray-platinum mx-auto flex relative z-10 flex-col my-4">
       <div className="w-full">
         <div className="mx-auto container top md:mb-8 flex items-center justify-between">
           <h1 className="font-bold text-xl md:text-3xl">Best Sellers</h1>
         </div>
 
-        <div className="2xl:pl-28 products mx-auto mt-4 flex items-center justify-between pb-12">
+        <div className="2xl:pl-28 pl-0 products mx-auto mt-4 flex items-center justify-between pb-0 md:pb-12">
           {status === "error" ? (
             "unable to load products"
           ) : status === "loading" ? (
@@ -28,6 +28,7 @@ export default function BestSellerSlider() {
                 breakpoints: {
                   500: {
                     perPage: 1,
+                    padding: "2rem",
                   },
                   800: {
                     perPage: 2,
@@ -37,7 +38,7 @@ export default function BestSellerSlider() {
                   },
                 },
               }}
-              className="w-full mx-auto"
+              className="w-full mx-auto bestsellerSplide"
             >
               {data.map((product: any) => (
                 <SplideSlide key={product.id}>

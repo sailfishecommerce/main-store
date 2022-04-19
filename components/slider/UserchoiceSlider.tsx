@@ -6,24 +6,25 @@ import UserChoiceCard from "@/components/cards/UserChoiceCard";
 
 export default function UserchoiceSlider() {
   return (
-    <section className="container mx-auto userchoice-slider itemSlider">
+    <section className="container mx-auto px-4 md:px-0 userchoice-slider itemSlider">
       <h1 className="text-2xl my-4 font-bold">User Choice</h1>
       <div className="user-choice flex items-center w-full">
-        <div className="trustmate-card w-1/5"></div>
         <Splide
           options={{
             perPage: 3,
             breakpoints: {
               500: {
                 perPage: 1,
+                padding: "3rem",
               },
               1000: {
                 perPage: 2,
               },
             },
           }}
-          className="w-4/5"
+          className="w-full"
         >
+          <div className="trustmate-card w-1/5"></div>
           {userChoice.map((choice: any) => (
             <SplideSlide key={choice.username}>
               <UserChoiceCard choice={choice} />

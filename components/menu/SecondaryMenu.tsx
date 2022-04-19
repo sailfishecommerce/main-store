@@ -6,7 +6,7 @@ import HomepageSearch from "@/components/search/HomepageSearch";
 
 export default function SecondaryMenu() {
   return (
-    <div className="hidden md:flex items-center justify-between">
+    <div className="md:flex items-center justify-between">
       <AllCategoriesDropdown />
       <ul className="flex items-center w-2/3 justify-between">
         {menuLinks.secondaryMenu.map((menuItem) => (

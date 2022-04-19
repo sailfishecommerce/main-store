@@ -14,6 +14,7 @@
   --gray-lavender: #c3c0c8;
   --gray-platinum: #e7e6e9;
   --tan-light-hide: #ffe690;
+  --light-gray: #f7f8fa;
   --light-red: #fd121240;
   --light-green: #16a26740;
 }
@@ -44,6 +45,10 @@
 
 .gray-platinum {
   color: var(--gray-platinum);
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
 }
 
 .bg-mountain-green {
@@ -172,4 +177,10 @@
     right: 0%;
     top: -30px;
   }
+
+  .bestsellerSplide .splide__track {
+    padding-left: 0px !important;
+  }
+
+  
 }
