@@ -4,7 +4,7 @@ import Container from "@/layouts/Container";
 
 export default function index() {
   return (
-    <nav>
+    <nav className="md:px-0 px-4">
       <Container>
         <PrimaryMenu />
         <SecondaryMenu />

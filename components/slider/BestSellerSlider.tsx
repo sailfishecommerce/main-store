@@ -26,11 +26,14 @@ export default function BestSellerSlider() {
                 perPage: 5,
                 padding: "5rem",
                 breakpoints: {
+                  500: {
+                    perPage: 1,
+                  },
                   800: {
-                    perPage: 3,
+                    perPage: 2,
                   },
                   1200: {
-                    perPage: 4,
+                    perPage: 3,
                   },
                 },
               }}

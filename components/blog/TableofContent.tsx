@@ -16,14 +16,14 @@ export default function TableofContent() {
               </li>
             ) : (
               item.map((v, i) => (
-                <li className="my-2" key={i}>
+                <ul className="my-2" key={i}>
                   <h6 className="font-medium text-sm">{v.title}</h6>
                   {v.subtitle.map((s, sIndex) => (
                     <li className="text-sm ml-3" key={sIndex}>
                       {s}
                     </li>
                   ))}
-                </li>
+                </ul>
               ))
             );
           })}

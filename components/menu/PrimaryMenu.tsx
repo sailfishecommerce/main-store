@@ -12,9 +12,9 @@ export default function PrimaryMenu() {
   const { data: cart }: any = useCartData();
   const { updateSlideTab } = useSlidingTab();
   return (
-    <div className="flex justify-between items-center my-2 py-4 ">
-      <Logo className="w-44" />
-      <div className="flex items-center">
+    <div className="flex justify-between items-center md:my-2 md:py-4">
+      <Logo className="w-2/5 md:w-44" />
+      <div className="hidden md:flex items-center">
         <Image
           src="/whatsappIcon.png"
           alt="cart"
@@ -25,7 +25,7 @@ export default function PrimaryMenu() {
         <span className="font-bold text-green-500 mx-1">Whatsapp:</span>
         9449 2060
       </div>
-      <ul className="flex items-center justify-between w-1/3">
+      <ul className="hidden md:flex items-center justify-between w-1/3">
         {menuLinks.primaryMenu.map((menuItem) => (
           <li className="mx-2" key={menuItem.link}>
             <Link href={menuItem.link} passHref>

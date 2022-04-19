@@ -15,7 +15,7 @@ export default function ValueCard({ content }: valuecardProps) {
     <>
       <div
         title={content.title}
-        className="value-card w-1/24 rounded-lg p-6 flex flex-col h-44 hover:opacity-80"
+        className="value-card w-full rounded-lg p-6 flex flex-col h-44 hover:opacity-80"
       >
         <div className="w-2/12">
           <Image
@@ -26,7 +26,7 @@ export default function ValueCard({ content }: valuecardProps) {
             layout="responsive"
           />
         </div>
-        <h3 className="font-bold text-xl my-2">{content.title}</h3>
+        <h3 className="font-medium text-xl my-2">{content.title}</h3>
         <p>{content.text}</p>
         {<span className="font-bold text-blue-500">{content?.link}</span>}
       </div>

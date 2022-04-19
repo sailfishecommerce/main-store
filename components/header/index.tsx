@@ -11,7 +11,7 @@ export default function Header() {
 
   
   return (
-    <header className={`${navStyle} bg-white w-full pb-4`}>
+    <header className={`${navStyle} bg-white w-full pb-0  md:pb-4`}>
       {showNoticebar && <Noticebar toggleBarVisibility={toggleNoticebar} />}
       <Menu />
     </header>

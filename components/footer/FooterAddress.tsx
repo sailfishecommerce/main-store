@@ -5,7 +5,7 @@ import SocialIcons from "@/components/icons/SocialIcons";
 
 export default function FooterAddress() {
   return (
-    <div className="address flex flex-col w-1/4">
+    <div className="address flex flex-col w-full md:w-1/4">
       <Logo className="w-1/3 my-2" />
       <SocialIcons />
       <div className="call-us bg-white rounded-lg p-3 w-5/6 my-3">
@@ -21,7 +21,7 @@ export default function FooterAddress() {
           </h6>
         </div>
       </div>
-      <div className="text text-sm w-2/3">
+      <div className="text text-sm w-full md:w-2/3">
         <p>
           We are an online business operating out of Sydney, Australia. All
           products are shipped weekly from Sydney to Hong Kong. No minimum

@@ -13,7 +13,7 @@ export default function ProductTabSlider() {
         {tabs.map((tab, index) => {
           const activeTab = index === 0 ? "text-black" : "text-gray-500";
           return (
-            <h4 key={index} className={`${activeTab} text-2xl font-bold mr-8`}>
+            <h4 key={index} className={`${activeTab} text-xs md:text-xl lg:text-2xl font-bold mr-8`}>
               {tab}
             </h4>
           );
@@ -30,6 +30,9 @@ export default function ProductTabSlider() {
               perPage: 3,
               padding: "5rem",
               breakpoints: {
+                500: {
+                  perPage: 1,
+                },
                 1000: {
                   perPage: 2,
                 },

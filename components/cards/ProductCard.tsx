@@ -8,7 +8,7 @@ interface ProductTypes extends ProductProps {
   className?: string;
   color?: string;
   smallerImage?: boolean;
-  imageClassName?:string;
+  imageClassName?: string;
 }
 
 export default function Product({
@@ -17,14 +17,14 @@ export default function Product({
   row,
   color,
   smallerImage,
-  imageClassName
+  imageClassName,
 }: ProductTypes) {
   const isRow = row ? "flex" : "flex flex-col";
   const isRowText = row ? "ml-4" : "";
   const buttonClass = row ? "mt-1" : "mt-4";
 
   const productClassName = className ? className : "";
-  const productImageClassName = imageClassName ? imageClassName : ''
+  const productImageClassName = imageClassName ? imageClassName : "";
   const imageSize = smallerImage
     ? {
         height: 150,
@@ -50,11 +50,11 @@ export default function Product({
           />
         </div>
         <div className={`${isRowText} text`}>
-          <h4 className="vendor font-bold pl-2 my-0 py-0 h-5">
+          <h4 className="vendor text-xs md:text-md font-bold pl-2 my-0 py-0 h-3 mb-1 md:mb-0 md:h-5">
             {product.vendor}
           </h4>
-          <div className="product-name-view">
-            <h3 className="text-md">{product.name}</h3>
+          <div className="product-name-view md:mb-8 mb-2">
+            <h3 className="text-xs md:text-md">{product.name}</h3>
           </div>
           <div className="price-view">
             <h4 className={`font-bold mb-3 ${buttonClass}`}>
@@ -66,7 +66,7 @@ export default function Product({
           </div>
           <button
             type="button"
-            className="add-to-cart w-4/5 justify-center h-8 text-white px-4 py-1 flex items-center mx-auto rounded-md"
+            className="add-to-cart md:w-4/5 justify-center h-8 text-white px-4 py-1 flex items-center mx-auto rounded-md"
           >
             <Image
               src="/cart-white-icon.png"
@@ -75,7 +75,7 @@ export default function Product({
               height={20}
               width={20}
             />{" "}
-            <p className="text-sm">Add to cart</p>
+            <p className="text-xs md:text-sm">Add to cart</p>
           </button>
         </div>
         <style jsx>
@@ -89,9 +89,6 @@ export default function Product({
             .vendor {
               border-left: 3px solid ${color};
               color: ${color};
-            }
-            .text h3 {
-              height: 80px;
             }
           `}
         </style>

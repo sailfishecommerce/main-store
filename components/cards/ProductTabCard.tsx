@@ -10,27 +10,29 @@ export default function ProductTabCard({ product }: Props) {
     <>
       <div
         title={`Buy ${product.name}`}
-        className="producttab-card flex  p-4 justify-between items-center rounded-xl bg-gray-manatee mr-8"
+        className="producttab-card flex p-1 md:p-4 justify-between items-center rounded-xl bg-gray-manatee mr-8"
       >
-        <div className="image-wrapper flex flex-col w-1/3">
-          <Image
-            src={product.images[0].file.url}
-            alt={product.name}
-            height={150}
-            width={150}
-            className="bg-whit rounded-lg"
-            blurDataURL={product.images[0].file.url}
-          />
+        <div className="image-wrapper flex flex-col w-1/4 md:w-1/3">
+            <Image
+              src={product.images[0].file.url}
+              alt={product.name}
+              height={150}
+              width={150}
+              className="bg-whit rounded-lg"
+              blurDataURL={product.images[0].file.url}
+            />
           <button
             type="button"
-            className="add-to-cart bg-mountain-green mx-auto absolute top-12 py-1 px-2 rounded-md text-white"
+            className="add-to-cart text-xs md:text-sm bg-mountain-green mx-auto absolute top-12 py-1 px-2 rounded-md text-white"
           >
             Add to cart
           </button>
         </div>
-        <div className="content flex flex-col w-3/5">
-          <h3 className="text-md">{product.name}</h3>
-          <h4 className="text-sm font-bold text-lg">$ {product.price}</h4>
+        <div className="content flex flex-col ml-3 w-3/4 md:w-3/5">
+          <h3 className="text-xs md:text-md">{product.name}</h3>
+          <h4 className="text-xs md:text-sm font-bold text-lg">
+            $ {product.price}
+          </h4>
         </div>
       </div>
       <style jsx>

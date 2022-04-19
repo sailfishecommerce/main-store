@@ -23,7 +23,7 @@ export default function ProductSlider({
 }: Props) {
   const [data, status] = useLiveHealthyProduct();
   return (
-    <section className="itemSlider relative container mx-auto flex flex-col my-4">
+    <section className="itemSlider relative container mx-auto flex flex-col my-4 px-4 md:px-0">
       <div className="top mb-4 flex items-center justify-between">
         {productName ? (
           <h1 className="font-bold text-xl 2xl:text2xl">
@@ -57,10 +57,10 @@ export default function ProductSlider({
               perPage: 6,
               breakpoints: {
                 800: {
-                  perPage: 3,
+                  perPage: 2,
                 },
                 1200: {
-                  perPage: 4,
+                  perPage: 3,
                 },
                 1440: {
                   perPage: 5,

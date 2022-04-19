@@ -14,9 +14,12 @@ export default function UserchoiceSlider() {
           options={{
             perPage: 3,
             breakpoints: {
+              500: {
+                perPage: 1,
+              },
               1000: {
                 perPage: 2,
-              }
+              },
             },
           }}
           className="w-4/5"
