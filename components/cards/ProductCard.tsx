@@ -23,7 +23,7 @@ export default function Product({
   const isRow = row ? "flex" : "flex flex-col";
   const isRowText = row ? "ml-4" : "";
   const buttonClass = row ? "mt-1" : "mt-4";
-
+  const imageWidth = row ? "w-1/2" : "";
   const productClassName = className ? className : "";
   const productImageClassName = imageClassName ? imageClassName : "";
   const imageSize = smallerImage
@@ -38,10 +38,10 @@ export default function Product({
   return (
     <Link href={`/products/${product.slug}`} passHref>
       <a
-        className={`hover:bg-white hover:shadow-lg hover:rounded-lg product ${productClassName}  ${isRow} p-3 md:p-6 hover:border`}
+        className={`hover:bg-white hover:shadow-lg hover:rounded-lg product ${productClassName}  ${isRow} p-2 md:p-6 hover:border`}
         title={product.name}
       >
-        <div className={`${productImageClassName} image-wrapper`}>
+        <div className={`${productImageClassName} ${imageWidth} image-wrapper`}>
           <Image
             src={product.images[0].file.url}
             alt={product.name}
@@ -50,7 +50,7 @@ export default function Product({
             blurDataURL={product.images[0].file.url}
           />
         </div>
-        <div className={`${isRowText} text`}>
+        <div className={`${isRowText} ${imageWidth} text`}>
           <h4 className="vendor text-xs md:text-md font-bold pl-2 my-0 py-0 h-3 mb-1 md:mb-0 md:h-5">
             {product.vendor}
           </h4>

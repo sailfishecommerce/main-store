@@ -46,10 +46,10 @@ export default function ProductBanner() {
               <Product
                 key={index}
                 color="#24BFCE"
-                className="items-center h-1/4 justify-between"
+                className="items-center justify-between"
                 product={product}
                 row
-                smallerImage
+                // smallerImage
               />
             ))}
       </div>

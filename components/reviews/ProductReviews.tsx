@@ -3,7 +3,7 @@ import { memo } from "react";
 
 function ProductReviewsComponent() {
   return (
-    <div className="container product-reviews mx-auto justify-center items-center my-lg-3 py-5">
+    <div className="product-reviews mx-auto justify-center items-center my-lg-3 py-5">
       <Script
         src="https://en.trustmate.io/api/widget/5c6b265a-9520-4676-9d01-2ecfca53d95c/script"
         strategy="lazyOnload"

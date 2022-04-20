@@ -13,7 +13,7 @@ export default function PageLink({ menuItem }: Props) {
       <Link href={menuItem.link} passHref>
         <a
           title={menuItem.text}
-          className="hover:text-green-500 font-bold text-xs md:text-md md:font-light"
+          className="hover:text-green-500 font-bold text-xs md:text-lg md:font-light"
         >
           {menuItem.text}
         </a>
