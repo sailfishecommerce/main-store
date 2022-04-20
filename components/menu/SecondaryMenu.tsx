@@ -8,7 +8,7 @@ export default function SecondaryMenu() {
   return (
     <div className="md:flex items-center justify-between">
       <AllCategoriesDropdown />
-      <ul className="flex items-center w-2/3 justify-between">
+      <ul className="hidden lg:flex items-center w-2/3 justify-between">
         {menuLinks.secondaryMenu.map((menuItem) => (
           <li key={menuItem.link}>
             <Link href={menuItem.link} passHref>

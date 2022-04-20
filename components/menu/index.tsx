@@ -22,7 +22,6 @@ export default function Menu() {
         {!mobileWidth && <SecondaryMenu />}
         {mobileWidth && showMobileSearch && <MobileSearchbar />}
       </Container>
-      {mobileWidth && mobileMenu && <DynamicMobileSlideMenu />}
     </nav>
   );
 }

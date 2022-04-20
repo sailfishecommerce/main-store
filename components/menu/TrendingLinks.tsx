@@ -13,7 +13,7 @@ interface TrendLinkProps {
 }
 
 export const TrendLink = ({ trendingItem }: TrendLinkProps) => (
-  <li title={trendingItem.name} className="trending-item">
+  <li title={trendingItem.name} className="trending-item mr-4">
     <Link href={trendingItem.link} passHref>
       <a className="trending flex flex-col items-start md:items-center">
         <Image

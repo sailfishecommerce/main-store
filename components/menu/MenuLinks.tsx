@@ -25,7 +25,7 @@ export default function MenuLinks() {
         <span className="font-bold text-green-500 mx-1">Whatsapp:</span>
         9449 2060
       </div>
-      <ul className="hidden md:flex items-center justify-between w-1/3">
+      <ul className="hidden lg:flex items-center justify-between w-1/3">
         {menuLinks.primaryMenu.map((menuItem, index) => (
           <PageLink key={index} menuItem={menuItem} />
         ))}

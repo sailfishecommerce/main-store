@@ -29,7 +29,7 @@ const uiSlice = createSlice({
       state.slideTab = action.payload;
     },
     updateSearchView(state) {
-      if (state.mobileMenu) {
+      if (!state.mobileMenu) {
         state.showMobileSearch = !state.showMobileSearch;
       }
     },

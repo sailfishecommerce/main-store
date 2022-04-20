@@ -28,7 +28,7 @@ export default function BestSellerSlider() {
                 breakpoints: {
                   500: {
                     perPage: 1,
-                    padding: "2rem",
+                    padding: "1rem",
                   },
                   800: {
                     perPage: 2,
@@ -43,7 +43,7 @@ export default function BestSellerSlider() {
               {data.map((product: any) => (
                 <SplideSlide key={product.id}>
                   <Product
-                    className="mr-8 bg-white rounded-xl relative z-20"
+                    className="md:mr-8 bg-white rounded-xl w-5/6 relative z-20"
                     color={selectRandomColor()}
                     product={product}
                     imageClassName="border-gray-300 pb-4 mb-4 border-b"

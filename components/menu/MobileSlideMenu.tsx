@@ -8,7 +8,7 @@ import allCategoryContent from "@/json/allcategories-dropdown.json";
 export default function MobileSlideMenu() {
   return (
     <>
-      <div className="pl-4 mobileslidemenu flex flex-col">
+      <div className="fixed z-30 bg-white pl-4 mobileslidemenu flex flex-col">
         <ul className="flex items-center my-4">
           {menu.primaryMenu.map((item, index) => (
             <PageLink menuItem={item} key={index} />
@@ -25,20 +25,22 @@ export default function MobileSlideMenu() {
           </div>
         </div>
         <TrendingLinks mobile />
-        <CategoryLinks
-          title="Categories"
-          linkArray={allCategoryContent.sidebar[0]}
-        />
-        <CategoryLinks
-          title="Sections"
-          linkArray={allCategoryContent.sidebar[1]}
-        />
+        <div className="links">
+          <CategoryLinks
+            title="Categories"
+            linkArray={allCategoryContent.sidebar[0]}
+          />
+          <CategoryLinks
+            title="Sections"
+            linkArray={allCategoryContent.sidebar[1]}
+          />
+        </div>
       </div>
       <style jsx>
         {`
-          .mobileslidemenu {
-            height: 100vh;
-            overflow-y: auto;
+          .links {
+            max-height: 38vh;
+            overflow-y: scroll;
           }
         `}
       </style>
