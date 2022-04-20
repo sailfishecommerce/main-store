@@ -8,13 +8,13 @@ import allCategoryContent from "@/json/allcategories-dropdown.json";
 export default function MobileSlideMenu() {
   return (
     <>
-      <div className="mobileslidemenu flex flex-col">
+      <div className="pl-4 mobileslidemenu flex flex-col">
         <ul className="flex items-center my-4">
           {menu.primaryMenu.map((item, index) => (
             <PageLink menuItem={item} key={index} />
           ))}
         </ul>
-        <div className="contacts border-b mb-6 w-full">
+        <div className="contacts border-b mb-6 pr-4">
           <div className="reach-us w-full border rounded-md p-4 mb-4">
             <div className="flex items-center">
               <Whatsapp />
@@ -38,9 +38,7 @@ export default function MobileSlideMenu() {
         {`
           .mobileslidemenu {
             height: 100vh;
-            padding: 0px;
             overflow-y: auto;
-            width: 100vw;
           }
         `}
       </style>

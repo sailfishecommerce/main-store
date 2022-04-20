@@ -16,13 +16,13 @@ export default function Menu() {
   const { showMobileSearch, mobileMenu } = useNav();
 
   return (
-    <nav className="md:px-0 px-4 pb-3 md:pb-0">
-      <Container>
+    <nav>
+      <Container className="md:px-0 px-4 pb-3 md:pb-0">
         <PrimaryMenu />
         {!mobileWidth && <SecondaryMenu />}
         {mobileWidth && showMobileSearch && <MobileSearchbar />}
-        {mobileWidth && mobileMenu && <DynamicMobileSlideMenu />}
       </Container>
+      {mobileWidth && mobileMenu && <DynamicMobileSlideMenu />}
     </nav>
   );
 }

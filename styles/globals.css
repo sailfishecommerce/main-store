@@ -183,4 +183,23 @@
   .trendingLinks .splide__track {
     padding-left: 0px !important;
   }
+  .product-reviews
+    .carousel-and-title-wrapper.carousel-and-title-wrapper--with-score {
+    display: flex !important;
+    width: 90% !important;
+    align-items: flex-start;
+    /* flex-direction: row !important; */
+  }
+
+  .product-reviews
+    .tm-ferret-widget-wrapper
+    .carousel-and-title-wrapper
+    .carousel-container
+    .carousel-inner {
+    width: 95vw !important;
+    overflow: hidden;
+    display: flex;
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+  }
 }
