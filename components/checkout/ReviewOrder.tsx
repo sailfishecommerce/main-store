@@ -1,8 +1,8 @@
 import { BsFillCheckCircleFill } from "react-icons/bs";
 
 import { useCart } from "@/hooks";
-import FormattedPrice from "../Price/FormattedPrice";
-import ReviewOrderlist from "./ReviewOrderlist";
+import FormattedPrice from "@/components/price/FormattedPrice";
+import ReviewOrderlist from "@/components/checkout/ReviewOrderlist";
 
 export default function ReviewOrder() {
   const { useCartData } = useCart();

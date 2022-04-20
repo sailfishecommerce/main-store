@@ -1,4 +1,4 @@
-import FormattedPrice from "@/components/Price/FormattedPrice";
+import FormattedPrice from "@/components/price/FormattedPrice";
 import { useCart } from "@/hooks";
 
 export default function OrderSummary() {
@@ -8,7 +8,7 @@ export default function OrderSummary() {
     <div className="rounded-md pt-4 bg-white rounded-md p-4 my-2 h-full">
       <h4 className="font-medium">ORDER SUMMARY</h4>
       <ul>
-        {cart?.items.map((item) => (
+        {cart?.items.map((item: any) => (
           <li
             key={item.productId}
             className="item border-b py-3 border-gray-100 flex justify-between items-center"
@@ -48,7 +48,7 @@ export default function OrderSummary() {
         COMPLETE ORDER
       </button>
       <p className="text-gray-500 text-sm">
-        *By signing up or placing an order, you're consenting to our privacy
+        *By signing up or placing an order, you&#39;re consenting to our privacy
         policy
       </p>
       <style jsx>
