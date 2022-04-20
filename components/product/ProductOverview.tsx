@@ -5,6 +5,7 @@ import ProductReview from "@/components/product/ProductReview";
 import Breadcrumb from "@/components/bread-crumb/Breadcrumb";
 import ProductSlider from "@/components/slider/ProductSlider";
 import breadcrumb from "@/json/breadcrumb.json";
+import ProductOffers from "@/components/product/ProductOffers";
 
 type breadcrumbType = Array<{
   name: string;
@@ -23,9 +24,10 @@ export default function ProductOverview({ product }: ProductProps) {
   return (
     <div className="flex flex-col items-start">
       <Breadcrumb breadcrumbItems={breadcrumbItems} />
-      <div className="flex justify-start">
+      <div className="flex flex-col px-4 md:px-0 lg:flex-row md:justify-start">
         <ProductMagnifier product={product} />
         <ProductDetail product={product} />
+        <ProductOffers className="md:hidden" />
       </div>
       <ProductReview />
       <div className="mt-6" />

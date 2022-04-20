@@ -1,6 +1,6 @@
 import menu from "@/json/menu.json";
 import PageLink from "@/components/menu/PageLink";
-import Whatsapp from "@/public/svg/Whatsapp";
+import Whatsapp from "@/components/icons/Whatsapp";
 import TrendingLinks from "@/components/menu/TrendingLinks";
 import CategoryLinks from "@/components/menu/CategoryLinks";
 import allCategoryContent from "@/json/allcategories-dropdown.json";

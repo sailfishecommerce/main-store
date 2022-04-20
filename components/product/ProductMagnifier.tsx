@@ -6,8 +6,7 @@ const Lightbox = dynamic(() => import("react-image-lightbox"));
 
 import type { ProductProps } from "@/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import ProductOfferCards from "@/components/cards/ProductOfferCards";
-import productOffers from "@/json/product-offers.json";
+import ProductOffers from "./ProductOffers";
 
 export default function ProductMagnifier({ product }: ProductProps) {
   const [activeImage, setActiveImage] = useState(0);
@@ -24,6 +23,9 @@ export default function ProductMagnifier({ product }: ProductProps) {
   const images = product?.images;
 
   const onImgClick = () => setLightBoxOpen(!lightBoxOpen);
+  const magnifierDimens = tabletView
+    ? { height: 400, mgHeight: 300, mgWidth: 300 }
+    : { height: 500, mgHeight: 500, mgWidth: 500 };
 
   const imageView = tabletView
     ? {
@@ -45,17 +47,17 @@ export default function ProductMagnifier({ product }: ProductProps) {
   };
 
   return (
-    <div className="p-3">
+    <div className="p-3 w-full md:w-1/2">
       <div className="main-image">
         <div
           onClick={onImgClick}
-          className="product-gallery-preview-item active w-1/2 flex items-center mx-auto"
+          className="product-gallery-preview-item active w-full flex items-center mx-auto"
         >
           <Magnifier
             mgShowOverflow={false}
-            mgWidth={500}
-            mgHeight={500}
-            height={500}
+            mgWidth={magnifierDimens.mgWidth}
+            mgHeight={magnifierDimens.mgHeight}
+            height={magnifierDimens.height}
             className="img-fluid"
             src={images[activeImage].file.url}
             zoomFactor={0.11}
@@ -101,11 +103,7 @@ export default function ProductMagnifier({ product }: ProductProps) {
           </a>
         ))}
       </div>
-      <div className="product-offers my-4 flex items-center">
-        {productOffers.map((offer, index) => (
-          <ProductOfferCards offer={offer} key={index} />
-        ))}
-      </div>
+      <ProductOffers className="hidden md:flex" />
     </div>
   );
 }

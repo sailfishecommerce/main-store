@@ -11,8 +11,8 @@ interface Props {
 
 function BreadCrumbItem({ item }: any) {
   const linkStyle = item.active
-    ? "text-gray-900 text-sm"
-    : "text-gray-500 hover:text-green-300 text-sm";
+    ? "text-gray-900 md:text-sm text-xs"
+    : "text-gray-500 hover:text-green-300 md:text-sm text-xs";
   return (
     <>
       {item.link ? (

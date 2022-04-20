@@ -9,7 +9,7 @@ export default function ReviewBars({ barWidth, count }: Props) {
       <div className="w-full bg-gray-200  rounded-full h-2.5">
         <div className="bar bg-mountain-green h-2.5 rounded-full" />
       </div>
-      <p className="ml-6 w-12">{barWidth} %</p>
+      <p className="ml-6 lg:w-12 w-14">{barWidth} %</p>
       <style jsx>
         {`
           .bar {

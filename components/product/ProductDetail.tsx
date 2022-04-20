@@ -15,7 +15,7 @@ export default function ProductDetail({ product }: any) {
     dispatch(updateActiveProduct(product));
   }
   return (
-    <div className="w-1/2 flex flex-col justify-start">
+    <div className="lg:w-1/2 w-full flex flex-col justify-start">
       <h3 className="text-2xl font-bold">{product.name}</h3>
       <p>
         By <span className="text-green-500">{product.vendor}</span>
