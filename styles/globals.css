@@ -177,11 +177,6 @@ header.header {
   background-color: var(--light-red);
 }
 
-@media (min-width: 1000px) {
-  .tm-ferret-widget-wrapper {
-    width: 80% !important;
-  }
-}
 
 @media (max-width: 768px) {
   .itemSlider .splide__arrows {

@@ -8,6 +8,7 @@ const uiSlice = createSlice({
     loading: false,
     mobileMenu: false,
     modal: false,
+    categoryDropdown: false,
     showNav: false,
     showMobileSearch: false,
     authModal: "AUTHFORM",
@@ -38,6 +39,9 @@ const uiSlice = createSlice({
     },
     toggleModal(state) {
       state.modal = !state.modal;
+    },
+    updateCategoryDropdown(state) {
+      state.categoryDropdown = !state.categoryDropdown;
     },
     authModalForm(state, action: PayloadAction<string>) {
       state.authModal = action.payload;
@@ -86,6 +90,7 @@ export const {
   authModalForm,
   updateLoadingAction,
   quickViewModal,
+  updateCategoryDropdown,
   updateSearchView,
   toggleAuthModal,
   toggleAppModal,

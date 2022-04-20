@@ -1,26 +1,19 @@
-import { useState } from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 
-import AllCategoriesDropdownView from "@/components/dropdown/AllCategoriesDropdownView";
+import useUI from "@/hooks/useUI";
 
 export default function AllCategoriesDropdown() {
-  const [showDropdown, setShowDropdown] = useState(false);
+  const { toggleCategoriesDropdown } = useUI();
 
-  function toggleDropdown() {
-    return setShowDropdown(!showDropdown);
-  }
   return (
     <>
       <button
-        className="allCategories flex items-center font-bold hover:bg-green-500 text-white rounded-md px-2 py-1"
+        className="allCategories relative flex items-center font-bold hover:bg-green-500 text-white rounded-md px-2 py-1"
         type="button"
-        onClick={toggleDropdown}
+        onClick={toggleCategoriesDropdown}
       >
         <HiMenuAlt4 className="mr-2" /> Categories
       </button>
-      {showDropdown && (
-        <AllCategoriesDropdownView updateDropdown={toggleDropdown} />
-      )}
       <style jsx>
         {`
           .allCategories {

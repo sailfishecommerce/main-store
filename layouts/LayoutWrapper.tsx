@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { ToastContainer } from "react-toastify";
 import dynamic from "next/dynamic";
+import { PropsWithChildren } from "react";
 
 import LayoutMetatag from "@/components/metatag/LayoutMetatag";
-import { PropsWithChildren } from "react";
 import { useAppSelector } from "@/hooks/useRedux";
 import useSlidingTab from "@/hooks/useSlidingTab";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,8 +19,6 @@ const DynamicSlidingCartTab = dynamic(
 const DynamicAccountDetailsTab = dynamic(
   () => import("@/components/sliding-tab/AccountDetails")
 );
-
-
 
 export default function LayoutWrapper({ children }: PropsWithChildren<{}>) {
   const { slideTab } = useSlidingTab();
@@ -42,6 +40,7 @@ export default function LayoutWrapper({ children }: PropsWithChildren<{}>) {
       )}
       {slideTab === "SLIDING-CART" && <DynamicSlidingCartTab />}
       {slideTab === "SLIDING-ACCOUNT" && <DynamicAccountDetailsTab />}
+
       {children}
     </div>
   );
