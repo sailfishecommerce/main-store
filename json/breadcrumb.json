@@ -10,5 +10,10 @@
   "blog": [
     { "name": "Homepage", "link": "/" },
     { "name": "Live Healthy Content Page", "link": null, "active": true }
+  ],
+  "checkout": [
+    { "name": "Homepage", "link": "/" },
+    { "name": "Cart", "link": "#cart" },
+    { "name": "Checkout", "link": null, "active": true }
   ]
 }

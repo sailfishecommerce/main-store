@@ -234,6 +234,6 @@ header.header {
 
   .itemSlider .splide__track {
     overflow-x: scroll !important;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
   }
 }

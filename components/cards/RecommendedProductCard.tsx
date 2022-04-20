@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { ProductProps } from "@/types";
+import CartIcon from "../icons/CartIcon";
 
 interface ProductTypes extends ProductProps {
   className?: string;
@@ -52,12 +53,7 @@ export default function RecommendedProductCard({
               type="button"
               className="add-to-cart w-1/4 justify-center text-white px-2 py-1 flex items-center rounded-md"
             >
-              <Image
-                src="/cart-white-icon.png"
-                alt="cart"
-                height={20}
-                width={20}
-              />
+              <CartIcon />
             </button>
           </div>
         </div>
@@ -69,7 +65,6 @@ export default function RecommendedProductCard({
             .add-to-cart:hover {
               background-color: var(--mountain-mist);
             }
-            
           `}
         </style>
       </a>
