@@ -105,13 +105,15 @@ header.header {
 
 .itemSlider .splide__pagination,
 .product-tab-slider .splide__pagination,
-.trendingLinks .splide__pagination {
+.trendingLinks .splide__pagination,
+.values-slider .splide__pagination {
   display: none;
 }
 
 .product-tab-slider .splide__track.splide__track--slide,
 .itemSlider.itemSlider.recommendation-slider
-  .splide__track.splide__track--slide {
+  .splide__track.splide__track--slide,
+.values-slider .splide__track.splide__track--slide {
   padding-left: 0px !important;
 }
 

@@ -15,9 +15,9 @@ export default function ValueCard({ content }: valuecardProps) {
     <>
       <div
         title={content.title}
-        className="value-card w-full rounded-lg p-6 flex flex-col h-44 hover:opacity-80"
+        className="value-card w-11/12 rounded-3xl p-6 flex flex-col h-48 hover:opacity-80"
       >
-        <div className="w-2/12">
+        <div className="w-2/12 w-1/12">
           <Image
             src={content.icon}
             alt={content.title}

@@ -1,5 +1,6 @@
 {
   "head": ["ID", "Date", "Value", "Payment status", "Delivery status"],
+  "mobileHead": ["ID", "Date", "Value"],
   "body": [
     {
       "id": "#1124543",
