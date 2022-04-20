@@ -177,7 +177,6 @@ header.header {
   background-color: var(--light-red);
 }
 
-
 @media (max-width: 768px) {
   .itemSlider .splide__arrows {
     right: 0px;
@@ -227,5 +226,14 @@ header.header {
     right: 0px;
     z-index: 20;
     background-color: white;
+  }
+  .itemSlider .splide__arrows,
+  .values-slider .splide__arrows {
+    display: none;
+  }
+
+  .itemSlider .splide__track {
+    overflow-x: scroll !important;
+    padding-bottom: 10px;
   }
 }

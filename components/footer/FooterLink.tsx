@@ -6,10 +6,10 @@ export default function FooterLink() {
     <div className="pl-0 md:pl-12 order-2 md:order-1 flex items-start justify-around flex flex-col md:grid grid-cols-2 w-full md:w-2/4">
       {footerLinks.map((footerLink) => (
         <ul className="mt-4" key={footerLink.text}>
-          <span className="flex items-center mb-6">
-            <h4 className="font-bold text-xl">{footerLink.text}</h4>
+          <span className="flex items-center md:mb-6 mb-2">
+            <h4 className="font-bold text-lg md:text-xl">{footerLink.text}</h4>
             {footerLink.tag && (
-              <div className="py-1 px-2 border mx-2 text-sm border-gray-500 text-gray-500 rounded-full hover:border-green-500 hover:text-green-500 hover:font-bold">
+              <div className="py-1 px-2 border mx-2 md:text-sm text-xs border-gray-500 text-gray-500 rounded-full hover:border-green-500 hover:text-green-500 hover:font-bold">
                 {footerLink.tag}
               </div>
             )}

@@ -23,7 +23,7 @@ export default function ProductSlider({
 }: Props) {
   const [data, status] = useLiveHealthyProduct();
   return (
-    <section className="itemSlider relative container mx-auto flex flex-col my-0 md:my-4 px-4 md:px-0">
+    <section className="itemSlider relative container mx-auto flex flex-col my-0 mb-2 md:my-4 px-4 md:px-0">
       <div className="top mb-4 flex items-center justify-between">
         {productName ? (
           <h1 className="font-bold text-md md:text-xl 2xl:text2xl">

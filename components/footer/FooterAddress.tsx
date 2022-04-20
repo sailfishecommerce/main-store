@@ -8,7 +8,7 @@ export default function FooterAddress() {
     <div className="address flex flex-col w-full md:w-1/4">
       <Logo className="w-1/3 my-2" />
       <SocialIcons />
-      <div className="call-us bg-white rounded-lg p-3 w-5/6 my-3">
+      <div className="call-us bg-white rounded-lg p-3 w-5/6 my-4 md:my-3">
         <span className="flex items-center">
           <FaWhatsapp fill="green" />
           <h6 className="font-bold mx-2">Call Us: 9442 2060</h6>

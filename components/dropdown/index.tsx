@@ -12,27 +12,26 @@ function DropdownComponent({
   className,
 }: PropsWithChildren<Props>) {
   const [active, setActive] = useState(false);
+  const dropdownClassName = className
+    ? className
+    : " bg-red-500 hover:bg-red-700 hover:shadow-lg border-red-900 focus:bg-red-700 active:bg-red-800 uppercase";
 
   return (
-    <div className="flex justify-center">
+    <div className="flex">
       <div className="dropdown relative">
         <button
           onMouseEnter={() => setActive(!active)}
-          className={`${className} px-2 ml-2 lg:px-4
+          className={`${dropdownClassName} px-2 ml-2 lg:px-4
           py-2          
           text-white
           font-medium
           text-xs
           leading-tight
-          uppercase
           rounded
-          bg-red-500
           shadow-md
           border
-          border-red-900
-          hover:bg-red-700 hover:shadow-lg
-          focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0
-          active:bg-red-800 active:shadow-lg active:text-white
+          focus:shadow-lg focus:outline-none focus:ring-0
+           active:shadow-lg active:text-white
           transition
           duration-150
           ease-in-out
