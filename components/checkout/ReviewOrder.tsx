@@ -11,13 +11,11 @@ export default function ReviewOrder() {
   return (
     <div className="bg-white rounded-md w-full lg:h-full lg:w-1/4 md:w-1/2 p-4">
       <h6 className="mb-2">
-        <span className="font-medium mr-2">1. REVIEW YOUR ORDER </span> (
-        {cart?.items?.length} | {cartItem} )
+        <span className="font-semibold text-xl mb-2 mr-2">1. Review Your Order</span>
       </h6>
-      {cart?.items.map((item) => (
+      {cart?.items.map((item: any) => (
         <ReviewOrderlist key={item.productId} content={item} />
       ))}
-      <hr className="border-b border-gray-100 my-2" />
       <div className="subtotal flex items-center justify-between">
         <h4 className="font-bold">SUBTOTAL</h4>
         <FormattedPrice className="font-bold" price={cart?.subTotal} />

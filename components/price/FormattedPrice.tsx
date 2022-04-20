@@ -18,7 +18,7 @@ function FormattedPriceComponent({
 }: formattedPriceProps): JSX.Element {
   const { currencyList } = useCurrencies();
   const { currency } = useAppSelector((state) => state.currencyLanguage);
-
+  const priceValue = price ? price : 0;
   return (
     <>
       {currencyList === undefined ? (
@@ -28,7 +28,7 @@ function FormattedPriceComponent({
       ) : (
         currencyList.length > 1 && (
           <FormatCurrency
-            price={price}
+            price={priceValue}
             isProduct={isProduct}
             currencies={currencyList}
             currency={currency}

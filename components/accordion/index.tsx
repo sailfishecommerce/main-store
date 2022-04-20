@@ -26,7 +26,7 @@ export default function Accordion({
   }
   return (
     <div className="accordion" id="accordionExample">
-      <div className="accordion-item bg-white border-b border-gray-200">
+      <div className="accordion-item bg-white my-1">
         <h2
           className="accordion-header mb-0"
           onClick={onClickHandler}
@@ -45,8 +45,8 @@ export default function Accordion({
         text-base text-gray-800 text-left
         ${colorMode}
         border
-        border-gray-400
-        rounded-none
+        border-gray-300
+        rounded-xl
         transition
         focus:outline-none
       `}
