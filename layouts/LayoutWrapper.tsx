@@ -21,6 +21,7 @@ const DynamicAccountDetailsTab = dynamic(
 );
 
 
+
 export default function LayoutWrapper({ children }: PropsWithChildren<{}>) {
   const { slideTab } = useSlidingTab();
   const { activeProduct } = useAppSelector((state) => state.product);

@@ -5,6 +5,7 @@ import { IoPersonOutline } from "react-icons/io5";
 import { useCart } from "@/hooks";
 import menuLinks from "@/json/menu.json";
 import useSlidingTab from "@/hooks/useSlidingTab";
+import PageLink from "@/components/menu/PageLink";
 
 export default function MenuLinks() {
   const { useCartData } = useCart();
@@ -26,16 +27,7 @@ export default function MenuLinks() {
       </div>
       <ul className="hidden md:flex items-center justify-between w-1/3">
         {menuLinks.primaryMenu.map((menuItem) => (
-          <li className="mx-2" key={menuItem.link}>
-            <Link href={menuItem.link} passHref>
-              <a
-                title={menuItem.text}
-                className="hover:text-green-500 font-light"
-              >
-                {menuItem.text}
-              </a>
-            </Link>
-          </li>
+          <PageLink menuItem={menuItem} />
         ))}
       </ul>
       <div className="icons flex items-center justify-between w-16">

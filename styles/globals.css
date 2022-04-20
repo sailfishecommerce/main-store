@@ -178,9 +178,8 @@
     top: -30px;
   }
 
-  .bestsellerSplide .splide__track {
+  .bestsellerSplide .splide__track,
+  .trendingLinks .splide__track {
     padding-left: 0px !important;
   }
-
-  
 }

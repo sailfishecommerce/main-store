@@ -58,8 +58,8 @@ const uiSlice = createSlice({
     toggleAuthModal(state) {
       state.displayAuthModal = !state.displayAuthModal;
     },
-    updateMobileMenu(state, action) {
-      state.mobileMenu = action.payload;
+    updateMobileMenu(state) {
+      state.mobileMenu = !state.mobileMenu;
     },
     toggleNav(state) {
       state.showNav = !state.showNav;
