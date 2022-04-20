@@ -15,7 +15,7 @@ interface TrendLinkProps {
 export const TrendLink = ({ trendingItem }: TrendLinkProps) => (
   <li title={trendingItem.name} className="trending-item">
     <Link href={trendingItem.link} passHref>
-      <a className="trending">
+      <a className="trending flex flex-col items-start md:items-center">
         <Image
           src={trendingItem.image}
           height={120}
@@ -23,14 +23,14 @@ export const TrendLink = ({ trendingItem }: TrendLinkProps) => (
           className="hover:scale-105"
           alt={trendingItem.name}
         />
-        <p className="text-center font-light">{trendingItem.name}</p>
+        <p className="text-center font-light mt-2 font-medium">{trendingItem.name}</p>
       </a>
     </Link>
   </li>
 );
 
 interface TrendingLinksProps {
-  mobile: boolean;
+  mobile?: boolean;
 }
 
 export default function TrendingLinks({ mobile }: TrendingLinksProps) {

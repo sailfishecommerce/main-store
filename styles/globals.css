@@ -98,7 +98,8 @@
 }
 
 .itemSlider .splide__pagination,
-.product-tab-slider .splide__pagination {
+.product-tab-slider .splide__pagination,
+.trendingLinks .splide__pagination {
   display: none;
 }
 

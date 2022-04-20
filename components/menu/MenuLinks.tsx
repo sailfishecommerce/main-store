@@ -26,8 +26,8 @@ export default function MenuLinks() {
         9449 2060
       </div>
       <ul className="hidden md:flex items-center justify-between w-1/3">
-        {menuLinks.primaryMenu.map((menuItem) => (
-          <PageLink menuItem={menuItem} />
+        {menuLinks.primaryMenu.map((menuItem, index) => (
+          <PageLink key={index} menuItem={menuItem} />
         ))}
       </ul>
       <div className="icons flex items-center justify-between w-16">
