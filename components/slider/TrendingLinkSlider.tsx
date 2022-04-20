@@ -1,6 +1,8 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+
 import allCategoryContent from "@/json/allcategories-dropdown.json";
 import { TrendLink } from "@/components/menu/TrendingLinks";
+import "@splidejs/splide/dist/css/splide.min.css";
 
 export default function TrendingLinkSlider() {
   return (

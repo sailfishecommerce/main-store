@@ -22,6 +22,7 @@ export default function ProductSlider({
   randomColor,
 }: Props) {
   const [data, status] = useLiveHealthyProduct();
+
   return (
     <section className="itemSlider relative container mx-auto flex flex-col my-0 mb-2 md:my-4 px-4 md:px-0">
       <div className="top mb-4 flex items-center justify-between">
@@ -33,19 +34,7 @@ export default function ProductSlider({
           <h1 className="font-bold text-xl 2xl:text-2xl">{title}</h1>
         )}
       </div>
-      {tags && (
-        <ul className="flex items-center">
-          {tags.map((tag) => (
-            <li
-              className="productTag flex mr-2 items-center text-xs p-1 border  bg-white rounded-xl"
-              key={tag}
-              title={tag}
-            >
-              {tag}
-            </li>
-          ))}
-        </ul>
-      )}
+      {/* {tags && <ProductTags tags={tags} tabColor={tabColor} />} */}
       <div className="products mx-auto container mt-4 flex items-center justify-between pb-0 md:pb-12">
         {status === "error" ? (
           "unable to load products"
@@ -58,6 +47,7 @@ export default function ProductSlider({
               breakpoints: {
                 800: {
                   perPage: 2,
+                  padding: "2rem",
                 },
                 1200: {
                   perPage: 3,
@@ -67,7 +57,7 @@ export default function ProductSlider({
                 },
               },
             }}
-            className="container mx-auto"
+            className="productSlider container mx-auto"
           >
             {data.map((product: any) => (
               <SplideSlide key={product.id}>
@@ -81,18 +71,6 @@ export default function ProductSlider({
           </Splide>
         )}
       </div>
-      <style jsx>
-        {`
-          .productTag {
-            border: 1px solid ${tabColor};
-            color: ${tabColor};
-          }
-          .productTag:hover {
-            background-color: ${tabColor};
-            color: white;
-          }
-        `}
-      </style>
     </section>
   );
 }

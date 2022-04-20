@@ -2,6 +2,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import useLiveHealthyProduct from "@/hooks/useLivehealthyProduct";
 import RecommendedProductCard from "@/components/cards/RecommendedProductCard";
+import "@splidejs/splide/dist/css/splide.min.css";
 
 export default function RecommendationSlider() {
   const [data, status] = useLiveHealthyProduct();

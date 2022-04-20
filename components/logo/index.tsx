@@ -8,7 +8,7 @@ interface LogoProps {
 export default function Logo({ className }: LogoProps) {
   return (
     <Link href="/" passHref>
-      <a title="welcome to live healthy" className={className}>
+      <a title="welcome to live healthy" className={`${className} w-full h-full`}>
         <Image
           src="/logo.webp"
           alt="logo"

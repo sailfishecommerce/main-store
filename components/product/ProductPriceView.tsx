@@ -6,6 +6,7 @@ import useSlidingTab from "@/hooks/useSlidingTab";
 import LockIcon from "@/components/icons/LockIcon";
 import DeliveryboxIcon from "@/components/icons/DeliveryboxIcon";
 import CartIcon from "@/components/icons/CartIcon";
+import FormattedPrice from "../price/FormattedPrice";
 
 export default function ProductPriceView({ product }: any) {
   const { loadingState, addItemToCart } = useShoppingCart();
@@ -22,10 +23,10 @@ export default function ProductPriceView({ product }: any) {
   return (
     <div className="border border-gray-100 my-4 my-6 rounded-3xl p-6 flex flex-col">
       <div className="price flex flex-col">
-        <h4 className="font-bold text-2xl">$ {product.price}</h4>
-        {product.oldPrice && (
-          <h4 className="gray-manatee text-2xl">{product.oldPrice}</h4>
-        )}
+        <FormattedPrice
+          price={product.price}
+          className="font-semibold text-black text-xl"
+        />
         <div className="buy-now-section flex flex-col">
           <div className="row-1 flex flex-col md:flex-row items-start md:items-center justify-between my-3">
             <div className="button-group flex items-center my-2">
@@ -54,7 +55,7 @@ export default function ProductPriceView({ product }: any) {
               </div>
               <div className="secure-transaction flex items-center md:hidden">
                 <LockIcon />
-                <p className="font-normal text-sm ml-1 text-gray-400">
+                <p className="font-normal text-xs md:text-sm ml-1 text-gray-400">
                   Secure transaction
                 </p>
               </div>

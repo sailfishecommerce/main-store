@@ -2,7 +2,7 @@ import ProductOfferCards from "@/components/cards/ProductOfferCards";
 import productOffers from "@/json/product-offers.json";
 
 interface Props {
-  className: string;
+  className?: string;
 }
 
 export default function ProductOffers({ className }: Props) {

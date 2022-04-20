@@ -15,7 +15,7 @@ export default function ProductMagnifier({ product }: ProductProps) {
 
   const activethumbnailImg = (index: number) =>
     activeImage === index
-      ? "active border rounded-2xl p-1 border-green-500"
+      ? "active border md:rounded-2xl rounded-lg p-1 border-green-500"
       : "";
 
   const updateActiveImage = (index: number) => setActiveImage(index);
@@ -24,7 +24,7 @@ export default function ProductMagnifier({ product }: ProductProps) {
 
   const onImgClick = () => setLightBoxOpen(!lightBoxOpen);
   const magnifierDimens = tabletView
-    ? { height: 400, mgHeight: 300, mgWidth: 300 }
+    ? { height: 300, mgHeight: 300, mgWidth: 300 }
     : { height: 500, mgHeight: 500, mgWidth: 500 };
 
   const imageView = tabletView
@@ -84,10 +84,10 @@ export default function ProductMagnifier({ product }: ProductProps) {
           />
         )}
       </div>
-      <div className="product-gallery-thumblist mt-4  hidden md:flex flex-wrap w-full lg:order-1">
+      <div className="product-gallery-thumblist mt-4 flex flex-wrap w-full lg:order-1">
         {images?.map((image: any, index) => (
           <a
-            className={`items-center justify-center  flex px-2 cursor-pointer hover:border-green-500 w-1/6 border-gray-500 ${activethumbnailImg(
+            className={`items-center justify-center flex p-1 md:px-2 cursor-pointer hover:border-green-500 w-1/6 border-gray-500 ${activethumbnailImg(
               index
             )}`}
             onClick={() => updateActiveImage(index)}

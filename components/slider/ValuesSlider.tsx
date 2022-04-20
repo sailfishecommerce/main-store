@@ -2,6 +2,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import values from "@/json/values.json";
 import ValueCard from "@/components/cards/ValueCard";
+import "@splidejs/splide/dist/css/splide.min.css";
 
 export default function ValuesSlider() {
   return (

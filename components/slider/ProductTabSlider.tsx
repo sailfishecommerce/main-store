@@ -4,6 +4,7 @@ import useLiveHealthyProduct from "@/hooks/useLivehealthyProduct";
 import ProductTabCard from "@/components/cards/ProductTabCard";
 import { useMediaQuery } from "@/hooks";
 import ProductTabDropdown from "@/components/product/ProductTabDropdown";
+import "@splidejs/splide/dist/css/splide.min.css";
 
 export default function ProductTabSlider() {
   const tabs = ["New Products", "Special Products", "Featured Products"];
