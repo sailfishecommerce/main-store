@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { ProductProps } from "@/types";
+import CartIcon from "@/components/icons/CartIcon";
 
 interface ProductTypes extends ProductProps {
   row?: boolean;
@@ -68,13 +69,7 @@ export default function Product({
             type="button"
             className="add-to-cart w-full md:w-4/5 justify-center h-8 text-white px-4 py-1 flex items-center mx-auto rounded-md"
           >
-            <Image
-              src="/cart-white-icon.png"
-              alt="cart"
-              className="mr-6"
-              height={20}
-              width={20}
-            />{" "}
+            <CartIcon />
             <p className="text-xs md:text-sm">Add to cart</p>
           </button>
         </div>

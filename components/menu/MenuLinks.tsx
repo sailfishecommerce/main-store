@@ -2,14 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { IoPersonOutline } from "react-icons/io5";
 
-import { useCart } from "@/hooks";
 import menuLinks from "@/json/menu.json";
 import useSlidingTab from "@/hooks/useSlidingTab";
 import PageLink from "@/components/menu/PageLink";
 
-export default function MenuLinks() {
-  const { useCartData } = useCart();
-  const { data: cart }: any = useCartData();
+export default function MenuLinks({ cart }: any) {
   const { updateSlideTab } = useSlidingTab();
 
   return (

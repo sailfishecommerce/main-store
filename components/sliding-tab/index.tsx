@@ -18,9 +18,9 @@ export default function SlidingTab({
     <aside className="fixed flex z-50 justify-between h-screen items-center w-full right-0 top-0">
       <div
         onClick={() => updateSlideTab(null)}
-        className="overlay w-2/3 flex cursor-pointer h-full"
+        className="overlay lg:w-2/3 w-1/12 flex cursor-pointer h-full"
       ></div>
-      <div className="fixed top-0 items-start bg-white z-50 flex flex-col sliding-tab w-1/3 h-full">
+      <div className="fixed top-0 items-start bg-white z-50 flex flex-col sliding-tab w-11/12 lg:w-1/3 h-full">
         <button
           onClick={() => updateSlideTab(null)}
           className={`${defaultButtonColor} closeButton absolute p-1 top-5 right-10 hover:text-white hover:rounded-full`}
