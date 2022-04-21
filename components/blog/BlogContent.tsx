@@ -66,7 +66,7 @@ export default function BlogContent() {
             <h2 className="font-bold text-xl mb-4">Video review</h2>
             <Image
               src={content.section3.banner}
-              height={200}
+              height={250}
               width={500}
               alt={content.section3.banner}
               className="rounded-xl"

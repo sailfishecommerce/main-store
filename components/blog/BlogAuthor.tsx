@@ -4,7 +4,7 @@ import blogContent from "@/json/blog.json";
 
 export default function BlogAuthor() {
   return (
-    <div className="bg-gray-200 rounded-xl p-4 flex items-center">
+    <div className="bg-gray-200 rounded-xl p-4 flex items-center mb-6">
       <Image
         src={blogContent[0].author.image.big}
         alt={blogContent[0].author.name}
