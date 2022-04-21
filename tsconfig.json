@@ -19,6 +19,6 @@
       "@/*": ["*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/form/SearchLocationInput.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/form/SearchLocationInput.jsx", "components/page-view"],
   "exclude": ["node_modules"]
 }
