@@ -39,7 +39,7 @@
   ],
   "outlet": [
     {
-      "image": "/pages/contacts/orlando.webp",
+      "image": "/contacts/orlando.webp",
       "address": "Orlando, USA",
       "info": [
         {
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "image": "/pages/contacts/chicago.webp",
+      "image": "/contacts/chicago.webp",
       "address": "Chicago, USA",
       "info": [
         {
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "image": "/pages/contacts/newyork.webp",
+      "image": "/contacts/newyork.webp",
       "address": "New York, USA",
       "info": [
         {
