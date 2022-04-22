@@ -4,6 +4,7 @@ import Product from "@/components/cards/ProductCard";
 import useLiveHealthyProduct from "@/hooks/useLivehealthyProduct";
 import "@splidejs/splide/dist/css/splide.min.css";
 import selectRandomColor from "@/lib/selectRandomColor";
+import ProductTags from "@/components/tag/ProductTags";
 
 interface Props {
   title: string;
@@ -34,7 +35,7 @@ export default function ProductSlider({
           <h1 className="font-bold text-xl 2xl:text-2xl">{title}</h1>
         )}
       </div>
-      {/* {tags && <ProductTags tags={tags} tabColor={tabColor} />} */}
+      {tags && <ProductTags tags={tags} tabColor={tabColor} />}
       <div className="products mx-auto container mt-4 flex items-center justify-between pb-0 md:pb-12">
         {status === "error" ? (
           "unable to load products"

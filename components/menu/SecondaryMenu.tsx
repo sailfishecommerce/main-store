@@ -19,7 +19,7 @@ export default function SecondaryMenu() {
                 <Link href={`/collection/${menuItem.slug}`} passHref>
                   <a
                     title={menuItem.name}
-                    className="font-bold hover:text-green-500"
+                    className="font-semibold hover:text-green-500"
                   >
                     {menuItem.name}
                   </a>

@@ -20,7 +20,7 @@
       "icon": "phone",
       "title": "Phone numbers",
       "group": {
-        "text1": "For customers",
+        "text1": "Customers",
         "text2": "Tech support",
         "phoneNumber1": "+1 (080) 44 357 260",
         "phoneNumber2": "+1 00 33 169 7720"
@@ -30,7 +30,7 @@
       "icon": "mail",
       "title": "Email addresses",
       "group": {
-        "text1": "For customers",
+        "text1": "Customers",
         "text2": "Tech support",
         "email1": "customer@example.com",
         "email2": "support@example.com"

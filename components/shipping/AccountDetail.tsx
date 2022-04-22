@@ -21,13 +21,13 @@ export default function AccountDetail() {
           type="button"
           onClick={() => updateSlideTab("SLIDING-ACCOUNT")}
           text="Change account info"
-          className="light-green my-2 md:mr-8 w-full"
+          className="light-green my-2 md:mr-8 w-full md:w-1/4"
         />
         <Button
           type="button"
           onClick={() => updateSlideTab("SLIDING-ACCOUNT")}
           text="Change Shipping / Billing Address"
-          className="plain my-2 w-full"
+          className="plain my-2 w-full md:w-1/4"
         />
       </div>
     </div>

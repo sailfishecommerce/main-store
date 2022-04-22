@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useState } from "react";
 
 type footerLinkType = {
   slug: string;

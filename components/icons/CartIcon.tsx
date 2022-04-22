@@ -5,9 +5,9 @@ export default function CartIcon({ color }: Props) {
   const strokeColor = color ? color : "white";
   return (
     <svg
-      width="25"
-      height="24"
-      viewBox="0 0 25 24"
+      width="28"
+      height="28"
+      viewBox="0 0 25 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

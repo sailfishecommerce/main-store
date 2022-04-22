@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { IoPersonOutline } from "react-icons/io5";
+import { GrLogin, GrLogout } from "react-icons/gr";
 
 import menuLinks from "@/json/menu.json";
 import useSlidingTab from "@/hooks/useSlidingTab";
 import PageLink from "@/components/menu/PageLink";
+import CartIcon from "../icons/CartIcon";
 
 export default function MenuLinks({ cart }: any) {
   const { updateSlideTab } = useSlidingTab();
@@ -28,24 +30,24 @@ export default function MenuLinks({ cart }: any) {
         ))}
       </ul>
       <div className="icons flex items-center justify-between w-16">
+        <button className="flex items-center">
+          <GrLogin className="mr-4" />
+          <GrLogout className="mr-2" />
+        </button>
         <button
           onClick={() => updateSlideTab("SLIDING-CART")}
           className="cart-icon relative"
         >
-          <Image
-            src="/cartIcon.png"
-            alt="cart"
-            title="cart"
-            height={25}
-            width={25}
-          />
-          <div className="bg-yellow-500 rounded-full flex items-center text-white justify-center -mt-8 text-xs ml-2 z-5 absolute h-4 w-4">
-            {cart?.items?.length}
-          </div>
+          <CartIcon color="black" />
+          {cart?.items?.length && (
+            <div className="bg-yellow-500 rounded-full flex items-center text-white justify-center -mt-8 text-xs ml-2 z-5 absolute h-4 w-4">
+              {cart?.items?.length}
+            </div>
+          )}
         </button>
         <Link href="/account" passHref>
           <button title="account" className="account">
-            <IoPersonOutline className="hover:text-green-500" size={20} />
+            <IoPersonOutline className="hover:text-green-500 ml-2" size={20} />
           </button>
         </Link>
       </div>
