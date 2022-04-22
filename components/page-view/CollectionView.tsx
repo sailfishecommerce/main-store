@@ -100,7 +100,7 @@ export default function ShopView({ vendor, menu }: ShopViewProps) {
           <ShopBannerToolbar />
         </div>
       </div>
-      <div className="container flex pb-5 mb-2 md:mb-4">
+      <div className="container mx-auto flex pb-5 mb-2 md:mb-4">
         {!tabWidth && <ShopViewCategories />}
         <section className="w0full md:w-3/4 flex flex-col">
           <div className="flex flex-wrap">

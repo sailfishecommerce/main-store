@@ -1,7 +1,6 @@
 import qs from "qs";
 
 export default function useAlgoliaSearch() {
-
   function getCategorySlug(name: string) {
     return name.split(" ").map(encodeURIComponent).join("+");
   }
@@ -48,7 +47,7 @@ export default function useAlgoliaSearch() {
       arrayFormat: "repeat",
     });
 
-    return `/shop?search/${categoryPath}${queryString}`;
+    return `/collection?search/${categoryPath}${queryString}`;
   };
 
   const searchStateToUrl = (searchState: any) => {
