@@ -4,7 +4,7 @@ import Applayout from "@/layouts/Applayout";
 import aboutUsContent from "@/json/about-us.json";
 import { MdOutlineMailOutline } from "react-icons/md";
 
-const Aboutus = dynamic(() => import("@/components/page-view/about-us"));
+const Aboutus = dynamic(() => import("@/components/page-view/Aboutus"));
 
 export default function About() {
   return (

@@ -1,11 +1,16 @@
 import menu from "@/json/menu.json";
 import PageLink from "@/components/menu/PageLink";
 import Whatsapp from "@/components/icons/Whatsapp";
-import TrendingLinks from "@/components/menu/TrendingLinks";
 import CategoryLinks from "@/components/menu/CategoryLinks";
 import allCategoryContent from "@/json/allcategories-dropdown.json";
+import TrendingLinkSlider from "@/components/slider/TrendingLinkSlider";
+import useCategoryData from "@/hooks/useCategoryData";
 
 export default function MobileSlideMenu() {
+  const [data, status] = useCategoryData();
+
+  const categories = status === "success" ? data?.results.slice(12, 20) : [];
+
   return (
     <>
       <div className="fixed z-30 bg-white pl-4 mobileslidemenu flex flex-col">
@@ -24,15 +29,12 @@ export default function MobileSlideMenu() {
             <p>Opening Hours: Mon - Sat: 9:00 am - 6:00 pm</p>
           </div>
         </div>
-        <TrendingLinks mobile />
+        <TrendingLinkSlider />
         <div className="links">
-          <CategoryLinks
-            title="Categories"
-            linkArray={allCategoryContent.sidebar[0]}
-          />
+          <CategoryLinks title="Categories" linkArray={categories} />
           <CategoryLinks
             title="Sections"
-            linkArray={allCategoryContent.sidebar[1]}
+            linkArray={allCategoryContent.sidebar}
           />
         </div>
       </div>

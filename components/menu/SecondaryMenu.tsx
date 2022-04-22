@@ -16,7 +16,7 @@ export default function SecondaryMenu() {
         {categories.length > 1
           ? categories.map((menuItem: { slug: string; name: string }) => (
               <li key={menuItem.slug}>
-                <Link href={`collection/${menuItem.slug}`} passHref>
+                <Link href={`/collection/${menuItem.slug}`} passHref>
                   <a
                     title={menuItem.name}
                     className="font-bold hover:text-green-500"

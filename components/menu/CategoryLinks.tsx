@@ -2,7 +2,7 @@ import Link from "next/link";
 
 interface Props {
   title: string;
-  linkArray: Array<{ link?: string; title: string }>;
+  linkArray: Array<{ slug?: string; name: string }>;
 }
 
 export default function CategoryLinks({ title, linkArray }: Props) {
@@ -11,13 +11,13 @@ export default function CategoryLinks({ title, linkArray }: Props) {
       <h1 className="text-lg font-bold md:hidden">{title}</h1>
       <ul className="category-list border-r md:mr-8 md:w-full">
         {linkArray.map((item) => {
-          return item.link ? (
+          return item.slug ? (
             <li
-              key={item.link}
+              key={item.slug}
               className="sidebar-list py-1 md:p-2 my-1 md:my-2 w-full"
             >
-              <Link href={item.link} passHref>
-                <a className="text-black">{item.title}</a>
+              <Link href={item.slug} passHref>
+                <a className="text-black">{item.name}</a>
               </Link>
             </li>
           ) : null;

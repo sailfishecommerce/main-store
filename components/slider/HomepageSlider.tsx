@@ -6,6 +6,7 @@ import { memo, useState } from "react";
 import homepageSliderContent from "@/json/homepage-slider.json";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { useMediaQuery } from "@/hooks";
+import Link from "next/link";
 
 const DynamicHomepageSliderControls = dynamic(
   () => import("@/components/slider/HomepageSliderControls")
@@ -29,9 +30,11 @@ function HomepageSliderComponent() {
                   </span>
                 </div>
                 <p className="mb-2 text-sm">{content.description}</p>
-                <button className="view-collection rounded-md py-1 px-2 text-white mt-6 md:mt-12 2xl:mt-20">
-                  View collection
-                </button>
+                <Link href="/collection" passHref>
+                  <button className="view-collection rounded-md py-1 px-2 text-white mt-6 md:mt-12 2xl:mt-20">
+                    View collection
+                  </button>
+                </Link>
               </div>
               <div className="image order-1 md:order-2 w-full md:w-3/4">
                 <Image
