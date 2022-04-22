@@ -7,9 +7,9 @@ interface collectionProps {
   collection: categoryType;
 }
 
-export default function CategoryPage({ collection }: collectionProps) {
+export default function CollectionPage({ collection }: collectionProps) {
   return (
-    <Applayout title="Category Page">
+    <Applayout title="Collection Page">
       <CategoryMetatag collection={collection} />
     </Applayout>
   );
@@ -35,7 +35,7 @@ export async function getStaticPaths() {
   return {
     paths:
       storeCategories?.map(
-        (collection: { slug: any }) => `/category/${collection.slug}`
+        (collection: { slug: any }) => `/collection/${collection.slug}`
       ) || [],
     fallback: false,
   };
