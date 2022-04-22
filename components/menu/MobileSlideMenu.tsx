@@ -19,14 +19,16 @@ export default function MobileSlideMenu() {
             <PageLink menuItem={item} key={index} />
           ))}
         </ul>
-        <div className="contacts border-b mb-6 pr-4">
-          <div className="reach-us w-full border rounded-md p-4 mb-4">
+        <div className="contacts px-2 flex border-b mb-6 md:pr-4 pr-0">
+          <div className="reach-us border rounded-md p-4 mb-4">
             <div className="flex items-center">
               <Whatsapp />
               <span className="font-medium ml-4">Call us: 9442 2060</span>
             </div>
-            <hr className="w-full border-b border-gray-200 my-4" />
-            <p>Opening Hours: Mon - Sat: 9:00 am - 6:00 pm</p>
+            <hr className="w-full border-b border-gray-100 my-4" />
+            <p className="text-sm">
+              Opening Hours: Mon - Sat: 9:00 am - 6:00 pm
+            </p>
           </div>
         </div>
         <TrendingLinkSlider />
