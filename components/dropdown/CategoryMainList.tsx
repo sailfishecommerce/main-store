@@ -1,13 +1,12 @@
 import Link from "next/link";
 
 import allCategoryContent from "@/json/allcategories-dropdown.json";
-import TrendingLinks from "@/components/menu/TrendingLinks";
+import TrendingLinkSlider from "@/components/slider/TrendingLinkSlider";
 
 export default function CategoryMainList() {
   return (
     <div className="category-main mb-8 w-4/5 px-6">
-      <h1 className="text-lg mb-6 font-medium">Trending</h1>
-      <TrendingLinks />
+      <TrendingLinkSlider />
       <div className="medicines mt-6">
         <h1 className="text-lg mb-4 font-medium">Medicines</h1>
         <ul className="grid grid-cols-3 gap-4">

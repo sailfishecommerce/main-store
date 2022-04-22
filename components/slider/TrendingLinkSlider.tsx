@@ -1,16 +1,21 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-import allCategoryContent from "@/json/allcategories-dropdown.json";
 import { TrendLink } from "@/components/menu/TrendingLinks";
 import "@splidejs/splide/dist/css/splide.min.css";
+import useCategoryData from "@/hooks/useCategoryData";
 
 export default function TrendingLinkSlider() {
+  const [data, status] = useCategoryData();
+
+  const categories = status === "success" ? data?.results.slice(12, 20) : [];
+  console.log("categories", categories);
+
   return (
     <div className="trending-slider">
       <h1 className="mb-3 font-bold text-xl">Trending</h1>
       <Splide
         options={{
-          perPage: 3,
+          perPage: 4,
           padding: "2rem",
           breakpoints: {
             500: {
@@ -19,12 +24,15 @@ export default function TrendingLinkSlider() {
             800: {
               perPage: 3,
             },
+            1200: {
+              perPage: 4,
+            },
           },
         }}
         className="mx-auto container trendingLinks"
       >
-        {allCategoryContent.main.trending.map((trendingItem: any) => (
-          <SplideSlide key={trendingItem.link}>
+        {categories.map((trendingItem: any) => (
+          <SplideSlide key={trendingItem.slug}>
             <TrendLink trendingItem={trendingItem} />
           </SplideSlide>
         ))}

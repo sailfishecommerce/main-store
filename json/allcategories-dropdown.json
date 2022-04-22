@@ -1,21 +1,8 @@
 {
   "sidebar": [
-    [
-      { "title": "Categories" },
-      { "title": "Vitamins & Supplements", "link": "#vitamins-supplements" },
-      { "title": "Medicines", "link": "#medicines" },
-      { "title": "Health & Personal", "link": "#health-personal" },
-      { "title": "Skin Care", "link": "#skin-care" },
-      { "title": "Hair Care", "link": "#hair-care" },
-      { "title": "Baby Care", "link": "#baby-care" },
-      { "title": "Pet Care", "link": "#pet-care" }
-    ],
-    [
-      { "title": "Sections" },
-      { "title": "Best sellers", "link": "#best-sellers" },
-      { "title": "Customers also bought", "link": "#customers-also-bought" },
-      { "title": "New arrivals", "link": "#new-arrivals" }
-    ]
+    { "name": "Best sellers", "slug": "#best-sellers" },
+    { "name": "Customers also bought", "slug": "#customers-also-bought" },
+    { "name": "New arrivals", "slug": "#new-arrivals" }
   ],
   "main": {
     "trending": [

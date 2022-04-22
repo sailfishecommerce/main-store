@@ -1,41 +1,35 @@
 import Link from "next/link";
 
 import allCategoryContent from "@/json/allcategories-dropdown.json";
+import useCategoryData from "@/hooks/useCategoryData";
 
-export default function CategorySidebarList() {
+type categoryType = {
+  slug: string;
+  name: string;
+};
+
+interface categoryProps {
+  categories: Array<categoryType>;
+  title: string;
+  className?: string;
+}
+
+function CategoryLinks({ categories, title, className }: categoryProps) {
+  const categoryLinkClassName = className ? className : "";
   return (
-    <div className="category-sidebar flex flex-col w-1/5">
-      {allCategoryContent.sidebar.map((sidebarItems, index) => {
-        const sidebarStyle =
-          index === 0 ? "border-b border-gray-200 pb-2" : "py-2";
-        return (
-          <div key={index} className="section">
-            {sidebarItems.map((item) => {
-              return (
-                !item.link && (
-                  <h1 key={item.title} className="text-xl font-bold my-1">
-                    {item.title}
-                  </h1>
-                )
-              );
-            })}
-            <ul
-              className={`${sidebarStyle} category-list border-r mr-8 w-full`}
-              key={index}
-            >
-              {sidebarItems.map((item) => {
-                return item.link ? (
-                  <li key={item.link} className="sidebar-list p-2 my-2 w-full">
-                    <Link href={item.link} passHref>
-                      <a className="text-black">{item.title}</a>
-                    </Link>
-                  </li>
-                ) : null;
-              })}
-            </ul>
-          </div>
-        );
-      })}
+    <>
+      <h1 className="text-xl font-bold my-2">{title}</h1>
+      <ul
+        className={`${categoryLinkClassName} border-gray-200 pb-2 category-list border-r mr-8 w-full`}
+      >
+        {categories?.map((category: categoryType, index: number) => (
+          <li key={index} className="sidebar-list py-1 my-1 w-full">
+            <Link href={category.slug} passHref>
+              <a className="text-black">{category.name}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
       <style jsx>
         {`
           .category-list {
@@ -50,6 +44,23 @@ export default function CategorySidebarList() {
           }
         `}
       </style>
+    </>
+  );
+}
+
+export default function CategorySidebarList() {
+  const [data, status] = useCategoryData();
+
+  const categories = status === "success" ? data?.results.slice(12, 20) : [];
+
+  return (
+    <div className="category-sidebar flex flex-col w-1/5">
+      <CategoryLinks
+        className="border-b"
+        categories={categories}
+        title="Categories"
+      />
+      <CategoryLinks categories={allCategoryContent.sidebar} title="Section" />
     </div>
   );
 }

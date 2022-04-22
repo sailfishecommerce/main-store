@@ -1,50 +1,29 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import allCategoryContent from "@/json/allcategories-dropdown.json";
-import TrendingLinkSlider from "@/components/slider/TrendingLinkSlider";
-
 interface TrendLinkProps {
   trendingItem: {
-    link: string;
+    slug: string;
     name: string;
-    image: string;
+    images: { file: { url: string } }[];
   };
 }
 
 export const TrendLink = ({ trendingItem }: TrendLinkProps) => (
   <li title={trendingItem.name} className="trending-item mr-4">
-    <Link href={trendingItem.link} passHref>
+    <Link href={trendingItem.slug} passHref>
       <a className="trending flex flex-col items-start md:items-center">
         <Image
-          src={trendingItem.image}
+          src={trendingItem.images[0].file.url}
           height={120}
           width={180}
           className="hover:scale-105"
           alt={trendingItem.name}
         />
-        <p className="text-center font-light mt-2 font-medium">{trendingItem.name}</p>
+        <p className="text-center hover:text-green-500 font-light mt-2 font-medium">
+          {trendingItem.name}
+        </p>
       </a>
     </Link>
   </li>
 );
-
-interface TrendingLinksProps {
-  mobile?: boolean;
-}
-
-export default function TrendingLinks({ mobile }: TrendingLinksProps) {
-  return (
-    <>
-      {mobile ? (
-        <TrendingLinkSlider />
-      ) : (
-        <ul className="trendings flex items-center justify-between w-full">
-          {allCategoryContent.main.trending.map((trendingItem, index) => (
-            <TrendLink trendingItem={trendingItem} key={index} />
-          ))}
-        </ul>
-      )}
-    </>
-  );
-}
