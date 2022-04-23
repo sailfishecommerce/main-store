@@ -14,11 +14,11 @@ import { connectCurrentRefinements } from "react-instantsearch-dom";
 import { withDebugLayer } from "@/components/@dev/debug-layer/debug-layer";
 import { Collapse } from "@/components/@algolia-ui/collapse/collapse";
 import { Count } from "@/components/@algolia-ui/count/count";
-import { useCurrentRefinementCount } from "@instantsearch/hooks/useCurrentRefinementCount";
-import { useHasRefinements } from "@instantsearch/hooks/useHasRefinements";
-import { searchResultsAtom } from "@instantsearch/widgets/virtual-state-results/virtual-state-results";
-import { Button } from "@/components/@algolia-uibutton/button";
-import { Icon } from "@/components/@algolia-uiicon/icon";
+import { useCurrentRefinementCount } from "@/components/@instantsearch/hooks/useCurrentRefinementCount";
+import { useHasRefinements } from "@/components/@instantsearch/hooks/useHasRefinements";
+import { searchResultsAtom } from "@/components/@instantsearch/widgets/virtual-state-results/virtual-state-results";
+import { Button } from "@/components/@algolia-ui/button/button";
+import { Icon } from "@/components/@algolia-ui/icon/icon";
 
 export type ExpandablePanelProps = CurrentRefinementsProvided & {
   children: React.ReactNode;
@@ -84,7 +84,7 @@ function ExpandablePanelComponent({
   );
 }
 
-export const ExpandablePanel = connectCurrentRefinements<any>(
+export const ExpandablePanel = connectCurrentRefinements(
   memo(
     withDebugLayer(ExpandablePanelComponent, "ExpandablePanelWidget"),
     isEqual

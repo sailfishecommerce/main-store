@@ -3,9 +3,9 @@ import { memo } from "react";
 import type { RelevantSortProvided } from "react-instantsearch-core";
 import { connectRelevantSort } from "react-instantsearch-dom";
 
-import { Button } from "@/components/@algolia-uibutton/button";
-import { Icon } from "@/components/@algolia-uiicon/icon";
-import { Pill } from "@/components/@algolia-uipill/pill";
+import { Button } from "@/components/@algolia-ui/button/button";
+import { Icon } from "@/components/@algolia-ui/icon/icon";
+import { Pill } from "@/components/@algolia-ui/pill/pill";
 
 export type RevelantSortProps = RelevantSortProvided;
 function RelevantSortComponent({

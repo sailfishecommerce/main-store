@@ -1,25 +1,25 @@
-import { memo, useCallback } from 'react'
-import isEqual from 'react-fast-compare'
-import type { CurrentRefinementsProvided } from 'react-instantsearch-core'
-import { connectCurrentRefinements } from 'react-instantsearch-dom'
+import { memo, useCallback } from "react";
+import isEqual from "react-fast-compare";
+import type { CurrentRefinementsProvided } from "react-instantsearch-core";
+import { connectCurrentRefinements } from "react-instantsearch-dom";
 
-import type { ButtonType } from '@/components/@algolia-ui/button/button'
-import { Button } from '@/components/@algolia-ui/button/button'
+import type { ButtonType } from "@/components/@algolia-ui/button/button";
+import { Button } from "@/components/@algolia-ui/button/button";
 
 export type ClearRefinementsProps = CurrentRefinementsProvided & {
-  children: React.ReactNode
-  type?: ButtonType
-  className?: string
-}
+  children: React.ReactNode;
+  type?: ButtonType;
+  className?: string;
+};
 
 function ClearRefinementsComponent({
   children,
-  type = 'native',
+  type = "native",
   className,
   items,
   refine,
 }: ClearRefinementsProps) {
-  const handleButtonClick = useCallback(() => refine(items), [refine, items])
+  const handleButtonClick = useCallback(() => refine(items), [refine, items]);
 
   return (
     <Button
@@ -30,9 +30,9 @@ function ClearRefinementsComponent({
     >
       {children}
     </Button>
-  )
+  );
 }
 
-export const ClearRefinements = connectCurrentRefinements<any>(
+export const ClearRefinements = connectCurrentRefinements(
   memo(ClearRefinementsComponent, isEqual)
-)
+);

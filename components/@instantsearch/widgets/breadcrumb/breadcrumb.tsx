@@ -9,12 +9,12 @@ import { connectBreadcrumb } from 'react-instantsearch-dom'
 import {
   searchQueryAtom,
   searchStateAtom,
-} from '@/components/@instantsearch/hooks/useUrlSync'
+} from '@/hooks/useUrlSync'
 import { Button } from '@/components/@algolia-ui/button/button'
 import { Icon } from '@/components/@algolia-ui/icon/icon'
 import { ClientOnly } from '@/components/client-only/client-only'
-import { searchResultsAtom } from '@instantsearch/widgets/virtual-state-results/virtual-state-results'
-import { nbHitsAtom } from '@instantsearch/widgets/virtual-stats/virtual-stats'
+import { searchResultsAtom } from '@/components/@instantsearch/widgets/virtual-state-results/virtual-state-results'
+import { nbHitsAtom } from '@/components/@instantsearch/widgets/virtual-stats/virtual-stats'
 
 export type BreadcrumbProps = BreadcrumbProvided
 

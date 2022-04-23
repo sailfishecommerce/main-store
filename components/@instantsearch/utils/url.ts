@@ -1,8 +1,8 @@
 import qs from 'qs'
 import type { SearchState } from 'react-instantsearch-core'
 
-import { getMapping } from '@/utils/getMapping'
-import { parseUrl } from '@/utils/parseUrl'
+import { getMapping } from '@/lib/getMapping'
+import { parseUrl } from '@/lib/parseUrl'
 
 const paramRegexBlacklist = [/configure/, /hierarchicalMenu/, /queryID/]
 const [paramToAlias, aliasToParam] = getMapping({

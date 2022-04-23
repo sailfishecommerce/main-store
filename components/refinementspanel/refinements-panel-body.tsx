@@ -2,17 +2,17 @@ import { atom, useAtom } from 'jotai'
 import { useAtomValue } from 'jotai/utils'
 import { useCallback, useEffect, useMemo } from 'react'
 
-import { configAtom } from '@/config/config'
+import { configAtom } from '@/components/algolia/config'
 import { useTailwindScreens } from '@/hooks/useTailwindScreens'
 import { Tablet } from '@/lib/media'
-import { useGetRefinementWidgets } from '@instantsearch/hooks/useGetRefinementWidgets'
+import { useGetRefinementWidgets } from '@/components/@instantsearch/hooks/useGetRefinementWidgets'
 import {
   getPanelAttributes,
   getPanelId,
-} from '@instantsearch/utils/refinements'
-import { DynamicWidgets } from '@instantsearch/widgets/dynamic-widgets/dynamic-widgets'
-import { ExpandablePanel } from '@instantsearch/widgets/expandable-panel/expandable-panel'
-import { SortBy } from '@instantsearch/widgets/sort-by/sort-by'
+} from '@/components/@instantsearch/utils/refinements'
+import { DynamicWidgets } from '@/components/@instantsearch/widgets/dynamic-widgets/dynamic-widgets'
+import { ExpandablePanel } from '@/components/@instantsearch/widgets/expandable-panel/expandable-panel'
+import { SortBy } from '@/components/@instantsearch/widgets/sort-by/sort-by'
 
 import type { RefinementsPanelProps } from './refinements-panel'
 

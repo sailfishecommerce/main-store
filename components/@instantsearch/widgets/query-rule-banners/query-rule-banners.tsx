@@ -5,10 +5,10 @@ import type { QueryRuleCustomDataProvided } from 'react-instantsearch-core'
 import { connectQueryRules } from 'react-instantsearch-dom'
 
 import { withDebugLayer } from '@/components/@dev/debug-layer/debug-layer'
-import { Banner } from '@/components/banner/banner'
+import { Banner } from '@/components/banners/banner'
 import { useIsMounted } from '@/hooks/useIsMounted'
 import { useTailwindScreens } from '@/hooks/useTailwindScreens'
-import { searchResultsAtom } from '@instantsearch/widgets/virtual-state-results/virtual-state-results'
+import { searchResultsAtom } from '@/components/@instantsearch/widgets/virtual-state-results/virtual-state-results'
 
 export type QueryRuleBannersProps = QueryRuleCustomDataProvided & {
   limit?: number

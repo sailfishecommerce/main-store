@@ -7,7 +7,7 @@ import { connectRange } from 'react-instantsearch-dom'
 import { Input } from '@/components/@algolia-ui/input/input'
 import { useDebouncedCallback } from '@/hooks/useDebouncedCallback'
 import { useDeepCompareState } from '@/hooks/useDeepCompareSetState'
-import { clamp } from '@/utils/math'
+import { clamp } from '@/lib/math'
 
 import { RangeInputCurrency } from './range-input-currency'
 

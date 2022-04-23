@@ -4,21 +4,21 @@ import { useAtomValue, useUpdateAtom } from "jotai/utils";
 import dynamic from "next/dynamic";
 
 import { refinementsPanelMobileExpandedAtom } from "@/components/refinementspanel/refinements-panel";
-import { ToggleFilters } from "@/components/ToggleFilters";
+import { ToggleFilters } from "@/components/toggle-filters";
 import { ViewModes } from "@/components/view-modes";
-import { configAtom } from "@/config/config";
+import { configAtom } from "@/components/algolia/config";
 import { Laptop, Tablet } from "@/lib/media";
-import { withDebugLayer } from "@dev/debug-layer/debug-layer";
+import { withDebugLayer } from "@/components/@dev/debug-layer/debug-layer";
 import {
   CurrentRefinements,
   refinementCountAtom,
-} from "@instantsearch/widgets/current-refinements/current-refinements";
-import { RelevantSort } from "@instantsearch/widgets/relevant-sort/relevant-sort";
-import { SortBy } from "@instantsearch/widgets/sort-by/sort-by";
-import { searchResultsAtom } from "@instantsearch/widgets/virtual-state-results/virtual-state-results";
-import { Button } from "@/components/@algolia-uibutton/button";
-import { Count } from "@/components/@algolia-uicount/count";
-import { IconLabel } from "@/components/@algolia-uiicon-label/icon-label";
+} from "@/components/@instantsearch/widgets/current-refinements/current-refinements";
+import { RelevantSort } from "@/components/@instantsearch/widgets/relevant-sort/relevant-sort";
+import { SortBy } from "@/components/@instantsearch/widgets/sort-by/sort-by";
+import { searchResultsAtom } from "@/components/@instantsearch/widgets/virtual-state-results/virtual-state-results";
+import { Button } from "@/components/@algolia-ui/button/button";
+import { Count } from "@/components/@algolia-ui/count/count";
+import { IconLabel } from "@/components/@algolia-ui/icon-label/icon-label";
 
 const RefinementsBarDropdowns = dynamic<any>(() =>
   import(

@@ -1,17 +1,17 @@
-import { memo } from 'react'
-import isEqual from 'react-fast-compare'
-import type { CurrentRefinementsProvided } from 'react-instantsearch-core'
-import { connectCurrentRefinements } from 'react-instantsearch-dom'
+import { memo } from "react";
+import isEqual from "react-fast-compare";
+import type { CurrentRefinementsProvided } from "react-instantsearch-core";
+import { connectCurrentRefinements } from "react-instantsearch-dom";
 
-import { Dropdown } from '@/components/@algolia-ui/dropdown/dropdown'
-import type { DropdownProps } from '@/components/@algolia-ui/dropdown/dropdown'
-import { useCurrentRefinementCount } from '@instantsearch/hooks/useCurrentRefinementCount'
+import { Dropdown } from "@/components/@algolia-ui/dropdown/dropdown";
+import type { DropdownProps } from "@/components/@algolia-ui/dropdown/dropdown";
+import { useCurrentRefinementCount } from "@/components/@instantsearch/hooks/useCurrentRefinementCount";
 
 export type RefinementsDropdownProps = CurrentRefinementsProvided &
   DropdownProps & {
-    children: React.ReactNode
-    attributes?: string[]
-  }
+    children: React.ReactNode;
+    attributes?: string[];
+  };
 
 export function RefinementsDropdownComponent({
   children,
@@ -21,7 +21,7 @@ export function RefinementsDropdownComponent({
   className,
   classNameContainer,
 }: RefinementsDropdownProps) {
-  const currentRefinementCount = useCurrentRefinementCount(items, attributes)
+  const currentRefinementCount = useCurrentRefinementCount(items, attributes);
 
   return (
     <Dropdown
@@ -32,9 +32,9 @@ export function RefinementsDropdownComponent({
     >
       <div className="p-3">{children}</div>
     </Dropdown>
-  )
+  );
 }
 
-export const RefinementsDropdown = connectCurrentRefinements<any>(
+export const RefinementsDropdown = connectCurrentRefinements(
   memo(RefinementsDropdownComponent, isEqual)
-)
+);

@@ -1,17 +1,16 @@
+import { useAtom } from "jotai";
+import { useCallback } from "react";
+
 import AddIcon from "@material-design-icons/svg/outlined/add.svg";
 import CloseIcon from "@material-design-icons/svg/outlined/close.svg";
 import FilterIcon from "@material-design-icons/svg/outlined/filter_list.svg";
 import RemoveIcon from "@material-design-icons/svg/outlined/remove.svg";
-import { useAtom } from "jotai";
-import { useCallback } from "react";
-
 import { useLockedBody } from "@/hooks/useLockedBody";
 import { Laptop, Tablet } from "@/lib/media";
-import { CurrentRefinements } from "@instantsearch/widgets/current-refinements/current-refinements";
-import { Button } from "@/components/@algolia-uibutton/button";
-import { IconLabel } from "@/components/@algolia-uiicon-label/icon-label";
-import { Icon } from "@/components/@algolia-uiicon/icon";
-
+import { CurrentRefinements } from "@/components/@instantsearch/widgets/current-refinements/current-refinements";
+import { Button } from "@/components/@algolia-ui/button/button";
+import { IconLabel } from "@/components/@algolia-ui/icon-label/icon-label";
+import { Icon } from "@/components/@algolia-ui/icon/icon";
 import { refinementsPanelMobileExpandedAtom } from "./refinements-panel";
 import { refinementsPanelsExpandedAtom } from "./refinements-panel-body";
 

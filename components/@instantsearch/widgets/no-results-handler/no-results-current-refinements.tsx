@@ -3,7 +3,7 @@ import { useAtomValue } from 'jotai/utils'
 import {
   CurrentRefinements,
   refinementCountAtom,
-} from '@instantsearch/widgets/current-refinements/current-refinements'
+} from '@/components/@instantsearch/widgets/current-refinements/current-refinements'
 
 export function NoResultsCurrentRefinements() {
   const refinementCount = useAtomValue(refinementCountAtom)

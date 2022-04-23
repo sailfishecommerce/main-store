@@ -1,47 +1,47 @@
-import SearchIcon from '@material-design-icons/svg/outlined/search.svg'
-import { useAtomValue, useUpdateAtom } from 'jotai/utils'
-import { memo, useCallback } from 'react'
-import isEqual from 'react-fast-compare'
-import type { HitsProvided } from 'react-instantsearch-core'
-import { Configure, connectHits, Index } from 'react-instantsearch-dom'
+import SearchIcon from "@material-design-icons/svg/outlined/search.svg";
+import { useAtomValue, useUpdateAtom } from "jotai/utils";
+import { memo, useCallback } from "react";
+import isEqual from "react-fast-compare";
+import type { HitsProvided } from "react-instantsearch-core";
+import { Configure, connectHits, Index } from "react-instantsearch-dom";
 
-import { Button } from '@/components/@algolia-ui/button/button'
-import { Icon } from '@/components/@algolia-ui/icon/icon'
-import { configAtom } from '@/config/config'
-import { querySuggestionsIndexName } from '@/utils/env'
-import { searchStateAtom } from '@instantsearch/hooks/useUrlSync'
+import { Button } from "@/components/@algolia-ui/button/button";
+import { Icon } from "@/components/@algolia-ui/icon/icon";
+import { configAtom } from "@/components/algolia/config";
+import { querySuggestionsIndexName } from "@/lib/env";
+import { searchStateAtom } from "@/hooks/useUrlSync";
 
 export type NoResultsQuerySuggestionsProps = {
-  query: string
-}
+  query: string;
+};
 
-export type NoResultsQuerySuggestionsHitsProps = HitsProvided<any>
+export type NoResultsQuerySuggestionsHitsProps = HitsProvided<any>;
 
 export type NoResultsQuerySuggestionsHitButtonProps = {
-  query: string
-}
+  query: string;
+};
 
 function NoResultsQuerySuggestionsHitButton({
   query,
 }: NoResultsQuerySuggestionsHitButtonProps) {
-  const setSearchState = useUpdateAtom(searchStateAtom)
+  const setSearchState = useUpdateAtom(searchStateAtom);
 
   const handleClick = useCallback(() => {
-    setSearchState((currentSearchState) => ({ ...currentSearchState, query }))
-  }, [setSearchState, query])
+    setSearchState((currentSearchState) => ({ ...currentSearchState, query }));
+  }, [setSearchState, query]);
 
   return (
     <Button className="underline" onClick={handleClick}>
       {query}
     </Button>
-  )
+  );
 }
 
 function NoResultsQuerySuggestionsHitsComponent({
   hits,
 }: NoResultsQuerySuggestionsHitsProps) {
   if (hits.length === 0) {
-    return null
+    return null;
   }
 
   return (
@@ -58,20 +58,20 @@ function NoResultsQuerySuggestionsHitsComponent({
         </ul>
       </span>
     </li>
-  )
+  );
 }
 
 const NoResultsQuerySuggestionsHits = connectHits(
   memo(NoResultsQuerySuggestionsHitsComponent, isEqual)
-)
+);
 
 export function NoResultsQuerySuggestions({
   query,
 }: NoResultsQuerySuggestionsProps) {
-  const { searchParameters } = useAtomValue(configAtom)
+  const { searchParameters } = useAtomValue(configAtom);
 
   if (!querySuggestionsIndexName) {
-    return null
+    return null;
   }
 
   return (
@@ -84,5 +84,5 @@ export function NoResultsQuerySuggestions({
       />
       <NoResultsQuerySuggestionsHits />
     </Index>
-  )
+  );
 }

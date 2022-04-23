@@ -7,7 +7,7 @@ import type {
 import { memo, useMemo } from 'react'
 import isEqual from 'react-fast-compare'
 
-import { useUrlSync } from '@/components/@instantsearch/hooks/useUrlSync'
+import { useUrlSync } from '@/hooks/useUrlSync'
 import { configAtom } from '@/components/algolia/config'
 import { useUserToken } from '@/hooks/useUserToken'
 import { isBrowser } from '@/lib/browser'

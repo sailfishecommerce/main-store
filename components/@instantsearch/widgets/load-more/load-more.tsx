@@ -7,9 +7,9 @@ import { useAtomValue } from "jotai/utils";
 import { memo, useCallback, useEffect, useRef } from "react";
 
 import { withDebugLayer } from "@/components/@dev/debug-layer/debug-layer";
-import { searchQueryAtom } from "@/components/@instantsearch/hooks/useUrlSync";
+import { searchQueryAtom } from "@/hooks/useUrlSync";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
-import { Button } from "@/components/@algolia-uibutton/button";
+import { Button } from "@/components/@algolia-ui/button/button";
 
 function LoadMoreButton({
   translations,

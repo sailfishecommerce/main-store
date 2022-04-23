@@ -1,34 +1,34 @@
-import classNames from 'classnames'
-import { m } from 'framer-motion'
-import { atom } from 'jotai'
-import { useAtomValue, useUpdateAtom } from 'jotai/utils'
-import { memo, useEffect, useMemo } from 'react'
-import isEqual from 'react-fast-compare'
+import classNames from "classnames";
+import { m } from "framer-motion";
+import { atom } from "jotai";
+import { useAtomValue, useUpdateAtom } from "jotai/utils";
+import { memo, useEffect, useMemo } from "react";
+import isEqual from "react-fast-compare";
 import type {
   CurrentRefinementsProvided,
   RefinementValue,
-} from 'react-instantsearch-core'
-import { connectCurrentRefinements } from 'react-instantsearch-dom'
+} from "react-instantsearch-core";
+import { connectCurrentRefinements } from "react-instantsearch-dom";
 
-import { Chip } from '@/components/@algolia-ui/chip/chip'
-import { configAtom } from '@/config/config'
-import { withDebugLayer } from '@dev/debug-layer/debug-layer'
-import { ClearRefinements } from '@instantsearch/widgets/clear-refinements/clear-refinements'
+import { Chip } from "@/components/@algolia-ui/chip/chip";
+import { configAtom } from "@/components/algolia/config";
+import { withDebugLayer } from "@/components/@dev/debug-layer/debug-layer";
+import { ClearRefinements } from "@/components/@instantsearch/widgets/clear-refinements/clear-refinements";
 
-import { getCurrentRefinement } from './getCurrentRefinement'
+import { getCurrentRefinement } from "./getCurrentRefinement";
 
 export type CurrentRefinementsProps = CurrentRefinementsProvided & {
-  header?: string
-  className?: string
-}
+  header?: string;
+  className?: string;
+};
 
 export type CurrentRefinement = {
-  category?: string
-  label: string
-  value: RefinementValue
-}
+  category?: string;
+  label: string;
+  value: RefinementValue;
+};
 
-export const refinementCountAtom = atom(0)
+export const refinementCountAtom = atom(0);
 
 function CurrentRefinementsComponent({
   items,
@@ -36,22 +36,22 @@ function CurrentRefinementsComponent({
   header,
   className,
 }: CurrentRefinementsProps) {
-  const config = useAtomValue(configAtom)
+  const config = useAtomValue(configAtom);
 
   const refinements = useMemo(
     () =>
       items.reduce((acc: CurrentRefinement[], current) => {
-        return [...acc, ...getCurrentRefinement(current, config)]
+        return [...acc, ...getCurrentRefinement(current, config)];
       }, []),
     [config, items]
-  )
+  );
 
-  const setRefinementCount = useUpdateAtom(refinementCountAtom)
+  const setRefinementCount = useUpdateAtom(refinementCountAtom);
   useEffect(() => {
-    setRefinementCount(refinements.length)
-  }, [setRefinementCount, refinements])
+    setRefinementCount(refinements.length);
+  }, [setRefinementCount, refinements]);
 
-  if (!refinements.length) return null
+  if (!refinements.length) return null;
 
   return (
     <div className={className}>
@@ -59,7 +59,7 @@ function CurrentRefinementsComponent({
       <ul className="flex flex-wrap gap-3">
         {refinements.map((refinement) => {
           return (
-            <m.li key={[refinement.category, refinement.label].join(':')}>
+            <m.li key={[refinement.category, refinement.label].join(":")}>
               <Chip closeIcon={true} onClick={() => refine(refinement.value)}>
                 {refinement.category && (
                   <div className="font-normal">{refinement.category}:</div>
@@ -67,11 +67,11 @@ function CurrentRefinementsComponent({
                 <div className="capitalize">{refinement.label}</div>
               </Chip>
             </m.li>
-          )
+          );
         })}
         <li
           key="clear"
-          className={classNames('flex items-center', {
+          className={classNames("flex items-center", {
             hidden: refinements.length < 2,
           })}
         >
@@ -81,12 +81,12 @@ function CurrentRefinementsComponent({
         </li>
       </ul>
     </div>
-  )
+  );
 }
 
-export const CurrentRefinements = connectCurrentRefinements<any>(
+export const CurrentRefinements = connectCurrentRefinements(
   memo(
-    withDebugLayer(CurrentRefinementsComponent, 'CurrentRefinementsWidget'),
+    withDebugLayer(CurrentRefinementsComponent, "CurrentRefinementsWidget"),
     isEqual
   )
-)
+);

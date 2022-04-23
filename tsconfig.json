@@ -19,6 +19,6 @@
       "@/*": ["*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/form/SearchLocationInput.jsx", "components/page-view", "hooks/useDeepUpdateAtom.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/form/SearchLocationInput.jsx", "components/page-view", "hooks/useDeepUpdateAtom.js", "lib/getResultsState.js"],
   "exclude": ["node_modules"]
 }

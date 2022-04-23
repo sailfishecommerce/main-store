@@ -3,16 +3,16 @@ import classNames from "classnames";
 import { useAtomValue } from "jotai/utils";
 import { useCallback, useMemo, useState } from "react";
 
-import { configAtom } from "@/config/config";
-import { useGetRefinementWidgets } from "@instantsearch/hooks/useGetRefinementWidgets";
+import { configAtom } from "@/components/algolia/config";
+import { useGetRefinementWidgets } from "@/components/@instantsearch/hooks/useGetRefinementWidgets";
 import {
   getPanelAttributes,
   getPanelId,
-} from "@instantsearch/utils/refinements";
-import { DynamicWidgets } from "@instantsearch/widgets/dynamic-widgets/dynamic-widgets";
-import { RefinementsDropdown } from "@instantsearch/widgets/refinements-dropdown/dropdown-refinements";
-import { Button } from "@/components/@algolia-uibutton/button";
-import { IconLabel } from "@/components/@algolia-uiicon-label/icon-label";
+} from "@/components/@instantsearch/utils/refinements";
+import { DynamicWidgets } from "@/components/@instantsearch/widgets/dynamic-widgets/dynamic-widgets";
+import { RefinementsDropdown } from "@/components/@instantsearch/widgets/refinements-dropdown/dropdown-refinements";
+import { Button } from "@/components/@algolia-ui/button/button";
+import { IconLabel } from "@/components/@algolia-ui/icon-label/icon-label";
 
 export type RefinementsBarDropdownsProps = {
   dynamicWidgets?: boolean;

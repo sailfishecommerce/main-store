@@ -1,4 +1,4 @@
-import type { Refinement, RefinementWidget } from '@/typings/refinements'
+import type { Refinement, RefinementWidget } from '@/types/refinements'
 
 export function getRefinementPanelId(
   refinement: Refinement | RefinementWidget

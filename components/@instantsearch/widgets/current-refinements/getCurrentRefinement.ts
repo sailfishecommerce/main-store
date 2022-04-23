@@ -4,8 +4,8 @@ import type {
   Refinement as ISRefinement,
 } from 'react-instantsearch-core'
 
-import type { Config } from '@/config/config'
-import type { Refinement, RefinementWidget } from '@/typings/refinements'
+import type { Config } from "@/components/algolia/config";
+import type { Refinement, RefinementWidget } from '@/types/refinements'
 
 import type { CurrentRefinement } from './current-refinements'
 
