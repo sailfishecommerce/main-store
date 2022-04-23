@@ -3,6 +3,7 @@ import Applayout from "@/layouts/Applayout";
 import fetchAllSwellProducts from "@/lib/processPageproduct";
 
 export default function ProductPage({ pageProduct }: any) {
+  console.log("pageProduct", pageProduct);
   return (
     <Applayout title={pageProduct.name}>
       <main className="container mx-auto">
@@ -11,7 +12,6 @@ export default function ProductPage({ pageProduct }: any) {
     </Applayout>
   );
 }
-
 
 type propsType = {
   params: { slug: string };
