@@ -36,7 +36,7 @@ export default function MenuLinks({ cart }: any) {
         ))}
       </ul>
       <div className="icons flex items-center justify-between w-16">
-        <button className="flex items-center">
+        <div className="flex items-center">
           {userDetails === null ? (
             <button onClick={toggleAuthModalHandler} title="Login">
               <GrLogin className="mr-4" />
@@ -46,7 +46,7 @@ export default function MenuLinks({ cart }: any) {
               <GrLogout className="mr-2" />
             </button>
           )}
-        </button>
+        </div>
         <button
           onClick={() => updateSlideTab("SLIDING-CART")}
           className="cart-icon relative"

@@ -7,7 +7,6 @@ export default function SecondaryMenu() {
   const [data, status] = useCategoryData();
 
   const categories = status === "success" ? data?.results.slice(12, 20) : [];
-  console.log("data", data);
   return (
     <div className="md:flex items-center justify-between py-2">
       <AllCategoriesDropdown />

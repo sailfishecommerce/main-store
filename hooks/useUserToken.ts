@@ -1,35 +1,14 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { v4 as uuidv4 } from "uuid";
+import { useEffect, useRef } from 'react'
+import searchInsights from 'search-insights'
 
-import { useAppDispatch } from "@/redux/store";
-import { updateUserDetails } from "@/redux/user-slice";
-import { authorizeUser } from "@/redux/auth-slice";
+export function useUserToken() {
+  const userTokenRef = useRef<string | undefined>(undefined)
 
-type userDetailType = {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-} | null;
+  useEffect(() => {
+    searchInsights('onUserTokenChange', (userToken) => {
+      userTokenRef.current = userToken
+    })
+  }, [])
 
-export default function useUserToken() {
-  const dispatch = useAppDispatch();
-
-  function generateUserToken(userDetail: userDetailType) {
-    if (userDetail !== null) {
-      dispatch(
-        authorizeUser({
-          firstName: userDetail.firstName,
-          lastName: userDetail.lastName,
-          email: userDetail.email,
-        })
-      );
-      dispatch(updateUserDetails(userDetail.id));
-    } else {
-      const generatedUserId = uuidv4();
-      dispatch(updateUserDetails(generatedUserId));
-    }
-  }
-
-  return { generateUserToken };
+  return userTokenRef.current
 }

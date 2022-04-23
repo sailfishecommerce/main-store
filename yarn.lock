@@ -530,6 +530,15 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-instantsearch-core@^6.10.7":
+  version "6.10.7"
+  resolved "https://registry.yarnpkg.com/@types/react-instantsearch-core/-/react-instantsearch-core-6.10.7.tgz#a40b50890a2203011bd3ce6a7180aa15b1aa7f69"
+  integrity sha512-bG87zLTm5NVzMGVgP6jZtNZxOiHWMp8++MvWeVMg131vXyTpvG5wwuvrOHjWAZ7fq73QQCyCWN7ktKEqj4mqVg==
+  dependencies:
+    "@types/react" "*"
+    algoliasearch ">=4"
+    algoliasearch-helper ">=3"
+
 "@types/react-redux@^7.1.20":
   version "7.1.23"
   resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-7.1.23.tgz#3c2bb1bcc698ae69d70735f33c5a8e95f41ac528"
@@ -671,14 +680,14 @@ ajv@^6.10.0, ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-algoliasearch-helper@^3.8.0:
+algoliasearch-helper@>=3, algoliasearch-helper@^3.8.0:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/algoliasearch-helper/-/algoliasearch-helper-3.8.2.tgz#35726dc6d211f49dbab0bf6d37b4658165539523"
   integrity sha512-AXxiF0zT9oYwl8ZBgU/eRXvfYhz7cBA5YrLPlw9inZHdaYF0QEya/f1Zp1mPYMXc1v6VkHwBq4pk6/vayBLICg==
   dependencies:
     "@algolia/events" "^4.0.1"
 
-algoliasearch@^4.13.0:
+algoliasearch@>=4, algoliasearch@^4.13.0:
   version "4.13.0"
   resolved "https://registry.yarnpkg.com/algoliasearch/-/algoliasearch-4.13.0.tgz#e36611fda82b1fc548c156ae7929a7f486e4b663"
   integrity sha512-oHv4faI1Vl2s+YC0YquwkK/TsaJs79g2JFg5FDm2rKN12VItPTAeQ7hyJMHarOPPYuCnNC5kixbtcqvb21wchw==
@@ -2957,6 +2966,11 @@ tsutils@^3.21.0:
   integrity sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==
   dependencies:
     tslib "^1.8.1"
+
+tweakpane@^3.0.8:
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/tweakpane/-/tweakpane-3.0.8.tgz#e9138020ff4dc13a86cf1b2276ff5a2b5921df5c"
+  integrity sha512-vJuB0346B6gMpxnFDJyy2wcEshkvcTpQ74TCqJTeFaDvzq9FL29h5KszT1+YUTLlP+26OQI8PFGN8WbtOQStnQ==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
