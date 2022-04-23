@@ -18,7 +18,7 @@ export default function SecondaryMenu() {
                 key={menuItem.slug}
                 menuItem={menuItem}
                 link="collection"
-                className="font-semibold hover:text-green-500 lg:text-sm xl:text-md"
+                className="font-semibold hover:text-green-500 lg:text-sm xl:text-lg"
               />
             ))
           : null}

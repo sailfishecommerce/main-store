@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { Dispatch, SetStateAction, useState } from "react";
 
-import Modal from "@/components/Modal";
+import Modal from "@/components/modal";
+import ContactForMoreForm from "@/components/form/ContactForMoreForm";
 import { modalType } from "@/types";
-import ContactForMoreForm from "@/components/Form/ContactForMoreForm";
 
 interface Props extends modalType {
   productName: string;

@@ -1,12 +1,11 @@
 import axios from "axios";
 
-import useCategory from "@/hooks/useCategory";
 import useAllProducts from "./useAllProducts";
+import useCategoryData from "@/hooks/useCategoryData";
 
 export default function useAlgoliaIndex() {
   const [data, status] = useAllProducts();
-  const { allCategories } = useCategory();
-  const categories = allCategories();
+  const [categoryData, categoryStatus] = useCategoryData();
 
   function addProductToAlgoliaIndex() {
     axios
@@ -19,7 +18,7 @@ export default function useAlgoliaIndex() {
 
   function addCategoriesToAlgoliaIndex() {
     axios
-      .post("/api/add-products-to-algolia-index", categories?.results)
+      .post("/api/add-products-to-algolia-index", categoryData?.results)
       .then((response) => {
         console.log("response addProductToAlgoliaIndex", response);
       })

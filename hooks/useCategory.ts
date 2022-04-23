@@ -1,4 +1,3 @@
-import {  useQueryClient } from "react-query";
 import useSwell from "@/hooks/useSwell";
 
 export default function useCategory() {
@@ -25,16 +24,10 @@ export default function useCategory() {
     });
   }
 
-  function allCategories() {
-    const queryClient = useQueryClient();
-    const categories: any = queryClient.getQueryData("listAllCategory");
-    return categories;
-  }
-
+  
   return {
     listAllCategory,
     getACategory,
     getProductsInACategory,
-    allCategories,
   };
 }
