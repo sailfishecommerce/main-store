@@ -13,7 +13,7 @@ export default function useAuth() {
   const dispatch = useAppDispatch();
   const { isLoading, isSuccessful, hasError } = useToast();
   const { updateCart } = useSwellCart();
-  const { loginUser, logoutUser, signedUserDetails, createUserAccount } =
+  const { loginUser, logoutUser, createUserAccount } =
     useAccount();
 
   async function signIn(values: any, formik: any, notModal?: boolean) {
@@ -81,14 +81,11 @@ export default function useAuth() {
       });
   }
 
-  async function getUserDetails() {
-    return await signedUserDetails();
-  }
+  
 
   return {
     signIn,
     signUp,
     userLogout,
-    getUserDetails,
   };
 }

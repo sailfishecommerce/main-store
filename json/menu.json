@@ -1,18 +1,18 @@
 {
   "primaryMenu": [
-    { "link": "/about-us", "text": "About Us" },
-    { "link": "/blog", "text": "Blog" },
-    { "link": "#shipping-info", "text": "Shipping Info" },
-    { "link": "#faqs", "text": "FAQs" },
-    { "link": "/contact-us", "text": "Contact Us" }
+    { "slug": "/about-us", "name": "About Us" },
+    { "slug": "/blog", "name": "Blog" },
+    { "slug": "#shipping-info", "name": "Shipping Info" },
+    { "slug": "#faqs", "name": "FAQs" },
+    { "slug": "/contact-us", "name": "Contact Us" }
   ],
   "secondaryMenu": [
-    { "link": "#vitamins-supplements", "text": "Vitamins & Supplements" },
-    { "link": "#medicines", "text": "Medicines" },
-    { "link": "#health-personal", "text": "Health & Personal" },
-    { "link": "#skin-care", "text": "Skin Care" },
-    { "link": "#hair-care", "text": "Hair Care" },
-    { "link": "#baby-care", "text": "Baby Care" },
-    { "link": "#pet-care", "text": "Pet Care" }
+    { "slug": "#vitamins-supplements", "name": "Vitamins & Supplements" },
+    { "slug": "#medicines", "name": "Medicines" },
+    { "slug": "#health-personal", "name": "Health & Personal" },
+    { "slug": "#skin-care", "name": "Skin Care" },
+    { "slug": "#hair-care", "name": "Hair Care" },
+    { "slug": "#baby-care", "name": "Baby Care" },
+    { "slug": "#pet-care", "name": "Pet Care" }
   ]
 }

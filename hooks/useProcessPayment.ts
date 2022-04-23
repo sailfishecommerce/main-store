@@ -14,7 +14,7 @@ import { vboutOrderData } from "@/lib/vbout";
 export default function useProcessPayment() {
   const router = useRouter();
   const { tokenizePayment, submitUserOrder } = usePayment();
-  const { getUserDetails } = useAuth();
+  const { getUserAccount } = useAccount();
   const { onShowModal } = useModal();
 
   const { getACart } = useSwellCart();
@@ -90,7 +90,7 @@ export default function useProcessPayment() {
 
   async function makePayment(data: any) {
     const loading = isLoading();
-    getUserDetails()
+    getUserAccount()
       .then((response) => {
         console.log("response getUserDetails", response);
         if (response === null) {

@@ -8,6 +8,7 @@ interface collectionProps {
 }
 
 export default function CollectionPage({ collection }: collectionProps) {
+  console.log("collection", collection);
   return (
     <Applayout title="Collection Page">
       <CategoryMetatag collection={collection} />

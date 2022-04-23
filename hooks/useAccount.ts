@@ -43,12 +43,7 @@ export default function useAccount() {
     });
   }
 
-  async function signedUserDetails() {
-    const { swell } = await swellInit();
-
-    return await swell.account.get();
-  }
-
+ 
   async function loginUser(userLogin: userLoginType) {
     const { email, password } = userLogin;
     const { swell } = await swellInit();
@@ -102,12 +97,6 @@ export default function useAccount() {
     });
   }
 
-  function displayUserDetails(): any {
-    const queryClient = useQueryClient();
-    const userDetails = queryClient.getQueryData("getAccount");
-    return userDetails;
-  }
-
   async function createUserAddresstAtCheckout(data: checkoutData) {
     const { swell } = await swellInit();
 
@@ -151,12 +140,10 @@ export default function useAccount() {
 
   return {
     createUserAccount,
-    signedUserDetails,
     loginUser,
     logoutUser,
     forgotPassword,
     getUserAccount,
-    displayUserDetails,
     createUserAccountAtCheckout,
     recoverPassword,
     createUserAddresstAtCheckout,

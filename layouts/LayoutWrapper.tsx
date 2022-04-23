@@ -7,9 +7,15 @@ import LayoutMetatag from "@/components/metatag/LayoutMetatag";
 import { useAppSelector } from "@/hooks/useRedux";
 import useSlidingTab from "@/hooks/useSlidingTab";
 import "react-toastify/dist/ReactToastify.css";
+import useUI from "@/hooks/useUI";
+import AuthModal from "@/components/modal/AuthModal";
 
 const DynamicSlidingInformationTab = dynamic(
   () => import("@/components/sliding-tab/SlidingInformationTab")
+);
+
+const DynamicAuthModal = dynamic(
+  () => import("@/components/modal/AuthModal")
 );
 
 const DynamicSlidingCartTab = dynamic(
@@ -23,6 +29,7 @@ const DynamicAccountDetailsTab = dynamic(
 export default function LayoutWrapper({ children }: PropsWithChildren<{}>) {
   const { slideTab } = useSlidingTab();
   const { activeProduct } = useAppSelector((state) => state.product);
+  const { displayAuthModal, toggleAuthModalHandler } = useUI();
   return (
     <div className="relative">
       <Head>
@@ -35,6 +42,12 @@ export default function LayoutWrapper({ children }: PropsWithChildren<{}>) {
       <LayoutMetatag />
       <div data-aos="fade-up" id="head" />
       <ToastContainer />
+      {displayAuthModal && (
+        <DynamicAuthModal
+          onHide={toggleAuthModalHandler}
+          show={displayAuthModal}
+        />
+      )}
       {slideTab === "SLIDING-INFO" && activeProduct && (
         <DynamicSlidingInformationTab product={activeProduct} />
       )}

@@ -13,6 +13,8 @@ export default function FooterLink() {
 
   const tagText = !viewMore ? "Show Less" : "View All";
 
+  console.log("linkArray", linkArray);
+
   function updateLinkList() {
     setViewMore(!viewMore);
     if (viewMore) {

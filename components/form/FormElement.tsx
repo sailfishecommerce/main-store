@@ -1,5 +1,7 @@
 import dynamic from "next/dynamic";
 import { useState } from "react";
+import PasswordInput from "@/components/form/PasswordInput";
+import { inputContentType } from "@/types";
 
 const SelectCountries = dynamic(
   () => import("@/components/form/SelectCountries")
@@ -9,16 +11,6 @@ const SearchLocationInput = dynamic(
 );
 
 const Select = dynamic(() => import("@/components/form/Select"));
-
-type inputContentType = {
-  name: string;
-  label?: string;
-  type: string;
-  placeholder?: string;
-  id: string;
-  inputText: "text" | "email" | "password";
-  withIcon?: boolean;
-};
 
 interface Props {
   content: inputContentType;
@@ -37,7 +29,7 @@ export function Input({ content, formik, className }: Props) {
   return (
     <div className={`${inputClassName} mb-3 flex flex-col mx-2`}>
       {content.label && (
-        <label className="text-md mb-1" htmlFor={content.name}>
+        <label className="text-md text-gray-400 mb-1" htmlFor={content.name}>
           {content.label}
         </label>
       )}
@@ -53,30 +45,12 @@ export function Input({ content, formik, className }: Props) {
           value={formik.values[content.name]}
         />
       ) : (
-        <div className="password-toggle">
-          <input
-            className="w-full border border-gray-200 px-2 rounded-md h-10 focus:text-gray-700 focus:bg-white focus:border-red-500 focus:outline-none"
-            type={passwordInputType}
-            name={content.name}
-            placeholder={content.placeholder}
-            id={content.id}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values[content.name]}
-          />
-          <label
-            className="password-toggle-btn"
-            aria-label="show/hide-password"
-          >
-            <input
-              onClick={passwordVisibilityHandler}
-              className="password-toggle-check"
-              checked={showPassword}
-              type="checkbox"
-            />
-            <span className="password-toggle-indicator"></span>
-          </label>
-        </div>
+        <PasswordInput
+          content={content}
+          formik={formik}
+          passwordVisibilityHandler={passwordVisibilityHandler}
+          showPassword={showPassword}
+        />
       )}
       <p className="text-red-500 text-sm">
         {formik.errors[content.name] &&

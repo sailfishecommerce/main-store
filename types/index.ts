@@ -400,3 +400,13 @@ export type addProductSearchType = {
   email: string;
   query: string;
 };
+
+export type inputContentType = {
+  name: string;
+  label?: string;
+  type: string;
+  placeholder?: string;
+  id: string;
+  inputText: "text" | "email" | "password";
+  withIcon?: boolean;
+};

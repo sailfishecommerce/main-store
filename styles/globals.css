@@ -27,6 +27,10 @@
   color: var(--mountain-green);
 }
 
+.mountain-green:hover {
+  color: var(--mountain-mist);
+}
+
 .mountain-mist {
   color: var(--mountain-mist);
 }
@@ -53,6 +57,10 @@
 
 .bg-mountain-green {
   background-color: var(--mountain-green);
+}
+
+.bg-mountain-green:hover {
+  background-color: var(--mountain-mist);
 }
 
 .bg-mountain-mist {
@@ -197,7 +205,6 @@ header.header {
     display: flex !important;
     width: 100% !important;
     align-items: flex-start;
-    /* flex-direction: row !important; */
   }
 
   .product-reviews
