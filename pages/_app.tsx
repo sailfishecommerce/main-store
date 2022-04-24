@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import { QueryClient, QueryClientProvider } from "react-query";
 import AOS from "aos";
 import { Provider } from "react-redux";
@@ -10,6 +11,7 @@ import store from "@/redux/store";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Nprogress from "@/components/loader/Nprogress";
+import { scrollToTop } from "@/lib/scrollToTop";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
@@ -33,7 +35,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             options={{ showSpinner: true }}
             height={3}
           />
-          <Component {...pageProps} />
+          <AnimatePresence exitBeforeEnter={true} onExitComplete={scrollToTop}>
+            <Component {...pageProps} />
+          </AnimatePresence>
           <ReactQueryDevtools initialIsOpen={false} />
         </PersistGate>
       </QueryClientProvider>

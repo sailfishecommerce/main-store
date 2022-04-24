@@ -1,5 +1,8 @@
 import Head from "next/head";
 import { PropsWithChildren } from "react";
+import { LazyMotion } from "framer-motion";
+import { atom, Provider as JotaiProvider } from "jotai";
+import { useAtomValue } from "jotai/utils";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
